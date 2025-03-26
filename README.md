@@ -1,5 +1,5 @@
 # Pico-8 / Picotron Projects
-A collection of all my projects (unfinished and finished) in picotron and pico-8
+A collection of all my projects (unfinished and finished) in picotron and pico-8. Projects that arnt linked here are either unfinished or abandoned.
 
 ### Minesweeper - Mid/Late 2024
 
