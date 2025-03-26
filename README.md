@@ -13,7 +13,7 @@ A collection of all my projects (unfinished and finished) in picotron and pico-8
 
 [https://www.lexaloffle.com/bbs/?pid=fractal_renderer#p](https://www.lexaloffle.com/bbs/?pid=fractal_renderer#p)
 
-### QR Code Generator
+### QR Code Generator - Early/Mid 2025
 
 [https://www.lexaloffle.com/bbs/?pid=qrcode#p](https://www.lexaloffle.com/bbs/?pid=qrcode#p)
 
