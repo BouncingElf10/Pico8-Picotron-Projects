@@ -16,3 +16,6 @@ A collection of all my projects (unfinished and finished) in picotron and pico-8
 ### QR Code Generator
 
 [https://www.lexaloffle.com/bbs/?pid=qrcode#p](https://www.lexaloffle.com/bbs/?pid=qrcode#p)
+
+# Licence
+All of this work is protected by the [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) licence.
