@@ -1,0 +1,69 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: main.lua
+--[[pod_format="raw",created="2024-12-05 09:50:05",modified="2025-03-05 13:43:16",revision=287]]
+function _init()
+	x1, y1 = 240, 20    -- Top point (center, slightly above middle)
+	x2, y2 = 100, 230   -- Bottom left point
+	x3, y3 = 380, 230   -- Bottom right point
+	rx, ry = random_point_in_triangle(x1, y1, x2, y2, x3, y3)
+	zoom = 1
+	pan_x = 0
+	pan_y = 0
+	center_x = 240
+   center_y = 135
+end
+
+function _update()
+    x1 = center_x + pan_x + (240 - center_x + pan_x) * zoom
+    y1 = center_y + pan_y + (20 - center_y + pan_y) * zoom
+    x2 = center_x + pan_x + (100 - center_x + pan_x) * zoom
+    y2 = center_y + pan_y + (230 - center_y + pan_y) * zoom
+    x3 = center_x + pan_x + (380 - center_x + pan_x) * zoom
+    y3 = center_y + pan_y + (230 - center_y + pan_y) * zoom
+   	if btn(1) then pan_x -= 1 end
+   	if btn(0) then pan_x += 1 end
+   	if btn(2) then pan_y += 1 end
+   	if btn(3) then pan_y -= 1 end
+   if btn(5) then zoom *= 1.03 end
+	if btn(4) then zoom /= 1.03 end
+ end
+
+function _draw()
+   	if btn() != 0 then
+		cls()
+	end
+    for i = 1, 7000 do
+		pset(rx, ry, 8)
+		rand = flr(rnd(3))
+		if rand == 0 then
+			rx, ry = rx + (x1 - rx) / 2, ry + (y1 - ry) / 2
+		elseif rand == 1 then
+			rx, ry = rx + (x2 - rx) / 2, ry + (y2 - ry) / 2
+		elseif rand == 2 then
+			rx, ry = rx + (x3 - rx) / 2, ry + (y3 - ry) / 2
+		end
+    end
+end
+
+
+function random_point_in_triangle(x1, y1, x2, y2, x3, y3)
+    local r1 = rnd()
+    local r2 = rnd()
+    
+    local sqrt_r1 = sqrt(r1)
+    local a = 1 - sqrt_r1
+    local b = sqrt_r1 * (1 - r2)
+    local c = sqrt_r1 * r2
+
+    local x = a * x1 + b * x2 + c * x3
+    local y = a * y1 + b * y2 + c * y3
+    
+    return x, y
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTEyLTA1IDA5OjQ5OjU1Iixtb2RpZmllZD0iMjAyNS0w
+My0wNSAxMzo0MzoxNiIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzQyIix3b3Jrc3BhY2VfaW5kZXg9MX19XV0=
+:: [eoc]

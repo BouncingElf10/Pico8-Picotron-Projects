@@ -1,0 +1,271 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTI0IDE0OjQyOjUyIixtb2RpZmllZD0iMjAyNS0w
+My0wMyAxMjowMzozMyJdXQ==
+:: 0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTI0IDE0OjQyOjUyIixtb2RpZmllZD0iMjAyNS0w
+My0wMyAxMjowMzozMyIscmV2aXNpb249NTg1XV1sejQAfgAAABIxAADzIXtbMF09e2JtcD1weHUA
+QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4AH-AxAP--
+-------------------------------------------------------------9dQbT04fX0=
+:: main.lua
+--[[pod_format="raw",created="2025-02-14 09:19:29",modified="2025-03-03 12:03:33",revision=1368]]
+function _init()
+	leg_spread = 80
+	leg1_pos = {240 + leg_spread, 270}
+	leg2_pos = {140 - leg_spread, 270}
+	leg1_target = leg1_pos
+	leg2_target = leg2_pos
+	base_pos = {240, 250}
+	base_pos_default = {240, 250}
+	debug = false
+	
+	armature = {
+		{
+	    {{240, 270}, {240, 200}},
+--	    {{240, 200}, {240, 170}},
+	    {{240, 140}, {240, 90}}
+	   },
+	   	{
+	    {{240, 270}, {240, 200}},
+--	    {{240, 200}, {240, 170}},
+	    {{240, 140}, {240, 90}}
+	   },
+	}
+	
+	lengths = {}
+	for j = 1, #armature do
+		local temp_lengths = {}
+		for i = 1, #armature[j] do
+			-- sqrt( (x1 - x2)^2 + (y1 - y2)^2 ) 
+			-- pythag theorem to get length
+			local caulc_a = (armature[j][i][1][1] - armature[j][i][2][1])
+			local caulc_b = (armature[j][i][1][2] - armature[j][i][2][2])
+			add(temp_lengths, sqrt(caulc_a * caulc_a + caulc_b * caulc_b))
+		end
+		add(lengths, temp_lengths)
+	end
+	
+	blocks = {
+		{0,270,480,260, 6},
+		{330,230,480,220, 6},
+		{0,100,100,150, 6}
+	}
+	max_distance = 50
+end
+
+function lerp(a, b, t)
+	return a + (b - a) * t
+end
+
+function getCenterOfMass(armature)
+    local sum_x, sum_y, count = 0, 0, 0
+
+    for _, section in ipairs(armature) do
+        for _, segment in ipairs(section) do
+            for _, point in ipairs(segment) do
+                sum_x = sum_x + point[1]
+                sum_y = sum_y + point[2]
+                count = count + 1
+            end
+        end
+    end
+
+    return {sum_x / count, sum_y / count}
+end
+
+function checkFloor(x, y)
+	for i = 0, y, 3 do
+		for j = 1, #blocks do
+			if pointInBox(x,i,blocks[j][1],blocks[j][2],blocks[j][3],blocks[j][4]) and (abs(y - i) < max_distance) then
+				return i
+			end
+		end  		
+		pset(x, i, (pget(x, i) == 6) and 8 or 26)
+	end
+	return 270
+end
+
+function pointInBox(px, py, x1, y1, x2, y2)
+    local x_min, x_max = math.min(x1, x2), math.max(x1, x2)
+    local y_min, y_max = math.min(y1, y2), math.max(y1, y2)
+
+    return px >= x_min and px <= x_max and py >= y_min and py <= y_max
+end
+
+function _update()
+
+	if btnp(5) and debug then
+		debug = false
+	elseif btnp(5) then
+		debug = true
+	end
+	
+	camera(base_pos_default[1]-480/2, base_pos_default[2]-270/2-115)
+
+	base_pos = getCenterOfMass(armature)
+	center_of_mass = getCenterOfMass(armature)
+
+	if btn() != 0 then move_radius = 40 else move_radius = 2 end
+	
+	leg1_rpos = {base_pos_default[1] + leg_spread, checkFloor(leg1_pos[1], leg1_pos[2])}
+	leg2_rpos = {base_pos_default[1] - leg_spread, checkFloor(leg2_pos[1], leg2_pos[2])}
+
+	armature_speed = 3
+
+	if btn(0) then base_pos = {base_pos[1] - armature_speed, base_pos[2]} end
+	if btn(1) then base_pos = {base_pos[1] + armature_speed, base_pos[2]} end
+	
+	if btn(0) then base_pos_default = {base_pos_default[1] - armature_speed, base_pos_default[2]} end
+	if btn(1) then base_pos_default = {base_pos_default[1] + armature_speed, base_pos_default[2]} end
+	
+	if isOutsideRadius(leg1_pos[1], leg1_pos[2], leg1_rpos[1], leg1_rpos[2], move_radius) then
+		leg1_target = leg1_rpos
+	end
+	if isOutsideRadius(leg2_pos[1], leg2_pos[2], leg2_rpos[1], leg2_rpos[2], move_radius) and abs(leg1_target[1] - leg1_pos[1]) <= 0.5 then
+		leg2_target = leg2_rpos
+	end
+	
+	if leg1_target[2] > checkFloor(leg1_target[1], leg1_target[2]) then
+	    leg1_target[2] = checkFloor(leg1_target[1], leg1_target[2]) 
+	end
+	if leg2_target[2] > checkFloor(leg2_target[1], leg2_target[2]) then
+	    leg2_target[2] = checkFloor(leg2_target[1], leg2_target[2]) 
+	end
+
+	
+	lerp_factor = 0.4
+	leg2_pos[1] = lerp(leg2_pos[1], leg2_target[1], lerp_factor)
+	leg2_pos[2] = lerp(leg2_pos[2], leg2_target[2], lerp_factor)
+	
+	leg1_pos[1] = lerp(leg1_pos[1], leg1_target[1], lerp_factor)
+	leg1_pos[2] = lerp(leg1_pos[2], leg1_target[2], lerp_factor)
+	
+	arm_num = 1
+	for j = 1, 4 do -- alternate between forward and backward IK to get close aprox.
+		if j % 2 == 0 then
+			for i = 1, #armature[arm_num] do armature[arm_num][i][2] = FIK(armature[arm_num], i, arm_num,  base_pos) end
+		else
+			for i = 1, #armature[arm_num] do armature[arm_num][i][1] = BIK(armature[arm_num], i, arm_num,  leg1_pos) end
+		end
+	end
+	arm_num = 2
+	for j = 1, 4 do
+		if j % 2 == 0 then
+			for i = 1, #armature[arm_num] do armature[arm_num][i][2] = FIK(armature[arm_num], i, arm_num, base_pos) end
+		else
+			for i = 1, #armature[arm_num] do armature[arm_num][i][1] = BIK(armature[arm_num], i, arm_num, leg2_pos) end
+		end
+	end
+end
+
+function isOutsideRadius(ax, ay, bx, by, radius)
+    local dx = ax - bx
+    local dy = ay - by
+    local distanceSquared = dx * dx + dy * dy 
+    local radiusSquared = radius * radius
+
+    return distanceSquared > radiusSquared
+end
+
+-- forwards IK
+function FIK(points, i, k, base)
+	segment = i
+	if segment == 1 then
+		points[segment][1] = base  -- set first segment to base position
+	else
+		points[segment][1] = points[segment - 1][2]  -- link to previous segments end
+	end
+
+	-- make sure length is the same
+	local x1, y1 = points[segment][1][1], points[segment][1][2]
+	local x2, y2 = points[segment][2][1], points[segment][2][2]
+	local new_x2, new_y2 = shortenLine(x2, y2, x1, y1, lengths[k][segment])
+	points[segment][2] = {new_x2, new_y2}
+	return points[segment][2]
+end
+
+-- backwards IK
+function BIK(points, i, k, target)
+
+	segment = #points - i + 1  -- go backwards
+	if segment == #points then
+		points[segment][2] = target  -- set last segment to target position
+	else
+		points[segment][2] = points[segment + 1][1]  -- link to next segments start
+	end
+
+	-- make sure length is the same
+	local x2, y2 = points[segment][2][1], points[segment][2][2]
+	local x1, y1 = points[segment][1][1], points[segment][1][2]
+	local new_x1, new_y1 = shortenLine(x1, y1, x2, y2, lengths[k][segment])
+	points[segment][1] = {new_x1, new_y1}
+	return points[segment][1]
+end
+
+
+-- shortens line towards x2, y2, by length
+function shortenLine(x1, y1, x2, y2, length)
+	-- direction
+	local dx = x2 - x1
+	local dy = y2 - y1
+	
+	-- original distance
+	local distance = math.sqrt(dx * dx + dy * dy)
+	
+	if distance == 0 then return x1, y1 end
+
+	-- normalize
+	local nx = dx / distance
+	local ny = dy / distance
+
+	-- move `length` units towards `x2, y2`
+	local new_x1 = x2 - nx * length
+	local new_y1 = y2 - ny * length
+	
+	return new_x1, new_y1
+end
+
+
+function _draw()
+	cls()
+	
+	for i = 1, #blocks do
+		rectfill(blocks[i][1], blocks[i][2], blocks[i][3], blocks[i][4], blocks[i][5])
+	end
+	
+	for j = 1, #armature do
+		for i = 1, #armature[j] do
+		   line(armature[j][i][1][1], armature[j][i][1][2], armature[j][i][2][1], armature[j][i][2][2], 7)
+		end
+	end
+	print("Debug: "..tostr(debug).." (press x)", base_pos_default[1]-480/2+10, base_pos_default[2]-250, 5)
+	if debug then
+	
+	rect((max_distance) + leg1_pos[1], (max_distance) + leg1_pos[2], leg1_pos[1] - (max_distance), leg1_pos[2] - (max_distance), 9)
+	rect((max_distance) + leg2_pos[1], (max_distance) + leg2_pos[2], leg2_pos[1] - (max_distance), leg2_pos[2] - (max_distance), 9)
+	
+	print(checkFloor(leg1_pos[1], leg1_pos[2]))
+	print(checkFloor(leg2_pos[1], leg2_pos[2]))
+	
+	circ(base_pos[1], base_pos[2], 7, 10)
+--	line(leg1_pos[1], leg1_pos[2], leg1_pos[1], leg1_pos[2]-30, 11)
+--	line(leg2_pos[1], leg2_pos[2], leg2_pos[1], leg2_pos[2]-30, 11)
+	circ(leg1_target[1], leg1_target[2], 2, 3)
+	circ(leg2_target[1], leg2_target[2], 2, 3)
+	circ(base_pos[1] + leg_spread, base_pos[2] + 20, move_radius, 8)
+	circ(base_pos[1] - leg_spread, base_pos[2] + 20, move_radius, 8)
+	circ(center_of_mass[1], center_of_mass[2], 7, 28)
+	circ(base_pos_default[1], base_pos_default[2], 7, 23)
+	else
+	circfill(center_of_mass[1], center_of_mass[2], 7, 7)
+	end
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTE0IDA5OjE5OjE3Iixtb2RpZmllZD0iMjAyNS0w
+My0wMyAxMjowMzozMyIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzIzMCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iMC5nZngiLHdvcmtzcGFjZV9pbmRl
+eD0yfX1dXQ==
+:: [eoc]

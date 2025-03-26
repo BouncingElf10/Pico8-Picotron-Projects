@@ -1,0 +1,76 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTA3IDE0OjUyOjM2Iixtb2RpZmllZD0iMjAyNC0x
+MS0wOCAxNDozNzo1NyIscmV2aXNpb249MTI5XV1sejQAwQAAAFIxAADzIXtbMF09e2JtcD1weHUA
+QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4A8wcEc1Aj
+WyMwA5sTIAM7TxsrAxADK24bBgD-FQATK24bI0teGwN7PisD6wNbE1sTayMbIwBrHxMzIFsdcEsd
+gHEAHR-wMQD---------------------------------------------------------------_m
+UG09OH19
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTA3IDE1OjAxOjUwIixtb2RpZmllZD0iMjAyNC0x
+MS0wOCAxNDozOTozNSJdXQ==
+:: map/
+:: map/0.map
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTA3IDE0OjUyOjM2Iixtb2RpZmllZD0iMjAyNC0x
+MS0wOCAxNDozNzo1NyIscmV2aXNpb249MTI1XV1sejQAaAAAAFgQAADwCHt7Ym1wPXVzZXJkYXRh
+KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
+CADSeT0wLHRpbGVfaD0xNgoAEHcKAIB6b29tPTF9fQ==
+:: map/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTA3IDE1OjAxOjUwIixtb2RpZmllZD0iMjAyNC0x
+MS0wOCAxNDozOTozNSJdXQ==
+:: sfx/
+:: sfx/0.sfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTA3IDE0OjUyOjM2Iixtb2RpZmllZD0iMjAyNC0x
+MS0wOCAxNDozNzo1NyIscmV2aXNpb249MTI4XV1sejQAdAEAABkLAAD-MHB4dQADKAAABAAED0AQ
+Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
+Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
+-70f-wEArPE0yA9AAA98QB--Dz8PPQ85DzcPNA8xDy8PKw8oD0c-LQ8uDzAPMw81DzwPQg85Dy9f
+Pg8-L0APPx8_Dz0PGA8oDzcPMSAAcTgPOg87DzwYAPE5Lw8uDyIPKC--DzgPNw--HzYv--8kJS--
+HyQP-x8kL-8OHyEODx4OCAcPDA8RDxUODyQPKw8vDy0PJg4PHR8YDxkfGg4tDg8lFgDwJhsPGA8V
+DxMNDxsNDxUPEA8MCA8QDx8PJQ8jDyEODx0PHA4PJg8sDy8PMQ8yDzAPKA0fF-Bw1QBfEED--7AL
+ADAf-wEA-_FQ-----yg=
+:: sfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTA3IDE1OjAxOjUwIixtb2RpZmllZD0iMjAyNC0x
+MS0wOCAxNDozOTozNSJdXQ==
+:: main.lua
+--[[pod_format="raw",created="2024-11-07 14:52:36",modified="2024-11-08 14:37:57",revision=231]]
+function _init()
+	x = 246
+	y = 128
+	dx = 40
+	dy = 40
+	dir = 1
+	color_ = 1
+end
+
+function _update()
+	x += dx
+	y += dy
+	
+	if y > 270 or y < 0 then
+		dy *= -1
+	end
+	if x > 480 or x < 0 then
+		dx *= -1
+	end
+	if (time()*10)%4 == 0 then
+		color_ += 1
+	end
+	if color_ > 31 then
+		color_ = 1
+	end
+end
+
+function _draw()
+	circfill(x,y,abs(sin(time()/20)*35)+7,color_)
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTA3IDE1OjAwOjIxIixtb2RpZmllZD0iMjAyNC0x
+MS0wOCAxNDozOTozNSIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzQiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImdmeC8wLmdmeCIsd29ya3NwYWNlX2lu
+ZGV4PTJ9LHtsb2NhdGlvbj0ibWFwLzAubWFwIix3b3Jrc3BhY2VfaW5kZXg9M30se2xvY2F0aW9u
+PSJzZngvMC5zZngiLHdvcmtzcGFjZV9pbmRleD00fX1dXQ==
+:: [eoc]

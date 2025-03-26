@@ -1,0 +1,481 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTE2IDEwOjM3OjU4Iixtb2RpZmllZD0iMjAyNC0x
+MS0yOCAwODoyMzoyMiIscmV2aXNpb249MTA1OF1dbHo0AH4AAAASMQAA8yF7WzBdPXtibXA9cHh1
+AEMgEBAE8FYHEAfAF9AXwAcQB-BWLGZsYWdzPTAscGFuX3gIAMt5PTAsem9vbT04fSw_AB-wMQD-
+---------------------------------------------------------------XUG09OH19
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTE2IDEwOjM4OjUwIixtb2RpZmllZD0iMjAyNC0x
+MS0yOCAwODoyMzoyMyJdXQ==
+:: map/
+:: map/0.map
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTE2IDEwOjM3OjU4Iixtb2RpZmllZD0iMjAyNC0x
+MS0yOCAwODoyMzoyMiIscmV2aXNpb249MTA1OF1dbHo0AGgAAABYEAAA8Ah7e2JtcD11c2VyZGF0
+YSgiaTE2IiwzMgMALyIwAQD--------------------78QgiKSxoaWRkZW49ZmFsc2UscGFuX3g9
+MAgA0nk9MCx0aWxlX2g9MTYKABB3CgCAem9vbT0xfX0=
+:: map/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTE2IDEwOjM4OjUwIixtb2RpZmllZD0iMjAyNC0x
+MS0yOCAwODoyMzoyMyJdXQ==
+:: sfx/
+:: sfx/0.sfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTE2IDEwOjM3OjU5Iixtb2RpZmllZD0iMjAyNC0x
+MS0yOCAwODoyMzoyMiIscmV2aXNpb249MTA1OF1dbHo0AKAAAAALCgAA-zBweHUAAygAAAQABA9A
+EAIOAAGgASACoA4ADxAADfDKAQIDQA8PkAQFBgdADJAICQoLQAyQDwwPDQ8ODEAM8P8BAOv-J6oB
+EAYPIBABIAEgAfAAAhACDhABIA8hIAEwD0Dwww8oD--wxg-4Cg--D4AP9w8NAfAJARAGDjAA----
+--_9H-8BAKzPyA9AAA8QQP--sPD-AQD-6lD-----KQ==
+:: sfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTE2IDEwOjM4OjUwIixtb2RpZmllZD0iMjAyNC0x
+MS0yOCAwODoyMzoyMyJdXQ==
+:: 3d.lua
+--[[pod_format="raw",created="2024-11-18 14:06:43",modified="2024-11-28 08:23:22",revision=1474]]
+function drawTransform(ve, fa, tX, tY, tZ, rX, rY, rZ, cam, col)
+	local rotated_vertices = ve
+
+	local cos_thetaX, sin_thetaX = cos(-rX), sin(-rX)
+	local cos_thetaY, sin_thetaY = cos(-rY), sin(-rY)
+	local cos_thetaZ, sin_thetaZ = cos(-rZ), sin(-rZ)
+	
+	for i=1, #rotated_vertices do
+		local vector3 = rotated_vertices[i]
+		
+		local temp_x = vector3[1]
+		local temp_y = vector3[2]
+		local temp_z = vector3[3]
+		
+		--transformation
+		temp_x = vector3[1]
+		temp_y = vector3[2]
+		temp_z = vector3[3]
+		vector3[1] = temp_x + tX
+		vector3[2] = temp_y + tY
+		vector3[3] = temp_z + tZ
+		--X axis
+		temp_x = vector3[1]
+		temp_y = vector3[2]
+		temp_z = vector3[3]
+		vector3[1] = temp_x * cos_thetaY + temp_z * sin_thetaY
+		vector3[2] = vector3[2]
+		vector3[3] = -temp_x * sin_thetaY + temp_z * cos_thetaY
+		--Y axis
+		temp_x = vector3[1]
+		temp_y = vector3[2]
+		temp_z = vector3[3]
+		vector3[1] = temp_x
+		vector3[2] = temp_y * cos_thetaX - temp_z * sin_thetaX
+		vector3[3] = temp_y * sin_thetaX + temp_z * cos_thetaX
+		--Z axis
+		temp_x = vector3[1]
+		temp_y = vector3[2]
+		temp_z = vector3[3]
+		vector3[1] = temp_x * cos_thetaZ - temp_y * sin_thetaZ
+		vector3[2] = temp_x * sin_thetaZ + temp_y * cos_thetaZ
+		vector3[3] = vector3[3]
+		
+		rotated_vertices[i] = {vector3[1], vector3[2], vector3[3]}
+   end
+	order = {}
+	avgZValues = {}
+	for i=1, #rotated_vertices do
+		local x, y, z = render(rotated_vertices[i])
+		add(order, z)
+	end
+  	renderFaces(fa, rotated_vertices, col)
+  	return rotated_vertices
+end
+
+function renderFaces(faces, verte, col)
+	for i=1, #faces do
+		local index = i
+		avgZ = 0
+		for j = 1, #faces[i] do
+			avgZ += order[faces[index][j]]
+		end
+		avgZ /= #faces[i]
+		add(avgZValues, avgZ)	
+	end
+		minIndacies = get_min_indices(avgZValues)
+		
+	for i=1, #faces do	
+		local face_index = flip_table(minIndacies)[i]	
+		local coordtbl = {}
+		is_visible = false
+		for j=1, #faces[face_index] do
+			x, y, z = render(verte[faces[face_index][j]])
+			circ(x,y,7-z/3,7)
+			add(coordtbl, x)
+			add(coordtbl, y)
+			if not is_visible then
+				is_visible = not (
+					z > 50 or z < -50 or
+					x < 0 or x > 480 or
+					y < 0 or y > 270
+		    	)
+		    end
+		end
+    	if is_visible then
+			render_quad(coordtbl,face_index+8+col)
+		end
+	end
+end
+
+function render(vert)
+	local vector3draw = vert
+	local distance = 0
+	
+	local x = vector3draw[1]/(vector3draw[3]+distance+9)*360+240
+	local y = vector3draw[2]/(vector3draw[3]+distance+9)*360+135
+	local z = vector3draw[3]
+	return x,y,z
+end
+
+function find_min_index(tbl)
+    local min_idx = 1
+    for i=2,#tbl do
+        if tbl[i].value < tbl[min_idx].value then
+            min_idx = i
+        end
+    end
+    return min_idx
+end
+
+function get_min_indices(tbl)
+    local indices = {}
+    local tempTbl = {}
+
+    for i=1,#tbl do
+        add(tempTbl, {value=tbl[i], original_index=i})
+    end
+
+    while #tempTbl > 0 do
+        local min_idx = find_min_index(tempTbl)
+        add(indices, tempTbl[min_idx].original_index)
+        deli(tempTbl, min_idx)
+    end
+    return indices
+end
+
+function render_quad(crdtbl,col)
+	col = col % 31 + 1
+
+	if not wire_mesh then
+		local n = #crdtbl
+		if n == 6 then
+			tri_fill(crdtbl[1], crdtbl[2], crdtbl[3], crdtbl[4], crdtbl[5], crdtbl[6], col)
+	   else
+			for i = 1, n, 2 do
+		    tri_fill(
+		        crdtbl[(i + 6 - 1) % n + 1],
+		        crdtbl[(i + 7 - 1) % n + 1],
+		        crdtbl[(i + 0 - 1) % n + 1],
+		        crdtbl[(i + 1 - 1) % n + 1],
+		        crdtbl[(i + 2 - 1) % n + 1],
+		        crdtbl[(i + 3 - 1) % n + 1],
+		        col)
+			end
+		end
+	else
+		line(crdtbl[1], crdtbl[2], crdtbl[3], crdtbl[4], col)
+		line(crdtbl[3], crdtbl[4], crdtbl[5], crdtbl[6], col)
+		line(crdtbl[1], crdtbl[2], crdtbl[5], crdtbl[6], col)
+	end
+end
+
+function tri_fill(x1, y1, x2, y2, x3, y3, col)
+    -- Sort the points by their y-coordinates (from top to bottom)
+    if y1 > y2 then x1, y1, x2, y2 = x2, y2, x1, y1 end
+    if y1 > y3 then x1, y1, x3, y3 = x3, y3, x1, y1 end
+    if y2 > y3 then x2, y2, x3, y3 = x3, y3, x2, y2 end
+
+    -- Calculate the slopes of the edges
+    local dx1 = (x2 - x1) / (y2 - y1)
+    local dx2 = (x3 - x1) / (y3 - y1)
+    local dx3 = (x3 - x2) / (y3 - y2)
+
+    -- Draw the scanlines
+    for y = y1, y2 do
+        local x_left = x1 + dx1 * (y - y1)
+        local x_right = x1 + dx2 * (y - y1)
+        line(x_left, y, x_right, y, col)
+    end
+
+    for y = y2, y3 do
+        local x_left = x2 + dx3 * (y - y2)
+        local x_right = x1 + dx2 * (y - y1)
+        line(x_left, y, x_right, y, col)
+    end
+end
+
+function flip_table(tbl)
+    local flipped = {}
+    for i=#tbl, 1, -1 do
+        add(flipped, tbl[i])
+    end
+    return flipped
+end
+:: keyinput.lua
+--[[pod_format="raw",created="2024-11-16 10:39:53",modified="2024-11-16 10:50:39",revision=12]]
+
+:: main.lua
+--[[pod_format="raw",created="2024-11-16 10:37:58",modified="2024-11-28 08:23:22",revision=1463]]
+include("movement.lua")
+include("3d.lua")
+include("models.lua")
+
+function _init()
+	current_key = "none"
+	dy = 0
+	trans_x = 0
+	trans_y = 2
+	trans_z = 4
+	rot_x = 0.09
+	rot_y = 0
+	rot_z = 0
+	character = {}
+	colmap = {}
+	collision = false
+end
+
+function _update()
+	collision = check_ground(load_cube())
+	if not collision then
+		collision = check_ground(load_cube3())
+	end
+	movement_update()
+end
+
+function _draw()
+	cls()
+	vert, faces = load_cube()
+	colmap = drawTransform(vert, faces, trans_x, trans_y, trans_z, rot_x, rot_y, rot_z, true, 0)
+	vert, faces = load_cube3()
+	colmap = drawTransform(vert, faces, trans_x, trans_y, trans_z, rot_x, rot_y, rot_z, true, 18)
+	vert, faces = load_cube2()
+	character = drawTransform(vert, faces, 0, 8, 10, 0.09, 0, 0, true, 9)
+--	print(character[1][2])
+--	print(colmap[1][2])
+--	print(character[8][2])
+--	print(colmap[8][2])
+--	print(intersect(character, colmap))
+	print(trans_x)
+	print(trans_z)
+	print(tostr(collision))
+	print(max_x.." "..min_x)
+	print(stat(7), 0, 60, 7)
+end
+:: models.lua
+--[[pod_format="raw",created="2024-11-26 11:46:13",modified="2024-11-28 08:23:22",revision=236]]
+function load_cube()
+	local vertices = {
+    {-5.000, -1.000, -5.000},  -- Bottom-left-front
+    {-5.000, -1.000, 5.000},   -- Bottom-left-back
+    {-5.000, 1.000, -5.000},   -- Top-left-front
+    {-5.000, 1.000, 5.000},    -- Top-left-back
+    {5.000, -1.000, -5.000},   -- Bottom-right-front
+    {5.000, -1.000, 5.000},    -- Bottom-right-back
+    {5.000, 1.000, -5.000},    -- Top-right-front
+    {5.000, 1.000, 5.000}      -- Top-right-back
+}
+
+	
+	local faces = {
+	    {7, 5, 1, 3},
+	    {8, 7, 3, 4},
+	    {6, 8, 4, 2},
+	    {5, 6, 2, 1},
+	    {8, 6, 5, 7},
+	    {3, 1, 2, 4}
+	}
+	return vertices, faces
+end
+
+function load_cube3()
+	local vertices = {
+    {8.000, -3.000, -5.000},  -- Bottom-left-front
+    {8.000, -3.000, 5.000},   -- Bottom-left-back
+    {8.000, 1.000, -5.000},   -- Top-left-front
+    {8.000, 1.000, 5.000},    -- Top-left-back
+    {18.000, -1.000, -5.000}, -- Bottom-right-front
+    {18.000, -1.000, 5.000},  -- Bottom-right-back
+    {18.000, 1.000, -5.000},  -- Top-right-front
+    {18.000, 1.000, 5.000}    -- Top-right-back
+}
+	
+	local faces = {
+	    {7, 5, 1, 3},
+	    {8, 7, 3, 4},
+	    {6, 8, 4, 2},
+	    {5, 6, 2, 1},
+	    {8, 6, 5, 7},
+	    {3, 1, 2, 4}
+	}
+	return vertices, faces
+end
+
+function load_cube2()
+	local vertices = {
+	    {-1.000, -1.000, -1.000},
+	    {-1.000, -1.000, 1.000},
+	    {-1.000, 1.000, -1.000},
+	    {-1.000, 1.000, 1.000},
+	    {1.000, -1.000, -1.000},
+	    {1.000, -1.000, 1.000},
+	    {1.000, 1.000, -1.000},
+	    {1.000, 1.000, 1.000}
+	}
+	
+	local faces = {
+	    {7, 5, 1, 3},
+	    {8, 7, 3, 4},
+	    {6, 8, 4, 2},
+	    {5, 6, 2, 1},
+	    {8, 6, 5, 7},
+	    {3, 1, 2, 4}
+	}
+	return vertices, faces
+end
+
+function load_prism()
+local vertices = {
+    {1.000, -2.000, 0.000},
+    {1.000, 2.000, 0.000},
+    {0.707, -2.000, 0.707},
+    {0.707, 2.000, 0.707},
+    {0.000, -2.000, 1.000},
+    {0.000, 2.000, 1.000},
+    {-0.707, -2.000, 0.707},
+    {-0.707, 2.000, 0.707},
+    {-1.000, -2.000, 0.000},
+    {-1.000, 2.000, 0.000},
+    {-0.707, -2.000, -0.707},
+    {-0.707, 2.000, -0.707},
+    {-0.000, -2.000, -1.000},
+    {-0.000, 2.000, -1.000},
+    {0.707, -2.000, -0.707},
+    {0.707, 2.000, -0.707}
+}
+
+local faces = {
+    {1, 3, 5, 7, 9, 11, 13, 15},
+    {2, 4, 6, 8, 10, 12, 14, 16},
+    {1, 3, 4, 2},
+    {3, 5, 6, 4},
+    {5, 7, 8, 6},
+    {7, 9, 10, 8},
+    {9, 11, 12, 10},
+    {11, 13, 14, 12},
+    {13, 15, 16, 14},
+    {15, 1, 2, 16}
+}
+	return vertices, faces
+end
+:: movement.lua
+--[[pod_format="raw",created="2024-11-16 11:24:42",modified="2024-11-28 08:23:22",revision=1212]]
+function movement_update()
+    -- Initialize movement variables if not exists
+    move_x = move_x or 0
+    move_y = move_y or 0
+    move_z = move_z or 0
+    velocity_y = velocity_y or 0  -- New: vertical velocity for gravity
+    
+    local move_speed = 0.1
+    local rotation_speed = 0.1
+    local lerp_speed = 0.2
+    
+    -- Physics constants
+    local gravity = 0.015        -- Gravity acceleration
+    local terminal_velocity = 0.5 -- Maximum falling speed
+    local ground_level = max_y + 1.1       -- Ground Y position
+    if collision == false then
+    	ground_level = -10
+    end
+    local jump_force = 0.3       -- Initial jump velocity
+    
+    local target_move_x = 0
+    local target_move_z = 0
+    
+    -- Determine target movement
+    if key(26) then target_move_z = -move_speed end -- W: Move forwards
+    if key(22) then target_move_z = move_speed end  -- S: Move backwards
+    if key(7) then target_move_x = -move_speed end  -- A: Move left
+    if key(4) then target_move_x = move_speed end   -- D: Move right
+    
+    -- Lerp horizontal movement
+    move_x = move_x + (target_move_x - move_x) * lerp_speed
+    move_z = move_z + (target_move_z - move_z) * lerp_speed
+    
+    -- Apply rotated movement
+    trans_x += move_x * cos(rot_y) + move_z * sin(rot_y)
+    trans_z += -move_x * sin(rot_y) + move_z * cos(rot_y)
+    
+    -- Gravity and vertical movement
+    local on_ground = trans_y <= ground_level
+    
+    if on_ground then
+        velocity_y = 0
+        trans_y = ground_level
+        
+        -- Jump when space is pressed (assuming btn(4) is space)
+        if btn(4) then
+            velocity_y = jump_force
+        end
+    else
+        -- Apply gravity when in air
+        velocity_y = velocity_y - gravity
+        -- Limit falling speed to terminal velocity
+        velocity_y = max(velocity_y, -terminal_velocity)
+    end
+    
+    -- Up/Down movement (now only works when on ground)
+    if on_ground then
+        if btn(2) then velocity_y = jump_force end     -- Q: Jump up
+        if btn(3) and trans_y > ground_level then      -- E: Move down
+            velocity_y = -move_speed
+        end
+    end
+    
+    trans_y += velocity_y
+    
+    local target_rot_y = rot_y
+    if btn(1) then target_rot_y -= 0.05 end -- Arrow Left: Rotate left
+    if btn(0) then target_rot_y += 0.05 end -- Arrow Right: Rotate right
+   
+    rot_y = rot_y + (target_rot_y - rot_y) * lerp_speed
+end
+
+function check_ground(loaded_model)
+	local verts, faces = loaded_model
+
+	for i=1, #verts do
+		for j=1, 3 do
+			verts[i][j] *= -1
+		end
+	end
+	
+	max_x, min_x, max_z, min_z = verts[1][1],verts[1][1],verts[1][3],verts[1][3]
+	max_y = 0
+	
+	for i=1, #verts do
+		if verts[i][1] > max_x then max_x = verts[i][1] end
+		if verts[i][1] < min_x then min_x = verts[i][1] end
+		if verts[i][3] > max_z then max_z = verts[i][3] end
+		if verts[i][3] < min_z then min_z = verts[i][3] end
+		if verts[i][2] > max_y then max_y = verts[i][2] end
+	end
+	if trans_x < max_x and trans_x > min_x and trans_z < max_z and trans_z > min_z then
+		return true
+	else
+		return false
+	end
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTE2IDEwOjM4OjUwIixtb2RpZmllZD0iMjAyNC0x
+MS0yOCAwODoyMzoyMyIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzM0Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJtb3ZlbWVudC5sdWEjNzUiLHdvcmtz
+cGFjZV9pbmRleD0xfSx7bG9jYXRpb249IjNkLmx1YSM4MSIsd29ya3NwYWNlX2luZGV4PTF9LHts
+b2NhdGlvbj0ibW9kZWxzLmx1YSMzMiIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZ2Z4
+LzAuZ2Z4Iix3b3Jrc3BhY2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAiLHdvcmtzcGFj
+ZV9pbmRleD0zfSx7bG9jYXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4PTR9fV1d
+:: [eoc]

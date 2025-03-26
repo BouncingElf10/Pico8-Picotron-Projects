@@ -1,0 +1,1532 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAzLTI2IDE0OjE4OjA1Iixtb2RpZmllZD0iMjAyNS0w
+My0yNiAxNDoyODoxMCJdXQ==
+:: 0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAzLTI0IDE0OjU5OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+My0yNiAxNDoyODoxMCIscmV2aXNpb249ODFdXWx6NAABGgAAi1QAAPMhe1swXT17Ym1wPXB4dQBD
+IBAQBPBWBxAHwBfQF8AHEAfwVixmbGFncz0wLHBhbl94CADGeT0wLHpvb209OH0sPgDPKEsCAABL
+AQAABPf-AQAsgRsGwAb3--8uBwDxC0AGDxYNHxVAHgUPFgb3ZQYNBR5ADgUNBvdLHwDgPAYNDvAB
+DgUG9wYF8A4IAGAlBgUO8AAKAPIQRwbADRz3-zgGDvAHDg33BAXwEg4G9yAMDvAGDgz3RR4A8gg2
+Bg7wDAz3AgXwFA4G9xwMDvAKDgb3Qx0A8gU1BfAPDgb3AAXwFgz3GgXwDg33QhoA8gUzBg7wEgzn
+BfAXDfcXBg7wEAX3QRoA0DIGDvAUDdcF8BgM9xUmADIF90AaANAxBg7wFgzHBfAZBvcTJgAzBfc-
+GgAALgDitwXwGQ4G9xIF8BYF9z4ZACAwDRQAkKcF8BoNBvcQDFQAEj0aAPMGLwbwGwUGlwXwGgUM
+9xAO8BgOBvc8GwCwBfABDh08DQXwAg0hAKAODQb3Dg3wAQUNFADyCQENBvcCBgwNHjAeBQwG9wwG
+DAUOIA4FDC4BEAEaAAJhAfAj-w8G8AAODZwF8AAOBocF0A2cDQ7wAA0M9w4O4A4NjAXgBQbnBgXw
+AAUG9wcGDqAFBhdCABDXEwAAcgDyA-8LBeAOzAXwAA0GdwXQDbwO4G8A8AfgDrwF0A4MBrcGDvAE
+Dgz3AwYF4A0HOwAAEgDgBQUG9-8JDtAODUwGZwZkAAE9ABINPQCwBdAODTwWVwYO0A0VARAInAFQ
+Bg7wAQU-AOGnBfAJDff-BwbgDTwGp2QAUGcF0A0MDAABPgBwDtAFPAaHBhMA4HcGDvALDdcGDvAR
+DRyHDQD3AA4G9-8FDdAOPAa3BtAODTsAMBz3CxIA4CwGpw7ABQwGZwYO8A0NrAAwEg0cSAAQDTsA
+gAQF0AUsBtcONQAWVzsAoAb3CgzQDiwGtwU7AMBXBg7wDwWnBfATDRxHAFAPDvf-A80AISznowAC
+OQAQlxIAADoAEA1TAPAJtw3ABRxXBfARDYcG8BQNHGcF8BEF9-8CkwBHHAbnDDgAEQUTACH3CnkA
+4McNwA4cBjcM8BIODHcFOgDyA1cM8BMN9-8BBtAOLPcABtAOHDgAEHdnAUEs9wsFdgDxAAAGnSwG
+Nw7ADgU8DQXQBbQAAD0AABIAYA0sDQUOwO8AYgAM0A4cBkYAIAZHnwImHAZCAPAAzAYnDcAFfA0O
+sA4NBkcMPQEQDQkCIhxHFwBWwA0G9-5CACANDEMAOhkOLEMAQAWwDpw3AWBHBcAFbA0UARBHEwCL
+DQ6wBQz3-g0-ABAYogEh9wo8AfAE9xIGwA08FkcFsAUMBjcFsA4NfFgAEjcWAH0NsA4MBvf9QQBD
+BTz3Cz8A8ggMsA48BmcMsA4cJwYOsAU8BkcOwA0cNxcAEAbWAA5AAEUXBTwGQQBgDbAFLAZ3KgAR
+DBcDQCwGVwxCAAMYAHwOsA0MBvf8AwEQFkMAIQ0FQgAXBSoAEBdJADAcBmfmAhA3cwQKPQABggFm
+FAUNTPcOPABzlw6wDRwXDDkAIg6wOgAACAMi-AY6ABMMOgBXEg4NXAY7ADEcBpcGABEHPQAddzwA
+IQ0MPQATBT0AQEwG9xByAhDXKgEcR0AAJwwGQQAwHPf8IAEAQAATBUAAcxMFLAb3EQ1AAB8NQAAN
+Ev3LAyIADj8AQNANPA0sBDAG9xPOAD-XBsBCAA0xBvf8GgRC5wbgDUIAEExlBOT3EwbgDQwGxwzA
+BRwGF0MAHQ1DAECwBfwNfAFQ4A0G5wXZAwFCAASEABAOnQAmxwVEABGHNwAzBgcGRQAXwEQAEAY1
+AFLXDOAFLIcDITcMiAAAxQMAgwRSDRwGFw1EAAHEAQAiBTQMBndGApDM3RwG9-0F4A5IBQDLAAJF
+APAARw7gDQb3EgbgDgynBg7AOQAAPQKQHAaHDLAOLAYHpAFDDAZ3Bc4CYBwGlw2wDBQEAOQFZJcN
+8AAOLEoAEQ2PADAO4A7GAEHQBSwngQARh5gCEBdUAzMGZwZVAwB8BGCwBvf-AgWLBRFHkwcUBUkA
+EleTABANeQYhRwYHBAGUAwEQAQBMAGQNwAUMVwbgAzEMBofZB2MCBvAbDiyHBUBXDeAOjQCg8BgO
+LAY3DMAFDNMCwg4NLCcM0A4MNwwO4FwEAagBAPUAMPf-AJUEBUAAEgaFAHAM8BgFLAY3GgExDDcG
+YAUSJ_AEEUcUABFHFAAAEAEQDhAEEXc9ANBnDeAODPcTBfAWDjxXUAVCDSwGN1IFUQ3wFA0srABD
+Fw48Bi8AIAYOOgEQElgAEQ6CAFTwEQU8R70FEBLnBHH-AwzwFQ48VgcyDAZ3YQBxBg7wEw08dyQG
+QjwGVw0mBiDwEUUAhPf-BAbwEw5MMgACZAARE8AGANQGQPAOBUxSBjAFHqCzA3HwEA089-8GmAgx
+TAaXNAARh2YAYBQGDvAODiEHAPUGsgVMBncG8AQODQWgBwcQDYIEYP8HBgXwDYIHEqc6AAJuANAV
+BfAMBUwGxwYO8AgOVwAAegdwDg0MDaANHAwAEApXALH3-woMBfAKBVwGtzwA8AOXDeAODfcWBgXw
+CAUNTAb3AA3kBxFctgLxAg4sDQ6QDRy3DQ7wBwVMBvf-jAhk8AgFPAbHCgcAeQCgFgYMDQ7wAg4F
+bLoIEQ3eCfAAbAbnBQ6gDg1MBZANHMcG7AgBxwSQ-w4GLA0VHvADJwTwEAIGzAbHBuwG9xYWHA0V
+HlAeFQ2MBvcEBhwNBR5QHgUNABABUQrRMA4FDVwGJ6zXBhwdBScAcHwG9-8RFnyuAiT3A0YAoBgW
+-AcG9wgG-AVFAPEB7AY3Bpz3AAb8Bhb3-xUGbCwAAHIAENcsAPEOGhb8ARb3DBbsFvcIBqwGVwac
+9wIW-AEG9-8cNgwrAPEHXTZMNvcUJkwm9w4mLCb3GTZMJvf-JhsASv--LA4IACwrBgkAXywG-AAG
+CAAAAwEAkgcGDAUeMB4NDBwAAqcJgrAFYAb3-10MeQkwrQYODwARW9ABoAb3qwZwBvf-WgwOCzGq
+DXA6ACBXDfMKIqkFDgCSVg3wEAz3pwYODwCSVQbwEgb3pgyADgAQBeoKIqYFDgAxVAzQbgqhDsAM
+9wAGDQUOMFMKUA8GDQUgmwsQBeoBAoEKgg0GBQ4QBQynsQABtwERDkUAMAIGDZoBBCMAUA4M9-8S
+3gOAjAWwBccGBdD7BKBwDTcGDpAM9wENoAiyxwVgDgYXBg5QBXfyAHCXDfAEDKcMCQVwxw1wBicF
+UL0IgRAGsA68BaAOwgIQAgcA4HAFJwXABdcN8AMNpwVwJwUxYAVXoAogBndDAAAbA2ACDacNcAwb
+AAFEACANoO8C8AFnBg6QDg2HDPAGDYcGcA4HsQIAWgMQBTIL4HAMBg5wDgwGJw3wCAxnSAAhdw0a
+AGENcA0HBYBjC-EHBaAFLAaXDaANBmcN8AgFdwaABQ7wAXEA8QYHDgZ3BXAegA4NBhcN8AoMVw3w
+BAUoCAAaAFENcA4FkGwBsA0GDqANHAanBq4NNgRwCg1nBvAMDpsAMPAJDn8EUQMODQYHoQMDQwAh
+NwUaADMN8ARBAICgDhwG1wasRxQEtAZXBvANDWcF8AsFPABSBfAMDUc7ACAnBhgABToAEAw6AFDn
+rEcFkB4KQAUOkAU_AAAEBhGg9QkxoAxXRAAyFg6QEAAzDgY3SQAAdw0ZV0kA4fcApjcGkA4NXA0O
+kAxH9wYwDQ6gAQqDkAVsBZAFBkdMAIOADg1cBZAODEsAFBdtADUOBkdRADENoA4sARACFQDgkA18
+DZAFBjcGoAVcDpCTAZMGDoAFjA6ADgxUACAFjmQKAGwBgFcGBZANbAYXdQAAoAQPUwADMAWADhYK
+EIBIBhOQjwCxBicGkA0sFjcMkA3iBgFVBEkGnAZHWABADoAOjM0AazcNwAUNbFgAEDeYAAA6BxKA
+TwBhBSwWFwYODQAgDYDZBiBXBjsAgQWgDowGJwaMKQAFWwARBzAAAUMAIAw3oAIYjF4AkQMNDCcG
+8A8ODVgAERxrAGAOHCcF8A_OASAFkC8AYCdWDA0VLoIIIGcNXQIwZwyQPwoCjgBODaANnFEAPxAN
+DFAAA4YFLBa3DAXwBk0AUQ2QDRx3sQBAJw2QDiwGJxQMTAAxDPAQ7AoQkOUCC00AeQ0cBrcN8AlM
+ACUMBk0AAEUKIP8VBwIPTQALEg5NABEM-gYfCk4AAUEMJw2QQAg-FgawTQAVEZdADg9NAAEgBhdO
+ADD3-xgfD1JnBkwFoC4BK-wHTgBUgA4N-AZPAFIFsAUdHI0CD1MABACPAl8YBaAODFQADREHUwAQ
+l-gCCVEAFAxRABYcUACxDLAOBlcGPA2wDQwfA1qcDZUNDFQAYg2QDZylHFQAEQ0gAwdUAAEpABBn
+OgAHVQAAkAkCBwshDDdHAjB3DIDnAgdVAAEMAFF3DoANR1gAALgANywWJ1oAEXcBAzdnDJBZABAZ
+nA4gRwYnCBA32wMAzAAZR1YAAjUANgaQDFcAAKUCEpBXAAEGCxGQ3w5EkA0cJ1YAQQbwFQ3SAxAM
+bwAnFidSABA3LwBSZwWQDBYAAQAFACEGN-kQMWcNkM8KAN4EZAwOkA4cBlEAEBooCrkMRwWgDTcG
+DaAFHE8BETcxAAFCBiQMBlUAMA4NJ4UKMA0GR8IDZyZXDvAMBVAAASUKIAxH4gUaDU4AIkcFKgAC
+SABw8BEFRwzwACoANQsOLEAAIBsGPwBoVw3wCwUs3QASRxADBD8AEAw-ADAG8AC_BVMJDg0sNz8A
+wRwN8AoOYA0MZwXwCTwLBkIAEVdHCCMNLEIAgAbwEQUWNw7gKwAQCDELA0IAIB0M7QlADA5QDZYQ
+OQcFPEUAALQGEgZgC4CQDQynDfACHhIMETf-EUBXBfAFHAATR0sA_QUeDAXwBAUNHAVQDQyHDQ7w
+Aw4FPFoCIXcGIQASPE4AYbcF4A4FDP0PEUdGDgDeBiUFTE8AEB_nCBDgtggQUMAAMA0O4OUKCFQC
+MYcGDdwSIUwGUwIQx_MFITwNUAYQV8UMYAZ3DAUO0OcKE1dUACAgBngKMUAeBZ4FIVynegrgQB4V
+DVwGhwaMBncGnJciACEOUCIAcXcGnMcGDA0ZCTMNXBY2CQC-DzANBQ5FAAANDjMMDQVRACCXBuAF
+0iEW-AMGN1y3BvwEBpdUAPELtwb8AwaXBpzXBuwWFwasBncGzAaXBvwCBrcyAMIjFtwWVwZM1xbc
+FrcxAACyChG3zQrxAKwWRwacBocGvAa3BtwG1zAAYCcmPDb3EQUAEC6uCuAcJiwmlyYsFscmPCb3
+AQUAH-8BAJWAvvYB9---KvYUC-EbJvYJ9---Iw8P9gr3--8iRtwNdvf--yE2BPAAAQ22J2b3--8Q
+NgzwAg8QLwChD0YPFGANDAVwDQ8A8RQONgxgASYEYA8Q9gf3--8NNgRgCyYEYAEmDA4QAQ1GBBAL
+RhcAADUAACcA8RQTFg8UUA0mBDALNvf--wwPDzYPFFABNgpgCwYKYA8TJgowARkAIjYMSACQBgRw
+ARYMQAENFgD2AAs2BGABFQ5gAQ0GCoANBhcAkgrwAQsmDxIMcBUAESYVAKMM8AAPE2YKYAsWVQAQ
+C6wAQB5wC0YUABIMggCQCzYKYA0WDApgugBBCSYEIFIAUgoPDzYKlwAAcwBAJgQQAccAEAqWAAEV
+AAD1ADQKEAuVAGALJgxwCzZ-AAQqACBGCvAAIHANbAAhDCAFASEJRisBVHAJVgqgJQCB8AMBDVYE
+oA0gAKEIJgwO8AMBdgyQMAARChAA4AABBQ0mDA4AAQ0WCnAJGADQCwj2CwogAQ0WBVABViwBgfYK
+DEALJgQwDgCwDQj2CQxAARwOMAkPAGAQ9gkKoA0KAFAmNgyACc4BYSdGDAowAeYBMCn2A0sNIPYA
+Zhhvxvf--zKGxQICEJd4APAONob3SaZ3xvf-uab3RuYn9gL3-7bG9x9m9w32GGcUBfAQ9gn3ZlYc
+DVb3HPZJp8b3-wD2DPdkNgwKMA029xv2HOkM8SEBDYYMBR5AAQUN9gFn9gP3_-YP92FGCkABRvcZ
+9hsMkAtWDNAN9gA39gf3_fYQ92BxAfAN9xlGCiAJDfYPDKABRgpwDmAL9gAH9gr39wg2BA4PQA1m
+91_FAXA29xhGClALNgHzCAQBDTYEkAENJgpgCQYMcA0mHAUOIA22fACwdvf2CCYM8AcNVqe6A-AS
+pybHJocm9wF2hzYEYA02FyaXFvcDdgRwCxYK8AcNNgqA4QLwHQEWBHAJDoALlgTQCVb39gg2CvAH
+CUZH1nemJ6Y3pieWl9ZHRgxQCdYXlpfGtAKRBPAHCzYKgAsmbQLwIfADC3YE8AINRvf2NgyQAR6g
+C0YH9gMn9iln9gIHdgQwAfYNV_YEcAEmCvAGDSYMkLkA4AsmCvACDWYKgAEOgA02OQAQgNEA8AmQ
+DfZGJ-YODBUN9g8n9gEMcAsmCoALRgT4AgAiAPQBFgxwDTYEDhABDqABVgwOcDkC8Qv1NgSAATYM
+kAv2RheWPPYlB5YsDTYMEAkcFXEAgEYMQAE2BIAJ3wKglgSQCVYKgA0mBHkAIPQIyAAAOgBghgwO
+YAEJwwEQDnsDAgcAEFYHAIELRgwOMAkNtnAAEmYZABVGGQAQARkA0YABDQoACXYEgAFmCjAbAZAG
+DBUOcAklDUbxAgB7AJAEgAs29-Q2DJC9AUALZgXARQBADpANBgUA4SYMDoALFgyADYYKwAk2UADx
+BxYMDoAJFgwOcAuGCvAAAXYKgAtmBDDPACAK8KEAEpAEABIKWADwKQSAAUYKkA1GBPABCzYEoAsG
+BKALJgqQAQYMkAFmDPAACSYKoAsWBKANDKANVgzwAw1WDJANZgwgGAEwAQYMUgABQwABBAAQCVIA
+AhgBAJUC0AEFDnALJgwKkAsWCpCDAjGQBbDVAAH-ASAOkGkAMAUOoBMA8AQLBgxwC1YMgAE2ChAN
+BgwFDUYK2QAh0AEJAAD6AHA2DJAJNvfzAAQygA02UABhcAENBgxwwQEgFgwjAABgAhAEFgAQBH8E
+ACABUPAHATYMcgJBcA1GBBkBMCALdhoAIQSQCAAhNgoQAUALNvfzFwFBHAUOkIgBMRYMgEIAEBYk
+AFAE8AcJJugBIA0WEQUBdAIBWgAAEAIAWgBgCoAJHEANyAFSNgSQDXYhAEKQAUYEWQAzBPAIMwNB
+gAsmBAgAAHYBIAsGvwEAEgUQJrAAAe4BQJAJBgwqACAMgGgAANMAMQEBhgMBMoABhiIAEAuxATA2
+9-JvAyEFASoCADwAESZZAwAzABIOCQBAFgxwAUcEAZIBMwqACX4AEQvCAgDwAQIAASGAC2AAAggB
+YAFG9-I2DFcAIFYKcQMAMgEDBQExDIABEQGRBHALVgUgDxI2YAEBJQADBAAwcAENdgYCCAEQDAgB
+EpAHAQK7ASE2BI0BEJBHACQJFgcBEQSZABABRwER5kABAf0AQQE2CnAFAQBIAEIGDAogBQERDAUB
+EQEFAQNcAQD2ABEM3gAABwEAawIRgP4AE0YIAAFZAAHhAAIQADI2CnACAQDQABAEDQIBUAIDBgEH
+XgEBXAMAfwARFgoBAIcABAoBAggAAHgDEtbjAAIYACEEcDcCEUYyBBIQBwIAWgAHaAITCWgCAbMC
+AegBNw6AAQwBIgEmAAEkDdYMASAEgAQDYHANBYALVtcAQQwWDAXLAgDBAAVkAABrAhANXAABRwAD
+BgECZAAUCQ4BACMDAFMBEdYGAQEOAXEJVgwO8AEL1ANCBCALNmkCEAlpAiNGCgQAAWkCAEIAA1YA
+AQoBIw6AcgMAEQIBAwExC2YMCgEUJhwAMmYM4NoERwQwCSZqAiJGClcBBQoBUKANFgqAQgEANwAC
+-wIBVQQRJlUEEJDTBDIFDgAWAgDvAABxAEFGDA5AtwZglgqAC1YE6wcGdAITRuEAQkb38kYQAQBj
+CCIBDWgBY-AHAQYMJgABYAYMJgTwAgsAIgs2RAMAHQBgDA5AC-YDSgBGBFANJn4DIAFWPwMgDIAm
+AxFWFwAQoOYIAIYEAhMENAgFACcCkwEFASYM8AINJo0AAewEgQ0WBFAL9gME4gAnUAEXATAJVgw3
+AQDTBOE29-NGDKAusAlGBHALDFYDMQzwCSYCUA0mCqABhgoiCyZ2AQERALEmCmABhQ1mDArwBggB
+A48BsA6gDVYEgAkFgAFWCQHwBvAKAWYK8AEJZgSgCwygCwYMoAsmBH0Fc9ANJgygCxYQABEmgAkA
+MAgxBw0WGADhDpAJRgwO0AtWCvACC1bIA2AJAQ2GBNAFABCAVgFBCwYKwOkAsmYMDpABNgTACwTA
+VAHwAgzwBQ0GDPAIARYKwA0MwAsmMgZQVgzgCWbUBmDwBREDDcb1AHAFxgwFMAED1wEAqAGgsAFG
+ClAJDZYMBeQBckYMsAENDLA0AQEOAiDwBogIcQYJJgSwCQYaAEEK4AuGSQBwDXb39Qj2E8oH8iqm
+B-YFHA32Ciz2MhwNNgpgCWWQAfZd9-f2Eif2Byf2LBf2LgpwDWYEgAn2W-f69g9n9gNn9ihH9i0W
+APILC-ZDF-YE9-32C7fWt4Yn9gwHtnemN-YQF5aUAfEZCoAB9i0H9gVX1vf-LTb3EDb3CUb3L3YE
+oAGwAQ1G90lG9-_6RgrwBoMKQRoIRgTZCkD3--8cDQghsAluCrAeplwNtvf--yD2DGoMAXgMESeC
+ChAvHwAPAQAwH4SoIwtbMC41fSzoIx-w2yMMDzEA------------------------------------
+----------------------------h1BtPTh9fQ==
+:: eval.lua
+--[[pod_format="raw",created="2025-03-19 12:24:55",modified="2025-03-26 14:28:10",revision=865]]
+function evaluateMask(qrcode)
+    -- Store the original QR code data
+    local original = {}
+    for i = 0, qrcode:width() - 1 do
+        original[i] = {}
+        for j = 0, qrcode:height() - 1 do
+            original[i][j] = qrcode:get(i, j)
+        end
+    end
+
+    local bestScore = math.huge
+    local bestPattern = -1
+
+    -- Test all 8 mask patterns (0-7)
+    for pattern = 0, 7 do
+        -- Restore original data
+        for i = 0, qrcode:width() - 1 do
+            for j = 0, qrcode:height() - 1 do
+                qrcode:set(i, j, original[i][j])
+            end
+        end
+
+        -- Apply the mask pattern
+        applyQRMask(pattern)
+
+        -- Calculate the penalty score
+        local score = calculatePenaltyScore(qrcode)
+        print("Mask pattern " .. pattern .. " score: " .. score)
+
+        -- Keep track of the best pattern
+        if score < bestScore then
+            bestScore = score
+            bestPattern = pattern
+        end
+    end
+
+    -- Restore original data
+    for i = 0, qrcode:width() - 1 do
+        for j = 0, qrcode:height() - 1 do
+            qrcode:set(i, j, original[i][j])
+        end
+    end
+
+    -- Apply the best mask pattern
+    applyQRMask(bestPattern)
+    
+    return bestPattern, bestScore
+end
+
+function calculatePenaltyScore(qrcode)
+    local score = 0
+    
+    -- Penalty Rule 1: Adjacent modules in row/column in same color
+    score = score + evaluateConsecutiveModules(qrcode)
+    
+    -- Penalty Rule 2: Block of modules in same color
+    score = score + evaluateBlocksOfModules(qrcode)
+    
+    -- Penalty Rule 3: 1:1:3:1:1 pattern in row/column
+    score = score + evaluateFinderPatterns(qrcode)
+    
+    -- Penalty Rule 4: Balance of black and white modules
+    score = score + evaluateModuleBalance(qrcode)
+    
+    return score
+end
+
+function evaluateConsecutiveModules(qrcode)
+    local score = 0
+    local width = qrcode:width()
+    local height = qrcode:height()
+    
+    -- Check rows
+    for y = 0, height - 1 do
+        local lastBit = qrcode:get(0, y)
+        local count = 1
+        
+        for x = 1, width - 1 do
+            local bit = qrcode:get(x, y)
+            if bit == lastBit then
+                count = count + 1
+            else
+                if count >= 5 then
+                    score = score + (count - 5) + 3
+                end
+                count = 1
+                lastBit = bit
+            end
+        end
+        
+        if count >= 5 then
+            score = score + (count - 5) + 3
+        end
+    end
+    
+    -- Check columns
+    for x = 0, width - 1 do
+        local lastBit = qrcode:get(x, 0)
+        local count = 1
+        
+        for y = 1, height - 1 do
+            local bit = qrcode:get(x, y)
+            if bit == lastBit then
+                count = count + 1
+            else
+                if count >= 5 then
+                    score = score + (count - 5) + 3
+                end
+                count = 1
+                lastBit = bit
+            end
+        end
+        
+        if count >= 5 then
+            score = score + (count - 5) + 3
+        end
+    end
+    
+    return score
+end
+
+function evaluateBlocksOfModules(qrcode)
+    local score = 0
+    local width = qrcode:width()
+    local height = qrcode:height()
+    
+    for y = 0, height - 2 do
+        for x = 0, width - 2 do
+            local bit = qrcode:get(x, y)
+            if bit == qrcode:get(x + 1, y) and 
+               bit == qrcode:get(x, y + 1) and 
+               bit == qrcode:get(x + 1, y + 1) then
+                score = score + 3
+            end
+        end
+    end
+    
+    return score
+end
+
+function evaluateFinderPatterns(qrcode)
+    local score = 0
+    local width = qrcode:width()
+    local height = qrcode:height()
+    
+    -- Pattern: 10111010000
+    local pattern1 = {1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0}
+    -- Pattern: 00001011101
+    local pattern2 = {0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1}
+    
+    -- Check rows
+    for y = 0, height - 1 do
+        for x = 0, width - 11 do
+            local matches1 = true
+            local matches2 = true
+            
+            for i = 0, 10 do
+                local bit = qrcode:get(x + i, y)
+                if bit ~= pattern1[i + 1] then
+                    matches1 = false
+                end
+                if bit ~= pattern2[i + 1] then
+                    matches2 = false
+                end
+            end
+            
+            if matches1 or matches2 then
+                score = score + 40
+            end
+        end
+    end
+    
+    -- Check columns
+    for x = 0, width - 1 do
+        for y = 0, height - 11 do
+            local matches1 = true
+            local matches2 = true
+            
+            for i = 0, 10 do
+                local bit = qrcode:get(x, y + i)
+                if bit ~= pattern1[i + 1] then
+                    matches1 = false
+                end
+                if bit ~= pattern2[i + 1] then
+                    matches2 = false
+                end
+            end
+            
+            if matches1 or matches2 then
+                score = score + 40
+            end
+        end
+    end
+    
+    return score
+end
+
+function evaluateModuleBalance(qrcode)
+    local score = 0
+    local width = qrcode:width()
+    local height = qrcode:height()
+    local darkCount = 0
+    local totalCount = width * height
+    
+    for y = 0, height - 1 do
+        for x = 0, width - 1 do
+            if qrcode:get(x, y) == 1 then
+                darkCount = darkCount + 1
+            end
+        end
+    end
+    
+    -- Calculate the percentage of dark modules
+    local darkPercentage = (darkCount * 100) / totalCount
+    
+    -- Calculate the previous and next multiple of 5
+    local prevMultiple = math.floor(darkPercentage / 5) * 5
+    local nextMultiple = prevMultiple + 5
+    
+    -- Calculate how far the percentage is from 50%
+    local distFromPrev = math.abs(darkPercentage - prevMultiple)
+    local distFromNext = math.abs(darkPercentage - nextMultiple)
+    
+    local nearestMultiple = prevMultiple
+    if distFromNext < distFromPrev then
+        nearestMultiple = nextMultiple
+    end
+    
+    -- Calculate the penalty: 10 points for each 5% away from 50%
+    score = math.abs(nearestMultiple - 50) / 5 * 10
+    
+    return score
+end
+:: functions.lua
+--[[pod_format="raw",created="2025-03-06 11:29:54",modified="2025-03-26 14:28:10",revision=1811]]
+-- Converts a number to a bit table with a length
+-- (3, tbl, 6) -> {0,0,0,0,1,1}
+function addBitsToTable(num, bit_table, length)
+    for i = length - 1, 0, -1 do
+        local bit = (num >> i) & 1
+        table.insert(bit_table, bit)
+    end
+end
+
+-- Returns a bit table to a bit number
+-- {0,1,0,1,1,1} -> 0b010111
+function tableToNumber(bit_table)
+    local num = 0
+    for i = 1, #bit_table do
+        num = (num << 1) | bit_table[i]
+    end
+    return num
+end
+
+-- Returns a bit number to a bit table
+-- 0b010111 -> {0,1,0,1,1,1}
+function numberToTable(num, length)
+    local bit_table = {}
+    for i = length - 1, 0, -1 do
+        table.insert(bit_table, (num >> i) & 1)
+    end
+    return bit_table
+end
+
+-- Converts a string to bit table using UTF-8
+-- "Hi" -> {0,0,1,0,1,0...} (Bits to the char's "Hi")
+function stringToBits(str)
+    local result = {}
+    for i = 1, #str do
+        local char = str:sub(i, i)
+        local ascii = string.byte(char)
+        for j = 7, 0, -1 do
+            table.insert(result, (ascii >> j) & 1)
+        end
+    end
+    return result
+end
+-- Merges 2 tables
+-- {1,2,3} + {4,5,6} -> {1,2,3,4,5,6}
+function mergeTables(t1, t2)
+    local result = {}
+    for _, v in ipairs(t1) do
+        table.insert(result, v)
+    end
+    for _, v in ipairs(t2) do
+        table.insert(result, v)
+    end
+    return result
+end
+
+-- BCH ECC for format info
+function formatInfoECC(bit_table)
+    local GENERATOR = 0b10100110111  -- x^10 + x^8 + x^5 + x^4 + x^2 + x + 1
+
+    local format_bits = tableToNumber(bit_table)
+    local data = format_bits << 10
+
+    -- BCH division
+    for i = 14, 10, -1 do
+        if (data & (1 << i)) ~= 0 then
+            data = data ~ (GENERATOR << (i - 10))
+            data = data & 0x7FFF
+        end
+    end
+
+    local error_correction = data & 0x3FF  -- Extract lower 10 bits to return
+    return numberToTable(error_correction, 10)
+end
+
+
+-- Reed-Solomon ECC
+
+-- Precomputed GF(256) log and antilog tables
+local GF_EXP = {}
+local GF_LOG = {}
+
+-- Take the bit XOR of a & b
+local function bitXOR(a, b)
+    local r = 0
+    for i = 0, 7 do
+        local x = a % 2
+        local y = b % 2
+        r = r + ((x ~= y) and 2^i or 0)
+        a = math.floor(a / 2)
+        b = math.floor(b / 2)
+    end
+    return r
+end
+
+-- Takes the bit AND of a & b
+local function bitAND(a, b)
+    local r = 0
+    for i = 0, 7 do
+        local x = a % 2
+        local y = b % 2
+        r = r + ((x == 1 and y == 1) and 2^i or 0)
+        a = math.floor(a / 2)
+        b = math.floor(b / 2)
+    end
+    return r
+end
+
+-- Takes the bit OR of a & b
+local function bitOR(a, b)
+    local r = 0
+    for i = 0, 7 do
+        local x = a % 2
+        local y = b % 2
+        r = r + ((x == 1 or y == 1) and 2^i or 0)
+        a = math.floor(a / 2)
+        b = math.floor(b / 2)
+    end
+    return r
+end
+
+-- Bitwise left shift
+local function bitSHL(a, n)
+    return (a * (2^n)) % 256
+end
+
+-- Bitwise right shift
+local function bitSHR(a, n)
+    return math.floor(a / (2^n))
+end
+
+
+function init_gf()
+    local x = 1
+    for i = 0, 255 do
+        GF_EXP[i] = x
+        GF_LOG[x] = i
+
+        x = bitXOR(x * 2, (x >= 128) and 0x11D or 0)
+    end
+    for i = 256, 511 do
+        GF_EXP[i] = GF_EXP[i - 256]
+    end
+end
+init_gf()
+
+-- GF(256) multiplication
+function gf_mul(x, y)
+    if x == 0 or y == 0 then
+        return 0
+    end
+    -- Use log and antilog tables to multiply in GF(256)
+    local log_sum = (GF_LOG[x] + GF_LOG[y]) % 255
+    return GF_EXP[log_sum]
+end
+
+-- GF(256) addition (which is just XOR)
+function gf_add(x, y)
+    return bitXOR(x, y)
+end
+
+-- Generate the Reed-Solomon generator polynomial
+function generate_generator_poly(ecc_num)
+    local poly = {1}  -- Start with x^0 = 1
+    
+    for i = 0, ecc_num - 1 do
+        local term = {1, GF_EXP[i]}
+        
+        -- Polynomial multiplication
+        local new_poly = {}
+        for j = 1, #poly + #term - 1 do
+            new_poly[j] = 0
+        end
+        
+        for j = 1, #poly do
+            for k = 1, #term do
+                local pos = j + k - 1
+                new_poly[pos] = gf_add(new_poly[pos], gf_mul(poly[j], term[k]))
+            end
+        end
+        poly = new_poly
+    end
+    
+    return poly
+end
+
+-- Convert bit table to byte codewords
+function bits_to_bytes(bits)
+	local bytes = {}
+	for i = 1, #bits, 8 do
+		local byte = 0
+		for j = 0, math.min(7, #bits - i) do
+			if bits[i + j] == 1 then
+				byte = bitOR(byte, bitSHL(1, 7 - j))
+			end
+		end
+		table.insert(bytes, byte)
+	end
+	return bytes
+end
+
+-- Convert byte codewords to bit table
+function bytes_to_bits(bytes)
+    local bits = {}
+    for _, byte in ipairs(bytes) do
+        for i = 7, 0, -1 do
+            table.insert(bits, bitAND(bitSHR(byte, i), 1))
+        end
+    end
+    return bits
+end
+
+-- Reed-Solomon ECC for QR data
+function compute_rs_ecc(data, ecc_level)
+    local ecc_codewords = {
+        [0] = 20,  -- M
+        [1] = 18,  -- L
+        [2] = 26,  -- Q
+        [3] = 16   -- H
+    }
+    local ecc_codewords_count = ecc_codewords[ecc_level]
+    -- Generate the generator polynomial
+    local gen_poly = generate_generator_poly(ecc_codewords_count)
+    
+    -- Copy the input data
+    local msg_poly = {}
+    for i = 1, #data do
+        msg_poly[i] = data[i]
+    end
+    
+    -- Pad with zeros (degree of generator polynomial)
+    for i = 1, ecc_codewords_count do
+        table.insert(msg_poly, 0)
+    end
+    
+    -- Perform polynomial division
+    for i = 1, #data do
+        local lead_term = msg_poly[1]
+        table.remove(msg_poly, 1)
+        table.insert(msg_poly, 0)
+        
+        if lead_term ~= 0 then
+            for j = 2, #gen_poly do
+                msg_poly[j-1] = gf_add(msg_poly[j-1], gf_mul(gen_poly[j], lead_term))
+            end
+        end
+    end
+    
+    -- Extract the remainder as ECC
+    local ecc = {}
+    for i = 1, ecc_codewords_count do
+        table.insert(ecc, msg_poly[i])
+    end
+    
+    return ecc
+end
+
+function numToBits(num)
+    local bits = {}
+    for i = 7, 0, -1 do
+        local bit = math.floor(num / (2^i)) % 2
+        table.insert(bits, bit)
+    end
+    return bits
+end
+
+-- Convert a bits table into 8-bit codewords
+function bitsToCodewords(bits)
+    local codewords = {}
+    for i = 1, #bits, 8 do
+        local cw = 0
+        for j = 0, 7 do
+            cw = cw * 2 + bits[i + j]
+        end
+        table.insert(codewords, cw)
+    end
+    return codewords
+end
+
+-- Converts a block into a bit table
+function blockToBits(block)
+    local bits = {}
+    for _, codeword in ipairs(block) do
+        local cw_bits = numToBits(codeword)
+        for _, bit in ipairs(cw_bits) do
+            table.insert(bits, bit)
+        end
+    end
+    return bits
+end
+
+-- Split a bit table into 8-bit groups
+function splitBitsIntoCodewords(bits)
+    local codewordTables = {}
+    for i = 1, #bits, 8 do
+        local cw = {}
+        for j = 0, 7 do
+            table.insert(cw, bits[i + j])
+        end
+        table.insert(codewordTables, cw)
+    end
+    return codewordTables
+end
+
+-- Split tables in x number of pieces
+-- ({1,2,3,4,5,6}, 2) -> {1,2,3}, {4,5,6}
+-- ({1,2,3,4,5,6}, 3) -> {1,2}, {3,4}, {5,6}
+function splitTable(tbl, pieces)
+    local result = {}
+    local size = math.ceil(#tbl / pieces)
+    for i = 1, #tbl, size do
+        local subTable = {}
+        for j = i, math.min(i + size - 1, #tbl) do
+            table.insert(subTable, tbl[j])
+        end
+        table.insert(result, subTable)
+    end
+    return result
+end
+
+function interleaveCodewords(data_blocks, ec_blocks)
+    local final_codewords = {}
+    local max_length = math.max(#data_blocks[1], #ec_blocks[1])
+
+    -- Interleave data codewords
+    for i = 1, max_length do
+        for j = 1, #data_blocks do
+            if data_blocks[j][i] then
+                table.insert(final_codewords, data_blocks[j][i])
+            end
+        end
+    end
+
+    -- Interleave ECC codewords
+    for i = 1, #ec_blocks[1] do
+        for j = 1, #ec_blocks do
+            if ec_blocks[j][i] then
+                table.insert(final_codewords, ec_blocks[j][i])
+            end
+        end
+    end
+
+    return final_codewords
+end
+
+-- Flip a table
+-- {1,2,3,4,5} -> {5,4,3,2,1}
+function flipTable(tbl)
+    local flipped = {}
+    local len = #tbl
+    for i, v in ipairs(tbl) do
+        flipped[len - i + 1] = v
+    end
+    return flipped
+end
+
+-- Keyboard setup
+
+keys={"1","2","3","4","5","6","7","8","9","0",
+		"q","w","e","r","t","y","u","i","o","p",
+		"a","s","d","f","g","h","j","k","l",
+		"z","x","c","v","b","n","m", ":",
+		"[","]"}
+normal_keys = {
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
+    "`", "-", "=", "[", "]", "\\", ";", "'", ",", ".", "/",
+    " ","space","backspace"
+}
+
+shift_keys = {
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+    "!", "@", "#", "$", "%", "^", "&", "*", "(", ")",
+    "~", "_", "+", "{", "}", "|", ":", "\"", "<", ">", "?",
+    " "
+}
+
+typed_string = ""
+
+-- GUI Setup
+function create_button(x, y, w, h, label, color, hover_color, click_color, tx, ty)
+    return {
+        x = x, y = y, w = w, h = h, tx = tx, ty = ty,
+        label = label,
+        color = color, hover_color = hover_color, click_color = click_color,
+        is_pressed = false,
+
+        is_hovered = function(self, mx, my)
+            return mx >= self.x and mx <= self.x + self.w and
+                   my >= self.y and my <= self.y + self.h
+        end,
+
+        update = function(self)
+            local mx, my, m1 = mouse()
+            if self:is_hovered(mx, my) then
+                if m1 == 1 then
+                    self.is_pressed = true
+                elseif self.is_pressed and m1 == 0 then
+                    self.is_pressed = false
+                    return true
+                end
+            end
+            return false
+        end,
+
+        draw = function(self)
+            local mx, my, m1 = mouse()
+            local col = self.color
+            if self:is_hovered(mx, my) then
+                col = m1 == 1 and self.click_color or self.hover_color
+            end
+            rectfill(self.x, self.y+1, self.x + self.w, self.y + self.h-1, col)
+            rectfill(self.x+1, self.y, self.x + self.w-1, self.y + self.h, col)
+            print(self.label, self.x + self.tx, self.y + self.ty, 7)
+        end
+    }
+end
+
+
+
+:: label.png
+b64$iVBORw0KGgoAAAANSUhEUgAAAeAAAAEOCAIAAADe_FMwAAArqklEQVR4Ae2db0icZ7r-rxFZ
+2F2WWXwRBxIZRc_ynVntCYVWo6Pk_HszNjNKp4vHBkdpjB6DdCrkyEjiKxNGpOBxCbW6pkTFijQW
+HbM7r0KI04m2sITOoP1BM8xIujDmhVRKt-DjcPwd9rFPnzx-7rnnmWfGf98PEibPc93Xfd3X-dyf
+_61pfy9FAAAAjh4FaAEAAEDQAAAAIGgAAICgAQAAQNAAAABBAwAAgKABAABA0AAAAEEDAACAoAEA
+AIIGAAAAQQMAAICgAQAAggYAAABBAwAABA0AAACCBgAACBoAAAAEDQAAAIIGAAAIGgAAAAQNAAAQ
+NAAAAAgaAAAABA0AABA0AAAACBoAACBoAAAAEDQAAEDQAAAAIGgAAAAQNAAAQNAAAAAgaAAAgKAB
+AACcGkGbzJZD-MtdPblbu748RtVz9PeUs0gAIGgAAAAQNAAAQNAAAAAgaAAAABA0AAAcBwoPd-r9
+vVSOMpvMFh2z84zKZzeU9fB0jGcUz1z6Zj-cPQXgJFGAFgAAAAQNAAAAggYAAAgaAACONSazResv
+HE1A0AAcXcLRxNzEeFNdS1Ndi3hum_paOrt75ibGT1s3bt1_0Nndo2zFoYvspFJ4BG8zHaP291I5
+mkuZWTkqnzXzrMKozMdxT42V0ZPQdCi2oXwVim1QjGYWV7z_gLOy_oyt_N7UJH-mzu6emcUV3YU5
+K6sHPxxzVJXl85YKXOtnt4KIOlqbr-T581lYrnm8upmMBNt7fYdVQAHuKABkMjKZLSazZWi0S1VJ
+SkPNLK4IQ_YmxvNQYSi2Ue_oEWZsqmvJ3URzE_NNdS0ms6XeUcPTipnFFaGwnFZ1qoCgAfiZzu6e
+ekeN7uFefyDPbgrFNnJ3K3j9AR4vq1Z16-YDfE4QNADGEI4mmupaZhZXsjemyWzJp568-oDJbDG8
+FVnmHBrtMpktnd09_LQgaACyJXCtPxTbMCrb0GhX-i_YI9iK7C88CBqA086t2w8MtLNAU12LgdJM
+S72j5tbtB9nPODcxbmwrTGbL3MQ4vjF9FKIFh4XJbJE92d9LHWI9ytmVFZ5IwtHE0GiX4WlDsY0z
+d0YcU5N5W8iz7VVrJO6o8mWTZGH_keGFLcw-au-NqioIGoBTSr2jhh3grKxuu3xR_fzh062ZxRXG
+wJnFlSt9fkdVWUb1DA9MW4viqpoLxTbY01VYXdm0oqmuhT2Fs7L6grNLWZ7XH2DfVeFogt2HcDSR
+diM6Wpsz7ScjbUdr8z0jrs-O7h72ZyDsaYPLnumXQEQFOJ8A6LAzETWet6Ud-nh1MxxNGFJJ2_WL
+zspqdsyz7dVspmPbWahB9fLoaG1mD0xGgozCmupa0tpZuIHqHTVzE_P86mSknVlcuXX7QTY7Eo4m
+mupa0tqZiIZGu_odNTq2phAnEJxm0p4Z0c6ltW5HVZnsbXuvr7O7h3FEn4SmrUUXHVW_TAtr71UZ
+0t7rM5kth9Ur0cLKVrQTXenzM2y4vVtOkaCyD011LWlvBRlef8DrDwwPTN_8cYmxrYFr-WkzD412
+DY3q-Gx48ssQ_uOsrP7r58ucQwpwRMFp5vHqJuOts7KaYWeBK31_9hTbu_X5XFEyEszFXeWsrK6w
+uoTfqq3Q6o-As_1V1RkzdZzUrbduP9B6q8OeGZFN-lBsg91qCBqAA0E8CU0zAi44u9Lax1FV1tHa
+zDiNz7ZX_Q9kNg4lIsGh_qZj31VnbMXWorhwVxmyls7unnpHTTYZtBydjfc5K88yf72jprO7hyey
+8DSfz-29lOyJyWzRMUofPHMZhb65jFrpUYZx0pyV1cKPtEpqPG_bWVzJQ7V374ww3ooF6_PZ9mra
+mNJaN_OuYvBia4fO28LRhDjckI49CU3PFcXbe338XcqSuYlxQyqfWVy5NzUJQQOgSTISZAdYi_I8
+SiqtdRMFGG5KRoJEvGobGu0iIq9fM6EWF5xdnAXroMLqIorz3OhzE_Nps926-UDrVUdrc_N5m_zh
+wvwj1as0FNug_ZeujbQCHR6YthbFiWh7t1xodUYw9kVZOXuKW7cfNLjs7M0qwCkF4ATgrKwWvHMs
+eLa9qvVKaef-1eIZW7FWfCi2Ib1oHz7dYszb0dosdslaFB8emHZWVhvVf2Xl1qI4I-_z7VVp5aoU
+4ssGp5bt3fITs5a2yxeFH46qMh3Dw9HEi62dtGE8ydt7feyAuYnxmcUVLc0JP0pr3dK52okaz9u8
+-gAjpzAvYxUdrc2iQ38u8sYlk9nC2aW5ifG0-ZdVXlrrDjlqVIe82NrZtrrYMxbglAJw3OlobT4Z
+9_IZW7HWTVBa6_ZJGIptaIVV-GRDRqosb3SZnWW3jgyh1HA0wUhYiI8bnFqsRfEToObG8zbxv_29
+Pn15HFVld23FFMtHzc_2V-VVaMjsSoc6K6sZWues3OsPEBGR8G8GrWgg_3ES9P5eKm9zmcwWQ2ZX
+5jncmo2KOY57mulZzfREqZKMBA_l-uGBaekdU1rrPhkXZ6YLeba9ai2yhaMJHokbJfr8UHAydhQA
+fTgrq7VehWIb27vlPEkePt1ivD1jK85R8c_2V0Wjtff6slRPhdXFMxeDproWk9mi_nfr9gN8bDpu
+dwganF4cVWVse-JYiYhebO0YWNXwwPTsyKDwx7g-hHm3d8uzV7OAtSie5RpDsQ18VDoIRxNarwrR
+HXCaaTxvm1lc0Xo7s7hypc-PztDZ3cMQk7OyuvG8TXd5F5xdDPEJz8MuuyGCbu-1ef0BhnzPPC0u
+jSb0zfVse3VuIl5a69ZdKsNiFVYXEet2ycO9MjsymIvvE4IGp5rSWjeRppWI6PHqJsMpcxPjDL8T
+0RlbsfAjUzG19-oOpiiKh-yaBgnFNnIiBjVebO3oE6jMoRVWFxGraUcWfZVv75Yz3lqLWFcLBA1O
+NWm9OTTa9SRU-dfPl5Wvbt1_MDTKkjsRNZ63-XQN6KS91_f1s2a5e2eE_vyZXgCqOCurQzHWZUDX
+_unDMeVcTXUtjIGihoSBDS47jaqHzSyuCB1TXyaH4zpam7WuzCehaXJ2ZXSvyGBUvr1bbi2Ki9eq
+lM7uHq2S1sLrjqpLR1fQJrPliB9gZYX7e6m0o5QxPHn0xRy1tR-9PZXBONKimDq7e65IJBiOJgLX
+_tlKMhC2N2cWVyqsLkMEfcHZxV5UKLYRctSshdelrbh7ZySjVjiqytL2XKlRzvgKq4tIPTIU2zhj
+Kyb6WYjCPhpynT8JTVsvX8ymclUKjtdZAsBw7k1NdrQ2s2NmFlfqHTUms0X4q3fU8ChpeGA67cHm
+YfDDMWdlNSNgaLQrHE1k34qbNy7NjgymDZO1Iq2AlO290ufXCvb6A1JphqOJW7cf1Dtq0iYXmtzg
+sjN6NbO4IlbOv4_yy1LL-l5-YG5iPKPKk5GgdAgEDYAKDF-opqO12VoUNySVo6rsgrOLHZOMBA2Z
+q73XZ2wfnJXVjedtyhUxhoRiG1KHDo1qrt1ZWV1hdckyn7EV5_5TYW_E1x-grJyIZJVD0ABoGnB2
+ZDAXViqtdRuivJs3LrEDFuYfzU2MG1L8WnjdWVltVCvaLl9UVb8hs7RdvijcgqW1bvHhvanJ3H0q
+N29cWguvG-KFKCuHoAFQp73XZ8jBE86eaCVjpc94G4ptPHy6FY4mDLmuBj8cM8TRwwPTwg_lhoRZ
+skne0doszcbfK2VjM4qXzaWPC84unmwQNAA-H7y18Lr02Otw6PDAtGjn0lq3IYdZIK00ZxZX7t4Z
+MaoVf-18OZtWzI4Mzo4MWovijD4IDddxEzgrq2dHBhvP28TLVRbw18_XOa9b4TYVdcnJ-l5K93Uu
+FC92hh1cmM8DsL_XOnaHVlmzyWxJO0oZo2-t_ubSVw9PnpOxp2wxOaYmBdnpGN52_SJRPBd2Fmp7
+7OwKxTYYMS_2dgyc8d7U5JU_f72jJqNRHa3NFVYXZx8cVWWOz5eb6lrY65LlF9XMcJyjqsxZWc1O
+K9hZ93YMD0w-CU3zVy4rnucLMZ2wA5al-ni6kTuR6cucz4vn9Hwt4WgiGQkS0cOnW4L4OM9hR2vz
+lT4-j5rFKVRp7-XpG2j43RCOJv738klGgtu75c_2V2WtcFZWE9EZW3GF1WUtOpCyjkqERW3vlj8J
+TRORbAqt-Iwuidy6-UBWtrOy_oKzS5pNrHNuYjyjvRCHaDXnjK2YiKQ3SkadKTy1dgaAgaOqjMhN
+RI3C-8-b2uii4OuZxRXGwJnFlXtTkyeuFUTkpkjQWmQTW6HgJXtmekkcNDwStF6_SERqU_jM3_Cy
+WyNxRdkqdtZHe68vHE2ka47OewuCBoAlJkeVT-hvOJogoiu1bsHCjIEms2V4YPrmjUtp84vJMy1M
+38AsuyFrBRElI0HROC-b3JgpxPziFDryi2mlObWytfdmuyNazdHXGQgagAx8TUSOqcm0jh4a7bp5
+I3XyW5Gze0J2Ox7ZnLluTgEOHgCZcm9q0llZzY4xmS23bj9Ar0A2FB7u9CazRfZkfy9lSEw_4amH
+ZxU8mY3qoVHryl0ezlE8LcoFgx_O0bX_UGyDETM02nXzxuGUByBoAE4vjqoyx_fL4WgiGQkywuYm
+xktr3Y6qMnQM6KAALQAgG02X1rrZMWyDA8CgEC0AIEtHO6p86APIBQVoAQAAQNAAHG-mJsY7u3ua
+6lpMZovw11TXcuv2g7mJcTQH5ALT-l4qf5OZLbIn_mZX5lGizMwzKnd5eDLns8-6YvK5Us7Z8-MB
+d3b3zCyusGM6WpvvTU3CKYeObLPWwuuOqrJjupYCbCcAWoSjCZPZYjJb0tqZiGYWV4TgcDSB1h3i
+lvFsFgQNwPFmbmK83lGjY2C9o2ZuYhwNPBQer24qn8xNjB-TW7MQOwqAklu3HwyNBnQP9-oDRNTe
+60Mn88yT0PRJWg4EDYCccDQxNNqVZRKvP1Ba63ZUlaGf_SQU2zhJyynAjgIgo95Rw3g7PDA9OzIo
+-HW0Njsrq-XlES_Dzu6eproWk9ki-HV299y6-SD7O_bW7QdCwqa6ls7unozGzk2Md3b3iCUJGeYm
+xrMsSVgmI5WyG011LU11LXMT4_FoIg9bf_v2A9nsWU4trEjIpqOBpv29VN6_e5PZInuib3aePIcb
+o_SozZ67PvNg4Epz8QFrLcpZWX3B2WUtisueP3y6NbO4kmnnw9EE2_DOyuq-fr7MOXZ4YPrmjUvs
+zLMjg_29vrSGGhrtYpR0xlZ8b2pS9W1nd4_sD_ISmupaQrEN8XlHa7MsSdpuCKOu9PkdVWUZ1cy5
+I7IKlbey2F6epq2F14U6pd_Ss7J68MMxZf0MCvJmZwCOBbduP9ByU9vli4KdS2vd7b0_8e-e1KSz
+spo-29zEuMlsSeujUGzDZLZwXoFPQtOC5hiZvf5AZ3ePlvGb6lpMZgvbdKHYxsziislsaapr4akq
+FNsQMsvc92JrJxxNiC3i6QYRzSyu1DtqTGbL3MS4sfexyWxh2JmIhka7hDCxbDaPVzc7u3tkexeK
+bTxe3eTMAEEDoMKz7VXV52dsxcKP9l6fo6pM9vaCU9NrsgN56-YDrz_QUUlaVpUd-s7unsC1-rSO
+U7Vb4Fo-21Cq5uWJZGe_dfsB_0rQuml07_-cxLi0cp7eypbDs-AnoemZxRXVV8lIkH_6QhxIAKQy
+VT1XzsrqxvO20lq3Us0CN29cunkjpea_eDISd1T5xPw6fDSzuDKzuLK-l0obxmm39t6DekRJZWRn
+gXpHTUdr872pybQqZ7zV0Q3R7DdvXMpyu01mS6ZDQrGNkKMm7V7o6KcqBTiTAIgkI8Gc5r97Z0TV
+-h2tzcMD07Mjg7Mjg87K6jzcQ2nvJCISSxoemM7mSuApQ9YQcd6O1mbVmCehaa3heUDtJs4JhTiT
+AIhs75Yz3jqqysTfJrOFJ_FaeF0cdev2A1WjtV2__E97x8X-XtjtGhrtkoV1dvdc6fNLa1BldmRQ
+-L0w-ygU29C4h9xCqsC1fmVAR2tz43mbWJK1KD47MqiabW5ivL3Xp7vhytvojK248bxNnNdaZKuw
+upTdIKLHq5vCEm7euHTzRiocTdy9M6Ls8PDAtLXoYCGyfmov-GdUV_31B7Z3y2-euHTqBK387vf3
+Ummf8IxSwpNHX4VGjeJB3_y52x2eUUbt1-Hi2fYq21BS0w2NyiNfbO0kI0FHFcuGMt_dsRVTLE1V
+qgavsLoEO5fWHnj8INgvD97eLQ9HE2mvDWdltdS84oXn_Hw5HE0kI0FZvGxeZTey58XWjvKhrEJG
+D59trxKlF3RHa3OF1SW5IVSuiuMkaABOEo9XN5ORoGDemcUVVT_K1vP6A_xs27vl7IAztmKp3Uqj
+iRdbO6oKZrt_aLTrp59pSnq2vWqNxNNeG22XLzICSmvdYlUPn24R0Yv5RwGNy0MLR1XZY6uLSKXJ
+SuPPTYwzkktvyvZ-dl65dy_2dtLeTMMD09aieKZShqABOH6EYhsXnKI3jxPCtaG0pChWwZhp7ycD
+SXvVZY_zstpadKBmqfEzogDfPQAiDS77IR5pHsLRBDtAVYK548XWTtqYCqurtNbd3utTFhaOJprq
+WkxmSz7tnLaBnJHJSJDxVrhNhYXrLgaCBiA9odgGmpALAtf6j3Vv096XWV6WhfhEAJAep47W5pnF
+FeWrJ6FpunFJ-O-_XiocTSQjQeG-D59uqY5KS0drc_N5G3d4nMie6yY4K6svOLusRXFjG6tqN1U7
+y3qyvVs_NNpl7BqNXV3uyKug9-dSsicmsyVtjBKeUUbF8Myeu1Xoy8PTeX31GDU7zyieGM4iM6Lx
+vE1VtaHYRjiaUBUNEfHY2VlZreojVR4_3VI_rLC6SnN-TkOxjQtOdSGqVpXJBfMSj1c3s76xdFJa
+6yYK8ESGo4kXWzvK52dsxSdN0AAcfdp7fV6-_tGtd9QQ0Vp4XdC0o6qMyH33zgiPnYnogrNLKeiZ
+xZUrfX6l972K_8lZWX1v6pLh61W9Np6Epq2XL7b3_mSqmlF0ZnZkUBbGz7PtVdVLiCheWusWexKO
+JmhU-wKfba9ai_TGd1SVdbQ2Kzfu4dOtK7Vu6ZPAtX7Va1WoU_vCNooCHEgAMqLeUWMyW4S-ekcN
+p52JqMFlV32ejARlT_YmxpVhZ2zF4WjC8OWcsRUrH4ZiGw_fbske3r0zopohF1VJ7Ry41q9aoarf
+lbzY2lF9fqXPr3w4s7ginW5uYlzVzs7KamtRvPRllUPQAOSDtfC6s7I6F9JZC68rn3v9AdH4wp-X
+H1CGVVhdyUjQcBvem5rsaG1WVZWsKq2rSHnBZMPQaJe0IfWOGlVFihV2dveIT6xFcVWVe-0B8VpV
+3gHKePZGEFHb5Yv5_RQhaABUTDr44ViOMuseK9gnmwxaXOnz6xuY5TXWeN5m7EJKa90ZxaveTPyr
+zsVeQNAAcJl0dmQwUwF1tDbPjgyyY-b3Upl6gSdtlotdC69nutjhgem2yxd1aFGkvdeX-U3wYmsn
+HE3wG3NuYlyMvzc1ub_XyvOqM6LwqB0Mk9mi-KDTPlE9BobMblRmnjz6Zuepx6iu6quQZ9QRRNBH
+yL-Br9HG8zaeyHtTky_2dkIxrszOymoxbe6k4Kgqow-HQo4a-sVai_LZz9vR2jyzuMJe-hlbcYXV
+xdmutAmzGWLUqo_xoAE4Uo4urXUnI8Ht3fJn26svtnaISDSF6A7Zod3fS4WjiWQk_M8c6uf5r58v
+CzHbu_VPQtOytESkzCxcGKJPX55FU7uOnybicfRaeF1cLBFJtSVUdcHZJVustKp7U5P3pibnJsYV
+uTWldm9q8kqf--Hq5rPtVXE6tcbG18LryjBlPUINt24-kEZKcyqLEctW3QvVLZaumohu3rh084Zy
+OwxQOQQNQBptEbkpErQW2ei8jYja6KKWfUpr3Y6qMmFUMpI_czJC1qK49fJFtbTyzPlZrKPKNzcx
+bi2yEVHjeRu7JGGx2U_ajAStRTbFdCpzWSPxl8PUJdjgsisi00iztNZNkaDGXhi-aggaACO1JfwO
+RxNElIwEZd5UHtr23oMhDKQxqpnZLpAWln2YsipZSZxV8SxcdYh0OtWJhIWkDVONTFu81i7zLFlf
+nyFoAIyXNREZfg5zmvm4lMQ5HX9Vuus-OntRgCMHAABHk8J8TmYyW2RP9vdSaWOMmosHZT25W_nh
+9jl3NRs1e_52B4DjQgFaAAAAEDQAAAAIGgAAIGgAAAAQNAAAnC4KD3d6k9kie7K-l9IxSokyD88o
+fTUbhb6aeXpoVMdyF5O7-QLg_FKAFgAAAAQNAAAAggYAAAgaAAAABA0AAKeLwsOdfn8vZcgok9mS
+9om_PLmr0KhuKOGZ63Axqs8AnGwK0AIAAICgAQAAQNAAAABBAwAAgKABAOB0YdrfSx2tgsyWtDHK
+mpWjeNalby6j1sWzCn318OThQd-a9a30qH2HABwFCtACAACAoAEAAEDQAAAAQQMAAICgAQDgdGHa
+30udhGWYLYbkUXZDmTl3MfrWpS_Pvn03Ko_BO3gyPmAAVClACwAAAIIGAAAAQQMAAAQNAAAAggYA
+gNNF4VEryGS2yJ7s76V05OEZpZyLJw-PqNytnWd2oyrUl0ffDuazzwAcFwrQAgAAgKABAABA0AAA
+AEEDAACAoAEA4HRRmM-JTGaL7Mn_XuoQRymfKEcpyd0onnUd7u7wrBQAYBQFaAEAAEDQAAAAIGgA
+AICgAQAAQNAAAHC6KMznZPt7KdkTk9miY5S_uZQoZ89dhbmbi2dU7nbHqNkBAEoK0AIAAICgAQAA
+QNAAAABBAwAAyBGFaAEAQCAcTfAHO6rK0LETJWiT2XLE5zoZFe7vpXTkUY4yKo__dSnz5HN3AKfN
+oemTI2gAwBEXLhElI0FG2PZueYPLLh0FR0PQAIA84fUH2AElf-F0v_kUNS2aXUDwtepDkCkFaAEA
+QMr1V1_RPRkemO5obRb-_3xzaWi06-HqpurwcDQhs7PS1wCCBgDo4YOvvpb_t8TuaXDZr-T5P33r
+denzydRvM0oLR_ugEC0AADDoftOp_vwfPywRvRfse1cq9OGB6QaXnYjqHTXCk3Pe_59cPYs2HgNB
+7__lZE9MZoshMconPPBk1pfHqG7kLo__leZzFbmrGajwzRpRieobQbhE9EX8e_nzX-3aQ0RSOxPR
+WPxhAx3EH3wPf1ugq9fR4GMgaADA0ST844Gdd8Z8sld374wQ0cziivRhid0zf-VssO9dWfDu0gK9
+-14yEpQ_fLy6KVoeQNAAAJ18Ef9e9kSmZiI6570-f-UsEZms79FXvWha7ihACwAAAslI8IOvvpY_
+KbF7nJXVWvGu--zX66__onxeWusWf__-1tbgsqO3EDQAICuiC8uyJ91vOgc-HJsdGZQ_-Hb27cer
+m8LvN8p-o5rq07deF370WL5DYyFoAIBOwtGE8OODr76WPj-nvd-gshNRaa1bNmQy9Vvhx4_vN6rm
+-CL_vfBDyEBEjqoytDpTCvM5mclskT3Z30sZEsODMg9PhfrgqZlnpbmrUN9_GQXPSsHRIRkJ8gc-
+Xt1scNkF15fYPeheNhSgBQCcZsLRhJaFP7l6loh2xnxef0D6vMjTJrwiotJa9-VXX5G_HRrtqnfU
+CHae-_i68NBRVYZW66AQLQAAEFF0YVn2RPCskv7yRul-3yj-DX2lEtb9phNdhaABAHr5Zo2ohIgC
+1-pDsa-ZsSV2T-ebzgaXnYiSkaDXHyixe_Y-ul7cP06fyVW_Fl4XfzuqytBpCBoAoJPBD8cGM4mP
+LiwT0fPNpcerzgaXvaO1eWZxRapytBSCBgBkx7-UUzSR6aBkJPjBV18Lv6f_ErIWxV9s7Yhv18Lr
+0mBHVRnarBvT-l7q9C7ebJE9UXZDGaMkd6P0ZeaBZ9956tHXZ6Pq0V0SkBLO3NHBvndFR0sZHphu
+cNlhZ6MoRAsAOOXwa1RUufvOxyRxtMzLUDMEDQA4BJVLHe1GR3JMAVoAAMjI0ey3wh8aBUEDAA7H
+0aoKhpcNpxAtAADo0zSacKIEbTJbDnGp_3upQ5yLZ_08FepbRe46r8xsVIXKPPncQQCOAgVoAQAA
+QNAAAAAgaAAAOP4UogUAAB7C0YTww1FVhm5A0ACAo6Vm6X_PnaZlq5AhLIcdk--76ZAFvb_XylFm
+k9mSt1H68vDE5LM-_ubK5yhwpLwWjiZyrSrZ1Lqn49EuT4zWwnPXikMWNABHUD1pybWYjiDJSDC6
+sPzBV18T0fDAdIPLnlMxqW6N7v2ScvfOyIutnVBsg4hK7J7uN53CWrRiBDpamyusLjFSWYnwRCnu
+LD8nCBrAznrGnhJHi10S7UxEU38JKaV2RLaGfcd4-QHpk_ebS0ObS2uudUaMwMziCtEKjdJa_Odg
+9ofBvwrG5wRBg9POzpjvj599mTbMWVl9wdklikk4fqdE00Qk2lnw2jt-bvvk6tlc27neUSN9Jcgx
+GQkuzD8KxTZ4spXYPfMfXRd_--LLh6oxj1c3hW0N9r0rXWaRp235-fdkNdQ7aoYHpoX4ZCT48OnW
+zOIKEYkPlV4WCiYiseYSu_ff-vDfV-r8slUrPycIGpx2eOwsnK5QbINGDzTBY5m0_maHpU2iFZDR
+7FL475sey3dEPwuaMWM4muBMK6tnZ8wnC3jnz3--5OrZ6MJyKPazRtk831x6vOoU1FncP349-pKC
+BYS3O2M_2avl999TzTkWfzjk6JI9nEz9tkEtWOZ3saqZTZpZXBHuAEb9EDQ47cyODHr9AeVzZ2W1
+4GXlkTvnvf-J1bOifZSmUzWO4CllsNZwnreMAPG5zI_MhNIhsrBP33pdvMmkV5Q0jKcP0mLSLk2G
+6W8LdPW6_87H1Kfi2bQkI0HGqC-i36s_v-7qK7JRu0sLaW8sVTWX2D1-KPi79IvaXVqoX1oYHpgW
+LoljIGiT2aJj1P5eypBRPLPzzKWvHp7ZjeqPvjz6RvHk0dex3FFi9wx_eJ2I7Gou_Hb2bbp6ICl_
+y2TqI6MQ5tW6HjhLLe4fn309_PDpVoXVlWUxnJX8_Hoj-XQlHHwkr7Ux4qXXhlKOjI0Wfmi5233n
+4zfGfMLlVGL3PN9cUg2TGjYZCS7MP1JONP_R_hc1Fn-YQHZpc46uoAHIM9GFZZUr7ScXVLW1kMbR
+VRK41h_KbUifFHna_ssbpadX4O6dkRdbO2Jwid3T-aZTCEtGgg_fbs0srojBwwPTyvMvjj3nvf-J
+1bOqNUgHyoSYjAS9-oCsKtlEyrlK7J4Kq_ZbaSWyV5lWIjREaODy__9JX_2M_ZQyFT0rcP3VV8QY
+cV6tjRYa7qyslu1dy3-9yVX4DyKqqOheC4--VO3vlNXKUAYUedrmf1rFG_W-oa9eeru7tEAvrxGC
+BuAA5Wknoh7Ld0RnieiXXz7kSXL3zohUqdKzN0QLw-SznmTmEni_uTS0ubTmWle11dBol5hBeQd8
+O-v2O3T-k6tnlWOlA6XUO2pUVzE02lUU-1mIyrmeby5N-aQ81Upafmhbfv891UrOpV66SNiVCA0h
+ol--3-8ne-VF-HvGhaolQcZGawl3d2lh5uDnypprnfNzSkaCyof95Y3s_rUowPkEQMY5731Ran-8
+7EtlQIndI-4O9r1b76iR2rnE7ulobZbpSWoie8Ge1tSltW7V55Op3zIK-nb27XpHjapohka7ZEKU
+ObHI03b91VekVnrnz39nzPV8c4mxit2lhcC1ftVKvp19m13JOe-9tbDcg883l2T1KD1bYveI6hfS
+FvePz44MDg9MKxMqN3p2ZJARU2L3DA9Mi-_NLiyr5hF_7Iz5VNcuvZ5V7wkIGgAJ36yJB0b5ssfy
+HXv0-mttwo-AtX7leet_03mlz89QcFVbi_7C2y5f1D12Z8yntM-y___9Uf4bHXNprSIU20hbiWrb
+BclKbwtVsyv54fe-EHIGrvVL_yxqkb3RpbXuT996XVW7a_H1_Y_uS-Oo6lX8YL6If2-sd1qIowpO
+IeEfS4Qfv-zyofLt0GgXjWqOXQuvCz_Cfe_GYvLjWmL3SM_zlHf_-HfBQaqTltg9WjOW2D3zV88K
+v6MLy1pVJSPBhflHWn7cGfP98bMvpU_GB6a1SmU0p8hzcDmpvhUr8foDDDsr34ppVQ3I9uzu0kL9
+0gK7k6p9Yy9f2Ky0FHnaxDyqxZ-z3meXAUGrYzJbZE-291JpY5RP9KGcK3d5eGrmieHpj74Yfbuj
+k2-WiA4E-UX8e-5xUqMlI0HV07j-2oFolPzjhyWi97QmZQyUvtr8H7OWAkpr3faF5ZBGEpmdpXoq
+7h_nz2qUYlKt81e-PtCf6lvBs6W1biJNQauaXUzLRutWYHdSa7NEMvoMMq28x-Id0VlGGYy7_VQL
+GpxOwj8e2HlnzMc_tzKm-hISpeb1qwioxO6Zv3pwFLWSqE4qDtwZ8ymHiMYkolBsQ_lEIUArM8-S
+1sLryoeMOjXfvv_e1vLFSpQ2ZPdNkL7w1qu4ZoTik5GgsCPSCkWiC8tat5qWN1X7xt4d1bfnvPcb
+XAcBWreLeKM4qspkrwpwXMGpRWkK4USthdfXwuvXX31F9ur55lLLf-2JkVA8aapH8Ve-9mhNKg5U
+fctGSJs2syGws4lvVYXIGMvuW395I2NSwaSltW6tWZKR4Ob-mJUDeyzfZVqtjt3hGS5WoqQQpxSc
+TpKR4Adffa1xWs4SUVVbCykCdpcW6P33tHJ_cvWskHnhmwKtt8pJS_ye_atniWhnzKf6Vvy9M_bT
+Sqs1VsicjAQz7Q9jLn2VdP-UWPedj6nvXWnMt7NvP7ZMD412KS9Lcca0Jl0LrycjwdLas8lIcHu3
+vMFlF6Ufin0pG1XkaRMD2NWyPxjp7qj6V1q-6vc2PDAtVgJBA3DAL798qHxYYvdID7bu5KHYBn-w
+D7--BeOEiwLSChD442dyB8nGZgpjLvZb1Vc--P4XUg0pLz_lnWV20xKceKESUWmte2fM5-3sSyI6
+lzqQu2o9v-r1z2JNWy3jexD3TjcMOxORyj0PwAkmHE0wjNb9ppOtPB68-oDy4TnvfSJKRoJao5KR
+oFJAJXZPj_U74ffOmE81gFGJKLjSWrfybb2j5vJ-fCD8vntnJHCtX-yvVjE8b1U12l-eKF3pwvwj
+8b-OymppZEdr8-DA9Fp4fS28nrbV57z3pYLbGfMpd021HrEzqjsirVYMU-0elJFaBPve1foqBBxV
+ZcqAwtN8Vvf3UjnKYzJbdMQYVTPP7DyjjMqsLw9nxzIqQLSzFtLTrgpDiOxX81fPEtEvv3yofLu7
+tFC-tJC2pC-i36ss-7U2dsHJSFDVzgLPN5fqHUtKX0QXlhlzqa7ih9--gt1YsZKF_Ueh2IY44_DV
+s4Mce6dq0h7Ld0QHqpXZWfqKgepalJ_BaliJ3SONfKP8N-RVZrev8FVo2fm0CxqcWlRPOxEFrvUT
+kagPGUWetvn33xN_f-rW61IdCLJLRn6nVFuJ3TP-0XXh94_vN9LLo9gIAl0LrxOR6gnvZmqo3lFT
+YvfM16oXrOSTq2cF0ynnkipPNU9-eSMjs7QSaXu-nX378t88--aH-5bFX_nzy-ZL9c4YGu2iUZXp
+znnvN7gO1sK4SpORoJdjO7TCnm8uPV51io4u7h_nz2pkMS3-9SdX4T9mFlcYXwWDApxVcEoIRxPC
+j50xn9cfUI0JxTa07ExEyz-ZWTiN1199RRbg9QdkaivytEnPYWmtWyv5Oe-9TG_U55tLk6nfsle9
+-1qbWPCnb73OiBwemBZ_aHlcmEvrbuOvRLmKmcUV2V_9o_byf3wgxizMP1K9M7TosXwnlKq6lueb
+S2LatKkC1-q1vpaDG0KC8pPYXVpQ2vmc9770q3BUlWnlL8S5BacNLQGpUmL3-Hv5-3H9578qX7nv
+fOwmSkaCC-OPZFovsXukJ1DKWng9GQmKZ-6lyKsvvRKk2eCy74z5vBo1m-62QFevC2mDfe9KLVbk
+aZPeKIKj1-pJNkVHa3OF1dXgsjNuAnGupO13WraSVrIz5pM2WVzj3TsjL7Z2ODv-fHPpnT_3fXL1
+rHBx8m9ZkadNWA5DrMJKtdI_Xt0UG5LR1OxPovtNp5iWx85EZNrfS_XtYJjMFvmlqphdGcMDTx59
+K_WpR9-s_jIb1Wd9K9VXoVErVc2TQYu_WQv-WJL9Z_yoKgtHE6oHnoi2d8uVh5AxSssdWnl4xhJR
+aa370C9CWSXK_8NV_A9p-MziivJ21LrnTgZsOxNR4QlePAAv8S-1xK1I9nESfsiEK5ioNMNRqpTW
+upV5OFGqWSyA-4YwBGklMjsTUX95o_wGUgp6-7W246Vazg6n9bKIaX8vlbc1mMwW_QbkbHaeuYyq
+R5mHB565clfh4eY5RPRJSutEsbPxj8roeKtOpDVWVgM7LHuDa1WiFHSJ3dP9plNwdDISjC4sywKI
+aC28frwEnfar4FezQOHxOl0AGHiQDiub1qhsauMcyw4zpDmqV4L7zsf0sqOfby4NbS7RqHqSErtn
+-qPrOdq1Y-SNFeDEAgDygPvOx5yRMjufZgrRAgBA7nBUlYWjCeH3WnhdfJ6MBMXf27vlDS671vDT
+3L0CfEAAgFw7WvmwtNYt-sHOEDQA4DAdzW9bIRh2JqLCw53eZLYc4uz7eylDKlTm0bcunlH66jFq
+d-RlNqqHRq0LHKKm0YSMKEALAAAAggYAAABBAwAABA0AAACCBgAACBoAAMARwLS-l0IXAADgCFKA
+FgAAAAQNAAAAggYAAAgaAAAABA0AABA0AAAACBoAAAAEDQAAEDQAAAAIGgAAIGgAAAAQNAAAAAga
+AAAgaAAAABA0AABA0AAAACBoAACAoAEAAEDQAAAAIGgAAICgAQAAQNAAAABBAwAAgKABAABA0AAA
+AEEDAACAoAEAAIIGAAAAQQMAAAQNAAAAggYAAABBAwAABA0AAACCBgCAU8L-B7f_uwrodxqYAAAA
+EHRFWHRMb2RlUE5HADIwMTEwMjIx41m2wQAAAABJRU5ErkJggg==
+:: main.lua
+--[[pod_format="raw",created="2025-03-06 10:19:48",modified="2025-03-26 14:28:10",revision=3136]]
+include"qr.lua"
+include"functions.lua"
+include"eval.lua"
+
+-----
+--qr_encoding_string = "Hello World!"
+qr_encoding_string = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+error_correction = 2
+mask_pattern = 7
+debug = false
+hide_menu_debug = false
+-----
+
+-- gui stuff
+set_str_btn = create_button(2,2, 32, 30, "Set\nStr", 0, 1, 2, 9, 6)
+increase_mask_pattern_btn = create_button(260,55, 10, 10, "<", 0, 1, 2, 4, 1)
+decrease_mask_pattern_btn = create_button(291,55	, 10, 10, ">", 0, 1, 2, 3, 1)
+best_mask_pattern_btn = create_button(330,50, 100, 20, "Caulc Best Pattern", 0, 1, 2, 6, 6)
+
+ECC_btn = create_button(310,94, 77+7, 20, "Change EC Level", 0, 1, 2, 6, 6)
+caulc_QR_btn = create_button(260,200, 74, 20, "Caulculate QR", 0, 1, 2, 6, 6)
+hide_menu_btn = create_button(338,200, 55, 20, "Hide Menu", 0, 1, 2, 6, 6)
+
+copy_btn = create_button(405,2, 28, 30, "Copy\nStr", 0, 1, 2, 5, 6)
+paste_btn = create_button(440,2, 32, 30, "Paste\nStr", 0, 1, 2, 5, 6)
+
+
+function _init()
+
+	qrcode = userdata("u8", 33, 33) -- Init Userdata for QR
+
+	-- qr code stuff now
+	format_info = {}	
+	-- Add ECC level to format info
+	if error_correction == 0 then
+		addBitsToTable(1, format_info, 2)
+		error_correction = 0
+	elseif error_correction == 1 then
+		addBitsToTable(0, format_info, 2) -- Med is 0 and Low is 1 for some reason
+		error_correction = 1
+	elseif error_correction == 2 then
+		addBitsToTable(3, format_info, 2)
+		error_correction = 2
+	elseif error_correction == 3 then
+		addBitsToTable(2, format_info, 2)
+		error_correction = 3
+	end
+	-- Add Maks Pattern to format info
+	-- https://en.wikipedia.org/wiki/QR_code#/media/File:QR_Format_Information.svg
+	-- https://www.thonky.com/qr-code-tutorial/mask-patterns
+	addBitsToTable(mask_pattern, format_info, 3)
+	
+	local ecc_bits = formatInfoECC(format_info) -- Get 10 ECC bits from 5 format bits
+	local full_format = tableToNumber(format_info) << 10 | tableToNumber(ecc_bits) -- Combine 5 format bits and 10 ECC bits
+	full_format = full_format ~ 0x5412 -- XOR the full string with 101010000010010 mask
+	final_format_info = numberToTable(full_format, 15) -- final string of our encoded info
+
+	for i=1, #final_format_info do
+		final_format_info[i] = (final_format_info[i] == 0) and 1 or 0 -- Flip the bits (yes this caused me so much joy when i figured out this was the problem ive been trying to tackle for the last week)
+	end
+
+	-- Drawing
+	setTempQRBackround()
+	placeMarkers()
+	placeTimingPatterns()
+	qrcode:set(8, 25, 0) -- Single preset black pixel (Dark Module)
+	placeFormatInfo(final_format_info)
+	--
+
+	encoding_mode = {}
+	addBitsToTable(4, encoding_mode, 4) -- Hard code for byte mode encoding only
+	
+	string_length = {}
+	addBitsToTable(#qr_encoding_string, string_length, 8) -- Get length of string in bytes
+	-- Combine both to get the header
+	qr_header = mergeTables(encoding_mode, string_length)
+	-- Raw bits of the string
+	string_bits = stringToBits(qr_encoding_string)
+	-- Combine the header and string bits
+	qr_base = mergeTables(qr_header, string_bits)
+	qr_base_term = mergeTables(qr_base, {0,0,0,0}) -- Terminator
+	
+	-- Add padding to round to nearest byte (in most cases, especially in byte mode, will never be used)
+	qr_padding = {}
+	if #qr_base_term % 8 != 0 then
+		for i=1, 8 - (#qr_base_term % 8) do
+			add(qr_padding, 0)
+		end
+	end
+	qr_base_padd = mergeTables(qr_base_term, qr_padding)
+
+	-- Set how many ECC codewords there are per each error correction level
+	-- (for a version 4 QR code)
+	ecc_codewords = 20
+	if error_correction == 0 then 
+		ecc_codewords = 20 
+		data_codewords = 100 - ecc_codewords
+		data_blocks = 1
+	end
+	if error_correction == 1 then 
+		ecc_codewords = 18
+		data_codewords = 100 - ecc_codewords
+		data_blocks = 2
+	end
+	if error_correction == 2 then 
+		ecc_codewords = 26 
+		data_codewords = 100 - ecc_codewords
+		data_blocks = 2 
+	end
+	if error_correction == 3 then  
+		ecc_codewords = 16
+		data_codewords = 100 - ecc_codewords
+		data_blocks = 4
+	end
+	-- Caulculating # of padding codewords to add
+	padding_codewords = (100 - (ecc_codewords * data_blocks )) - #qr_base_padd/8
+	
+	-- Add padding bits to fill out space before ECC bits
+	padding_bits = addPaddingBits(padding_codewords)
+	qr_base_fullpadd = mergeTables(qr_base_padd, padding_bits)
+	
+	-- Convert to bytes
+	qr_fullpadd_bytes = bits_to_bytes(qr_base_fullpadd)
+	-- https://www.thonky.com/qr-code-tutorial/error-correction-table
+	qr_codewords = splitTable(qr_fullpadd_bytes, data_blocks) -- Split table according to ECC level
+	ec_codewords = {}
+	for i = 1, #qr_codewords do
+		-- Caulculate ECC per block
+		add(ec_codewords, compute_rs_ecc(qr_codewords[i], error_correction))
+	end
+	
+	-- Interleave the codewords
+	-- (a1, b1, c1, d1, a2, b2, c2, d2, etc ect...)
+	final_codewords = interleaveCodewords(qr_codewords, ec_codewords)
+	
+	final_qr_bits = bytes_to_bits(final_codewords) -- Convert to bits
+		
+	final_qr_bits = mergeTables(final_qr_bits, {0,0,0,0,0,0,0}) -- Ending 7 Bits to finalize
+	
+	-- Mask important data from mask
+	maskData()
+	
+	-- Add the data to the qr code
+	placeFinalQRData(final_qr_bits)
+	
+	-- bestPattern, bestScore = evaluateMask(qrcode)
+	-- mask_pattern
+	
+	-- Apply the mask, manually set for now
+	applyQRMask(mask_pattern)
+	
+	-- Inverse the mask to protect the markers and such
+	inverseMaskData()
+end
+
+function _update()
+	for i=1,#normal_keys do
+		if keyp(normal_keys[i]) == true then
+			if key("space") then
+				typed_string = typed_string.." "
+				return
+			end
+			if key("backspace") then
+				typed_string = typed_string:sub(1,-2)
+				return
+			end
+			if key("shift") then 
+				typed_string = typed_string..shift_keys[i]
+				return
+			end
+			typed_string = typed_string..normal_keys[i]
+		end
+	end
+	
+	if set_str_btn:update() then
+		qr_encoding_string = typed_string	
+	end
+	if increase_mask_pattern_btn:update() then
+		mask_pattern -= 1
+	end
+	if decrease_mask_pattern_btn:update() then
+		mask_pattern += 1
+	end
+	if best_mask_pattern_btn:update() then
+		mask_pattern = evaluateMask(qrcode)
+		_init()
+	end
+	if ECC_btn:update() then
+		error_correction += 1
+	end
+	if caulc_QR_btn:update() then
+		_init()
+	end
+	if copy_btn:update() then
+		set_clipboard(qr_encoding_string)
+	end
+	if paste_btn:update() then
+		qr_encoding_string = get_clipboard()
+	end
+	if hide_menu_btn:update() then
+		hide_menu_debug = not hide_menu_debug
+	end
+	error_correction %= 4
+	mask_pattern %= 8
+end
+
+function _draw()
+	cls(7)
+--	rectfill(80,28, 400+76, 200+25, 0)
+--	local spri = unpod("b64:bHo0AH4ZAACCIwAA-wJweHUAQyhLAgAASwEAAAT3-wEALIEbBsAG9---LgcA8QtABg8WDR8VQB4FDxYG92UGDQUeQA4FDQb3Sx8A4DwGDQ7wAQ4FBvcGBfAOCABgJQYFDvAACgDyEEcGwA0c9-84Bg7wBw4N9wQF8BIOBvcgDA7wBg4M90UeAPIINgYO8AwM9wIF8BQOBvccDA7wCg4G90MdAPIFNQXwDw4G9wAF8BYM9xoF8A4N90IaAPIFMwYO8BIM5wXwFw33FwYO8BAF90EaANAyBg7wFA3XBfAYDPcVJgAyBfdAGgDQMQYO8BYMxwXwGQb3EyYAMwX3PxoAAC4A4rcF8BkOBvcSBfAWBfc_GQAgMA0UAJCnBfAaDQb3EAxUABI9GgDzBi8G8BsFBpcF8BoFDPcQDvAYDgb3PBsAsAXwAQ4dPA0F8AINIQCgDg0G9w4N8AEFDRQA8gkBDQb3AgYMDR4wHgUMBvcMBgwFDiAOBQwuARABGgACYQHwI-8PBvAADg2cBfAADgaHBdANnA0O8AANDPcODuAODYwF4AUG5wYF8AAFBvcHBg6gBQYXQgAQ1xMAAHIA8gP-CwXgDswF8AANBncF0A28DuBvAPAH4A68BdAODAa3Bg7wBA4M9wMGBeANBzsAABIA4AUFBvf-CQ7QDg1MBmcGZAABPQASDT0AsAXQDg08FlcGDtANFQEQCJwBUAYO8AEFPwDhpwXwCQ33-wcG4A08BqdkAFBnBdANDAwAAT4AcA7QBTwGhwYTAOB3Bg7wCw3XBg7wEQ0chw0A9wAOBvf-BQ3QDjwGtwbQDg07ADAc9wsSAOAsBqcOwAUMBmcGDvANDawAMBINHEgAEA07AIAEBdAFLAbXDjUAFlc7AKAG9woM0A4sBrcFOwDAVwYO8A8FpwXwEw0cRwBQDw73-wPNACEs56MAAjkAEJcSAAA6ABANUwDwCbcNwAUcVwXwEQ2HBvAUDRxnBfARBff-ApMARxwG5ww4ABEFEwAh9wp5AODHDcAOHAY3DPASDgx3BToA8gNXDPATDff-AQbQDiz3AAbQDhw4ABB3ZwFBLPcLBXYA8QAABp0sBjcOwA4FPA0F0AW0AAA9AAASAGANLA0FDsDvAGIADNAOHAZGACAGR58CJhwGQgDwAMwGJw3ABXwNDrAODQZHDD0BEA0JAiIcRxcAVsANBvf_QgAgDQxDADoZDixDAEAFsA6cNwFgRwXABWwNFAEQRxMAiw0OsAUM9-4NPwAQGKIBIfcKPAHwBPcSBsANPBZHBbAFDAY3BbAODXxYABI3FgB9DbAODAb3-UEAQwU89ws-APIIDLAOPAZnDLAOHCcGDrAFPAZHDsANHDcXABAG1gAOQABFFwU8BkEAYA2wBSwGdyoAEQwXA0AsBlcMQgADGAB8DrANDAb3-AMBEBZDACENBUIAFwUqABAXSQAwHAZn5gIQN3MECj0AAYIBZhQFDUz3DjwAc5cOsA0cFww5ACIOsDoAAAgDIvwGOgATDDoAVxIODVwGOwAxHAaXBgARBz0AHXc8ACENDD0AEwU9AEBMBvcQcgIQ1yoBHEdAACcMBkEAMBz3-CABAEAAEwVAAHMTBSwG9xENQAAfDUAADRL9ywMiAA4-AEDQDTwNLAQwBvcTzgA-1wbAQgANMQb3-BoEQucG4A1CABBMZQTk9xMG4A0MBscMwAUcBhdDAB0NQwBAsAX8DXwBUOANBucF2QMBQgAEhAAQDp0AJscFRAARhzcAMwYHBkUAF8BEABAGNQBS1wzgBSyHAyE3DIgAAMUDAIMEUg0cBhcNRAABxAEAIgU0DAZ3RgKQzN0cBvf9BeAOSAUAywACRQDwAEcO4A0G9xIG4A4MpwYOwDkAAD0CkBwGhwywDiwGB6QBQwwGdwXOAmAcBpcNsAwUBADkBWSXDfAADixKABENjwAwDuAOxgBB0AUsJ4EAEYeYAhAXVAMzBmcGVQMAfARgsAb3-wIFiwURR5MHFAVJABJXkwAQDXkGIUcGBwQBlAMBEAEATABkDcAFDFcG4AMxDAaH2QdjAgbwGw4shwVAVw3gDo0AoPAYDiwGNwzABQzTAsIODSwnDNAODDcMDuBcBAGoAQD1ADD3-wCVBAVAABIGhQBwDPAYBSwGNxoBMQw3BmAFEifgBBFHFAARRxQAABABEA4QBBF3PQDQZw3gDgz3EwXwFg48V1AFQg0sBjdSBVEN8BQNLKwAQxcOPAYvACAGDjoBEBJYABEOggBU8BEFPEe9BRAS5wRx-wMM8BUOPFYHMgwGd2EAcQYO8BMNPHckBkI8BlcNJgYg8BFFAIT3-wQG8BMOTDIAAmQAERPABgDUBkDwDgVMUgYwBR6gswNx8BANPPf-BpgIMUwGlzQAEYdmAGAUBg7wDg4hBwD1BrIFTAZ3BvAEDg0FoAcHEA2CBGD-BwYF8A2CBxKnOgACbgDQFQXwDAVMBscGDvAIDlcAAHoHcA4NDA2gDRwMABAKVwCx9-8KDAXwCgVcBrc8APADlw3gDg33FgYF8AgFDUwG9wAN5AcRXLYC8QIOLA0OkA0ctw0O8AcFTAb3-4wIZPAIBTwGxwoHAHkAoBYGDA0O8AIOBWy6CBEN3gnwAGwG5wUOoA4NTAWQDRzHBuwIAccEkP8OBiwNFR7wAycE8BACBswGxwbsBvcWFhwNFR5QHhUNjAb3BAYcDQUeUB4FDQAQAVEK0TAOBQ1cBies1wYcHQUnAHB8Bvf-ERZ8rgIk9wNGAKAYFvwHBvcIBvwFRQDxAewGNwac9wAG-AYW9-8VBmwsAAByABDXLADxDhoW-AEW9wwW7Bb3CAasBlcGnPcCFvwBBvf-HDYMKwDxB102TDb3FCZMJvcOJiwm9xk2TCb3-yYbAEr--ywOCAAsKwYJAF8sBvwABggAAAMBAJIHBgwFHjAeDQwcAAKnCYKwBWAG9-9dDHkJMK0GDg8AEVvQAaAG96sGcAb3-1oMDgsxqg1wOgAgVw3zCiKpBQ4AklYN8BAM96cGDg8AklUG8BIG96YMgA4AEAXqCiKmBQ4AMVQM0G4KoQ7ADPcABg0FDjBTClAPBg0FIJsLEAXqAQKBCoINBgUOEAUMp7EAAbcBEQ5FADACBg2aAQQjAFAODPf-Et4DgIwFsAXHBgXQ_wSgcA03Bg6QDPcBDaAIsscFYA4GFwYOUAV38gBwlw3wBAynDAkFcMcNcAYnBVC9CIEQBrAOvAWgDsICEAIHAOBwBScFwAXXDfADDacFcCcFMWAFV6AKIAZ3QwAAGwNgAg2nDXAMGwABRAAgDaDvAvABZwYOkA4NhwzwBg2HBnAOB7ECAFoDEAUyC_BwDAYOcA4MBicN8AgMZ0gAIXcNGgBhDXANBwWAYwvxBwWgBSwGlw2gDQZnDfAIBXcGgAUO8AFxAPEGBw4GdwVwHoAODQYXDfAKDFcN8AQFKAgAGgBRDXAOBZBsAbANBg6gDRwGpwauDTYEcAoNZwbwDA6bADDwCQ5-BFEDDg0GB6EDA0MAITcFGgAzDfAEQQCAoA4cBtcGrEcUBLQGVwbwDQ1nBfALBTwAUgXwDA1HOwAgJwYYAAU6ABAMOgBQ56xHBZAeCkAFDpAFPgAABAYRoPUJMaAMV0QAMhYOkBAAMw4GN0kAAHcNGVdJAOH3AKY3BpAODVwNDpAMR-cGMA0OoAEKg5AFbAWQBQZHTACDgA4NXAWQDgxLABQXbQA1DgZHUQAxDaAOLAEQAhUA4JANfA2QBQY3BqAFXA6QkwGTBg6ABYwOgA4MVAAgBY5kCgBsAYBXBgWQDWwGF3UAAKAED1MAAzAFgA4WChCASAYTkI8AsQYnBpANLBY3DJAN4gYBVQRJBpwGR1gAQA6ADozNAGs3DcAFDWxYABA3mAAAOgcSgE8AYQUsFhcGDg0AIA2A2QYgVwY7AIEFoA6MBicGjCkABVsAEQcwAAFDACAMN6ACGIxeAJEDDQwnBvAPDg1YABEcawBgDhwnBfAPjgEgBZAvAGAnVgwNFS6CCCBnDV0CMGcMkD8KAo4ATg2gDZxRAD8QDQxQAAOGBSwWtwwF8AZNAFENkA0cd7EAQCcNkA4sBicUDEwAMQzwEOwKEJDlAgtNAHkNHAa3DfAJTAAlDAZNAABFCiD-FQcCD00ACxIOTQARDP4GHwpOAAFBDCcNkEAIPxYGsE0AFRGXQA4PTQABIAYXTgAw9-8YHw9SZwZMBaAuASv8B04AVIAODfwGTwBSBbAFHRyNAg9TAAQAjwJfGAWgDgxUAA0RB1MAEJf4AglRABQMUQAWHFAAsQywDgZXBjwNsA0MHwNanA2VDQxUAGINkA2cpRxUABENIAMHVAABKQAQZzoAB1UAAJAJAgcLIQw3RwIwdwyA5wIHVQABDABRdw6ADUdYAAC4ADcsFidaABF3AQM3ZwyQWQAQGZwOIEcGJwgQN9sDAMwAGUdWAAI1ADYGkAxXAAClAhKQVwABBgsRkN8ORJANHCdWAEEG8BUN0gMQDG8AJxYnUgAQNy8AUmcFkAwWAAEABQAhBjf5EDFnDZDPCgDeBGQMDpAOHAZRABAaKAq5DEcFoA03Bg2gBRxPARE3MQABQgYkDAZVADAODSeFCjANBkfCA2cmVw7wDAVQAAElCiAMR_IFGg1OACJHBSoAAkgAcPARBUcM8AAqADULDixAACAbBj8AaFcN8AsFLN0AEkcQAwQ-ABAMPwAwBvAAvgVTCQ4NLDc-AMEcDfAKDmANDGcF8Ak8CwZCABFXRwgjDSxCAIAG8BEFFjcO4CsAEAgxCwNCACAdDO0JQAwOUA2WEDkHBTxFAAC0BhIGYAuAkA0Mpw3wAh4SDBE3-xFAVwXwBRwAE0dLAPkFHgwF8AQFDRwFUA0Mhw0O8AMOBTxaAiF3BiEAEjxOAGG3BeAOBQz9DxFHRg4A3gYlBUxPABAfpwgQ4LYIEFDAADANDuDlCghUAjGHBg3cEiFMBlMCEMfjBSE8DVAGEFfFDGAGdwwFDtDnChNXVAAgIAZ4CjFAHgWeBSFcp3oK4EAeFQ1cBocGjAZ3BpyXIgAhDlAiAHF3BpzHBgwNGQkzDVwWNgkAvw8wDQUORQAADQ4zDA0FUQAglwbgBdIhFvwDBjdctwb8BAaXVADxC7cG-AMGlwac1wbsFhcGrAZ3BswGlwb8Aga3MgDCIxbcFlcGTNcW3Ba3MQAAsgoRt80K8QCsFkcGnAaHBrwGtwbcBtcwAGAnJjw29xEFABAurgrgHCYsJpcmLBbHJjwm9wEFAB--AQCVgL72Aff--yr2FAvxGyb2Cff--yMPD-YK9---IkbcDXb3--8hNgTwAAENtidm9---EDYM8AIPEC8AoQ9GDxRgDQwFcA0PAPEUDjYMYAEmBGAPEPYH9---DTYEYAsmBGABJgwOEAENRgQQC0YXAAA1AAAnAPEUExYPFFANJgQwCzb3--8MDw82DxRQATYKYAsGCmAPEyYKMAEZACI2DEgAkAYEcAEWDEABDRYA9gALNgRgARUOYAENBgqADQYXAJIK8AELJg8SDHAVABEmFQCjDPAADxNmCmALFlUAEAusAEAecAtGFAASDIIAkAs2CmANFgwKYLoAQQkmBCBSAFIKDw82CpcAAHMAQCYEEAHHABAKlgABFQAA9QA0ChALlQBgCyYMcAs2fwAEKgAgRgrwACBwDWwAIQwgBQEhCUYrAVRwCVYKoCUAgfADAQ1WBKANIAChCCYMDvADAXYMkDAAEQoQAOAAAQUNJgwOAAENFgpwCRgA0AsI9gsKIAENFgVQAVYsAYH2CgxACyYEMA4AsA0I9gkMQAEcDjAJDwBgEPYJCqANCgBQJjYMgAnOAWEnRgwKMAHmATAp9gNLDSD2AGYYb8b3--8yhsUCAhCXeADwDjaG90mmd8b3-7mm90bmJ-YC9-_2xvcfZvcN9hhnFAXwEPYJ92ZWHA1W9xz2SafG9-8A9gz3ZDYMCjANNvcb9hzpDPEhAQ2GDAUeQAEFDfYBZ-YD9-v2D-dhRgpAAUb3GfYbDJALVgzQDfYAN-YH9-n2EPdgcQHwDfcZRgogCQ32DwygAUYKcA5gC-YAB-YK9-cINgQOD0ANZvdfhQFwNvcYRgpQCzYB8wgEAQ02BJABDSYKYAkGDHANJhwFDiANtnwAsHb39ggmDPAHDVanugPwEqcmxyaHJvcBdoc2BGANNhcmlxb3A3YEcAsWCvAHDTYKgOEC8B0BFgRwCQ6AC5YE0AlW9-YINgrwBwlGR9Z3piemN6YnlpfWR0YMUAnWF5aXxrQCkQTwBws2CoALJm0C8CHwAwt2BPACDUb39jYMkAEeoAtGB-YDJ-YpZ-YCB3YEMAH2DVfmBHABJgrwBg0mDJC5AOALJgrwAg1mCoABDoANNjkAEIDRAPAJkA32Rif2DgwVDfYPJ-YBDHALJgqAC0YE_AIAIgD0ARYMcA02BA4QAQ6gAVYMDnA5AvEL9TYEgAE2DJAL9kYXljz2JQeWLA02DBAJHBVxAIBGDEABNgSACd8CoJYEkAlWCoANJgR5ACD0CMgAADoAYIYMDmABCcMBEA57AwIHABBWBwCBC0YMDjAJDbZwABJmGQAVRhkAEAEZANGAAQ0KAAl2BIABZgowGwGQBgwVDnAJJQ1G8QIAewCQBIALNvf0NgyQvQFAC2YFwEUAQA6QDQYFAOEmDA6ACxYMgA2GCsAJNlAA8QcWDA6ACRYMDnALhgrwAAF2CoALZgQwzwAgCvChABKQBAASClgA8CkEgAFGCpANRgTwAQs2BKALBgSgCyYKkAEGDJABZgzwAAkmCqALFgSgDQygDVYM8AMNVgyQDWYMIBgBMAEGDFIAAUMAAQQAEAlSAAIYAQCVAtABBQ5wCyYMCpALFgqQgwIxkAWw1QAB-wEgDpBpADAFDqATAPAECwYMcAtWDIABNgoQDQYMBQ1GCtkAIdABCQAA_gBwNgyQCTb38wAEMoANNlAAYXABDQYMcMEBIBYMIwAAYAIQBBYAEAR-BAAgAVDwBwE2DHICQXANRgQZATAgC3YaACEEkAgAITYKEAFACzb38xcBQRwFDpCIATEWDIBCABAWJABQBPAHCSboASANFhEFAXQCAVoAABACAFoAYAqACRxADcgBUjYEkA12IQBCkAFGBFkAMwTwCDMDQYALJgQIAAB2ASALBr8BABIFECawAAHuAUCQCQYMKgAgDIBoAADTADEBAYYDATKAAYYiABALsQEwNvfybwMhBQEqAgA8ABEmWQMAMwASDgkAQBYMcAFHBAGSATMKgAl_ABELwgIA8AECAAEhgAtgAAIIAWABRvfyNgxXACBWCnEDADIBAwUBMQyAAREBkQRwC1YFIA8SNmABASUAAwQAMHABDXYGAggBEAwIARKQBwECuwEhNgSNARCQRwAkCRYHAREEmQAQAUcBEeZAAQH9AEEBNgpwBQEASABCBgwKIAUBEQwFAREBBQEDXAEA9gARDN4AAAcBAGsCEYD_ABNGCAABWQAB4QACEAAyNgpwAgEA0AAQBA0CAVACAwYBB14BAVwDAH8AERYKAQCHAAQKAQIIAAB4AxLW4wACGAAhBHA3AhFGMgQSEAcCAFoAB2gCEwloAgGzAgHoATcOgAEMASIBJgABJA3WDAEgBIAEA2BwDQWAC1bXAEEMFgwFywIAwQAFZAAAawIQDVwAAUcAAwYBAmQAFAkOAQAjAwBTARHWBgEBDgFxCVYMDvABC9QDQgQgCzZpAhAJaQIjRgoEAAFpAgBCAANWAAEKASMOgHIDABECAQMBMQtmDAoBFCYcADJmDODaBEcEMAkmagIiRgpXAQUKAVCgDRYKgEIBADcAAv8CAVUEESZVBBCQ0wQyBQ4AFgIA7wAAcQBBRgwOQLcGYJYKgAtWBOsHBnQCE0bhAEJG9-JGEAEAYwgiAQ1oAWPwBwEGDCYAAWAGDCYE8AILACILNkQDAB0AYAwOQAv2A0oARgRQDSZ_AyABVj8DIAyAJgMRVhcAEKDmCACGBAITBDQIBQAnApMBBQEmDPACDSaNAAHsBIENFgRQC-YDBOIAJ1ABFwEwCVYMNwEA0wThNvfzRgygLrAJRgRwCwxWAzEM8AkmAlANJgqgAYYKIgsmdgEBEQCxJgpgAYUNZgwK8AYIAQOPAbAOoA1WBIAJBYABVgkB8AbwCgFmCvABCWYEoAsMoAsGDKALJgR9BXPQDSYMoAsWEAARJoAJADAIMQcNFhgA4Q6QCUYMDtALVgrwAgtWyANgCQENhgTQBQAQgFYBQQsGCsDpALJmDA6QATYEwAsEwFQB8AIM8AUNBgzwCAEWCsANDMALJjIGUFYM4Alm1AZg8AURAw3G9QBwBcYMBTABA9cBAKgBoLABRgpQCQ2WDAXkAXJGDLABDQywNAEBDgIg8AaICHEGCSYEsAkGGgBBCuALhkkAcA129-UI9hPKB-Iqpgf2BRwN9gos9jIcDTYKYAllkAH2Xff39hIn9gcn9iwX9i4KcA1mBIAJ9lv3_vYPZ-YDZ-YoR-YtFgDyCwv2Qxf2BPf99gu31reGJ-YMB7Z3pjf2EBeWlAHxGQqAAfYtB-YFV9b3-y029xA29wlG9y92BKABsAENRvdJRvf-ukYK8AaDCkEaCEYE2QpA9---HA0IIbAJbgqwHqZcDbb3--8g9gxqDAF4DBEnggoQLx8ADwEALFD-----hA==")
+	local sprx, spry = 
+	sspr(spri,0,0, 590, 300, 80,28, 400, 200)
+	local qr_size = 6
+	local qr_x = qr_size*6
+	local qr_y = qr_size*6
+	if #final_codewords <= 100 then
+		for i = 0, qrcode:width() - 1 do
+			for j = 0, qrcode:height() - 1 do
+				local pcolor = qrcode:get(i, j) * 7 -- either 0 or 7 (from 0 and 1)
+				local x = i * qr_size + qr_x
+				local y = j * qr_size + qr_y
+				pset(x, y, pcolor)
+				rectfill(x, y, x + qr_size, y + qr_size, pcolor)
+			end
+		end
+	end
+	
+	hide_menu_btn:draw()
+	
+	if not hide_menu_debug then
+	set_str_btn:draw()
+	print("Mask Pattern:", 260, 40, 0)
+	increase_mask_pattern_btn:draw()
+	print(mask_pattern, 279, 57, 0)
+	decrease_mask_pattern_btn:draw()
+	best_mask_pattern_btn:draw()
+	print("Error Correction Level:", 260, 80, 0)
+	ECC_btn:draw()
+	print(" "..returnECLevel(error_correction), 260, 100, 0)
+	line(262,110,304,110,0)
+	caulc_QR_btn:draw()
+	copy_btn:draw()
+	paste_btn:draw()
+
+	mx, my, mp = mouse()
+	mxqr = flr(mx/qr_size+(qr_x/qr_size-12))
+	myqr = flr(my/qr_size+(qr_y/qr_size-12))
+	
+	if mp != 0 then
+		qrcode:set(mxqr, myqr, 4)
+	end
+	
+	local shift = 70
+	local ishift = 10
+	if not debug then
+	
+	print("'"..qr_encoding_string.."'", 30+ishift,8,0)
+	print("Input: "..typed_string, 34+ishift, 21,0)
+	if flr(time()*4) % 2 == 0 then rectfill(68+#typed_string*5+ishift,20,72+#typed_string*5+ishift,28, 0) end
+	if #final_codewords > 100 then
+		print("Too many codewords! Try lowering the ECC level \nor shortening your input string!", 20,270/2-10,8)
+	end
+	
+	
+	else
+	print(mxqr.." "..myqr, mx, my-10, 8)
+	print(error_correction, 350-shift, 2, 0)
+	print(mask_pattern)
+	print(format_info_placement_index)
+	print(#encoding_mode)
+	print(#string_length.." "..#qr_encoding_string)
+	print(#string_bits.." "..#qr_encoding_string * 8)
+	
+	print(#qr_base_padd.." "..#qr_base_padd/8)
+	print(100 - (padding_codewords + #qr_base_padd/8))
+	print(#qr_fullpadd_bytes)
+	print(#ec_codewords[1].." ")
+	print(#final_codewords)
+--	print(bestPattern.." "..bestScore)
+	
+	for i=1, #format_info do
+		local text_color = 0
+		if i <= 2 then text_color = 0 else text_color = 11 end
+		print(format_info[i], 400-shift, -8+i*10, text_color)
+	end
+	for i=1, #final_format_info do
+		local text_color = 0
+		if i <= 5 then text_color = 0 else text_color = 11 end
+		print(final_format_info[i], 406-shift, -8+i*10, text_color)
+	end
+	
+	for i=1, #string_bits do 
+		local text_color = 0
+		if i <= 4 then 
+			text_color = 0 
+		elseif i <= 4 + 8 then
+			text_color = 11 
+		else
+			text_color = 0 
+		end
+		print(qr_header[i], 420-shift, -8+i*10, text_color)
+	end
+	for i=1, #string_bits do 
+		local text_color = 0
+		if i <= 4 then 
+			text_color = 0 
+		elseif i <= 4 + 8 then
+			text_color = 11 
+		else
+			text_color = 0 
+		end
+		print(flr(qr_base_padd[i]), 426-shift, -8+i*10, text_color)
+	end
+	
+	for i=1, #string_bits do 
+		print(flr(qr_fullpadd_bytes[i]), 443-shift, -8+i*10, text_color)
+	end
+	for i=1, #string_bits do 
+		print(flr(final_codewords[i]), 463-shift, -8+i*10, text_color)
+	end
+	for i=1, #ec_codewords[1] do 
+		print(flr(ec_codewords[1][i]), 483-shift, -8+i*10, text_color)
+		local bits = {}
+		addBitsToTable(ec_codewords[1][i], bits, 8)
+		print(table.concat(bits), 503-shift, -8+i*10, text_color)
+	end
+	end
+	end
+end
+:: qr.lua
+--[[pod_format="raw",created="2025-03-06 11:29:48",modified="2025-03-26 14:28:10",revision=1677]]
+-- Vertical and horizontal timing strips
+function placeTimingPatterns()
+    for i = 8, 24 do  -- Avoid finder patterns
+        qrcode:set(i, 6, (i % 2 == 0) and 0 or 1)  -- Horizontal
+        qrcode:set(6, i, (i % 2 == 0) and 0 or 1)  -- Vertical
+    end
+end
+-- 7x7 finder pattern
+function drawFinderPattern(x, y)
+    for i = -4, 4 do
+        for j = -4, 4 do
+            local dist = math.max(math.abs(i), math.abs(j))
+            if dist == 4 then
+                qrcode:set(x + i, y + j, 1)
+            elseif dist == 3 then
+                qrcode:set(x + i, y + j, 0)
+            elseif dist == 2 then
+                qrcode:set(x + i, y + j, 1) 
+            elseif dist == 1 then
+                qrcode:set(x + i, y + j, 0) 
+            else
+                qrcode:set(x + i, y + j, 0)
+            end
+        end
+    end
+end
+-- 5x5 alignment pattern
+function drawAlignmentPattern(x, y)
+    for i = -2, 2 do
+        for j = -2, 2 do
+            local dist = math.max(math.abs(i), math.abs(j))
+            if dist == 2 then
+                qrcode:set(x + i, y + j, 0)  -- Outer black border
+            elseif dist == 1 then
+                qrcode:set(x + i, y + j, 1)  -- White space inside
+            else
+                qrcode:set(x + i, y + j, 0)  -- Center black dot
+            end
+        end
+    end
+end
+
+function placeMarkers()
+    -- Place finder patterns
+    drawFinderPattern(3, 3)   -- Top-left
+    drawFinderPattern(29, 3)  -- Top-right
+    drawFinderPattern(3, 29)  -- Bottom-left
+
+    -- Place alignment pattern for Version 4 (33x33)
+    drawAlignmentPattern(26, 26)
+end
+
+function placeFormatInfo(final_format_info)
+	-- Manually place the format info
+	format_info_placement_index = 1
+	for i = 0, 8 do
+		if qrcode:get(i,8) == 2 then
+			qrcode:set(i, 8, final_format_info[format_info_placement_index])
+			format_info_placement_index += 1
+		end
+	end
+	for i = 7, 0, -1 do
+		if qrcode:get(8,i) == 2 then
+			qrcode:set(8, i, final_format_info[format_info_placement_index])
+			format_info_placement_index += 1
+		end
+	end
+	format_info_placement_index = 1
+	for i = 32, 26, -1 do
+		if qrcode:get(8,i) == 2 then
+			qrcode:set(8, i, final_format_info[format_info_placement_index])
+			format_info_placement_index += 1
+		end
+	end
+	for i = 25, 32, 1 do
+		if qrcode:get(i,8) == 2 then
+			qrcode:set(i, 8, final_format_info[format_info_placement_index])
+			format_info_placement_index += 1
+		end
+	end
+end
+
+function setTempQRBackround()
+	for i = 0, 32 do
+		for j = 0, 32 do
+			qrcode:set(i, j, 2)
+		end
+	end
+end
+
+function maskData()
+	-- converts 0 into 3 and 1 into 4 to bypass some masking
+	for i = 0, qrcode:width() - 1 do
+		for j = 0, qrcode:height() - 1 do
+			if qrcode:get(i,j) == 0 then
+				qrcode:set(i,j, 3)
+			elseif qrcode:get(i,j) == 1 then
+				qrcode:set(i,j, 4)
+			end
+		end
+	end
+end
+
+function inverseMaskData()
+	-- does the inverse as the function above
+	-- converts 3 into 0 and 4 into 1 to revert the bypass
+	for i = 0, qrcode:width() - 1 do
+		for j = 0, qrcode:height() - 1 do
+			if qrcode:get(i,j) == 3 then
+				qrcode:set(i,j, 0)
+			elseif qrcode:get(i,j) == 4 then
+				qrcode:set(i,j, 1)
+			end
+		end
+	end
+end
+
+-- Applies the QR Mask
+function applyQRMask(pattern)
+    for i = 0, qrcode:width() - 1 do
+        for j = 0, qrcode:height() - 1 do
+            if qrcode:get(i, j) == 0 or qrcode:get(i, j) == 1 then
+                local mask = false
+                if pattern == 0 then
+                    mask = ((i + j) % 2 == 0)
+                elseif pattern == 1 then
+                    mask = (j % 2 == 0)
+                elseif pattern == 2 then
+                    mask = (i % 3 == 0)
+                elseif pattern == 3 then
+                    mask = ((i + j) % 3 == 0)
+                elseif pattern == 4 then
+                    mask = ((math.floor(j / 2) + math.floor(i / 3)) % 2 == 0)
+                elseif pattern == 5 then
+                    mask = (((i * j) % 2) + ((i * j) % 3) == 0)
+                elseif pattern == 6 then
+                    mask = ((((i * j) % 2) + ((i * j) % 3)) % 2 == 0)
+                elseif pattern == 7 then
+                    mask = ((((i + j) % 2) + ((i * j) % 3)) % 2 == 0)
+                end
+                
+                -- Apply mask by flipping the bit if mask is true
+                if mask then
+                    qrcode:set(i, j, qrcode:get(i, j) == 0 and 1 or 0)
+                end
+            end
+        end
+    end
+end
+
+function placeFinalQRData(data)
+    local qr_code_index = 1
+    for k = 0, 16 do
+        local movingDown = (k % 2 == 0)
+        for j = (movingDown and 0 or 32), (movingDown and 32 or 0), (movingDown and 1 or -1) do
+            for i = 0, 1 do
+                -- skip the vertical timing pattern
+                local col = 32 - i - k * 2
+                if col <= 6 then
+                    col = col - 1
+                end
+               
+                if qrcode:get(col, 32 - j) == 2 then
+                    qrcode:set(col, 32 - j, (data[qr_code_index] == 0) and 1 or 0)
+                    if data[qr_code_index] == nil then
+                        qrcode:set(col, 32 - j, 2)
+                    end
+                    qr_code_index = qr_code_index + 1
+                end
+            end
+        end
+    end
+end
+
+function addPaddingBits(num_codewords)
+	local padding_bits = {}
+	for i = 1, num_codewords do
+		if i % 2 == 1 then
+			add(padding_bits, 1)
+			add(padding_bits, 1)
+			add(padding_bits, 1)
+			add(padding_bits, 0)
+			add(padding_bits, 1)
+			add(padding_bits, 1)
+			add(padding_bits, 0)
+			add(padding_bits, 0)
+		else
+			add(padding_bits, 0)
+			add(padding_bits, 0)
+			add(padding_bits, 0)
+			add(padding_bits, 1)
+			add(padding_bits, 0)
+			add(padding_bits, 0)
+			add(padding_bits, 0)
+			add(padding_bits, 1)
+		end
+	end
+	return padding_bits
+end
+
+function returnECLevel(ec)
+	if ec == 0 then return "Low", "low" end
+	if ec == 1 then return "Medium", "med" end
+	if ec == 2 then return "Quartile", "quart" end
+	if ec == 3 then return "High", "high" end
+	return "ERR: NO VALID EC"
+end
+
+
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAzLTA2IDEwOjE5OjM5Iixtb2RpZmllZD0iMjAyNS0w
+My0yNiAxNDoyODoxMCIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzE1Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJxci5sdWEjMjA4Iix3b3Jrc3BhY2Vf
+aW5kZXg9MX0se2xvY2F0aW9uPSJmdW5jdGlvbnMubHVhIzM4NiIsd29ya3NwYWNlX2luZGV4PTF9
+LHtsb2NhdGlvbj0iZXZhbC5sdWEjMSIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iMC5n
+ZngiLHdvcmtzcGFjZV9pbmRleD0yfX1dXQ==
+:: [eoc]

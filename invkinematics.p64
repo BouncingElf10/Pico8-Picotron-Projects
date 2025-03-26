@@ -1,0 +1,137 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: main.lua
+--[[pod_format="raw",created="2025-02-14 09:19:29",modified="2025-02-27 14:08:32",revision=402]]
+function _init()
+	target_pos = {350, 150}
+	base_pos = {240, 270}
+	armature = {
+		{
+	    {{240, 270}, {240, 200}},
+	    {{240, 200}, {240, 140}},
+	    {{240, 140}, {240, 90}}
+	   },
+--	   	{
+--	    {{100, 270}, {100, 200}},
+--	    {{100, 200}, {100, 140}},
+--	    {{100, 140}, {100, 90}}
+--	   },
+	}
+	
+	lengths = {}
+	for j = 1, #armature do
+		local temp_lengths = {}
+		for i = 1, #armature[j] do
+			-- sqrt( (x1 - x2)^2 + (y1 - y2)^2 ) 
+			-- pythag theorem to get length
+			local caulc_a = (armature[j][i][1][1] - armature[j][i][2][1])
+			local caulc_b = (armature[j][i][1][2] - armature[j][i][2][2])
+			add(temp_lengths, sqrt(caulc_a * caulc_a + caulc_b * caulc_b))
+		end
+		add(lengths, temp_lengths)
+	end
+end
+
+function _update()
+	mx, my, ms = mouse()
+	if ms != 0 then -- set mouse pos if held down
+		target_pos = {mx, my}
+	end
+	
+	
+	arm_num = 1
+	for j = 1, 10 do -- alternate between forward and backward IK to get close aprox.
+		if j % 2 == 0 then
+			for i = 1, #armature[arm_num] do armature[arm_num][i][2] = FIK(armature[arm_num], i, arm_num,  {240, 270}) end
+		else
+			for i = 1, #armature[arm_num] do armature[arm_num][i][1] = BIK(armature[arm_num], i, arm_num,  target_pos) end
+		end
+	end
+--	arm_num = 2
+--	for j = 1, 10 do
+--		if j % 2 == 0 then
+--			for i = 1, #armature[arm_num] do armature[arm_num][i][2] = FIK(armature[arm_num], i, arm_num, {100, 270}) end
+--		else
+--			for i = 1, #armature[arm_num] do armature[arm_num][i][1] = BIK(armature[arm_num], i, arm_num, target_pos) end
+--		end
+--	end
+end
+
+-- forwards IK
+function FIK(points, i, k, base)
+	segment = i
+	if segment == 1 then
+		points[segment][1] = base  -- set first segment to base position
+	else
+		points[segment][1] = points[segment - 1][2]  -- link to previous segments end
+	end
+
+	-- Ensure segment length remains constant
+	local x1, y1 = points[segment][1][1], points[segment][1][2]
+	local x2, y2 = points[segment][2][1], points[segment][2][2]
+	local new_x2, new_y2 = shortenLine(x2, y2, x1, y1, lengths[k][segment])
+	points[segment][2] = {new_x2, new_y2}  -- Assign new end point
+	return points[segment][2]
+end
+
+-- backwards IK
+function BIK(points, i, k, target)
+
+	segment = #points - i + 1  -- go backwards
+	if segment == #points then
+		points[segment][2] = target  -- set last segment to target position
+	else
+		points[segment][2] = points[segment + 1][1]  -- link to next segments start
+	end
+
+	-- make sure length is the same
+	local x2, y2 = points[segment][2][1], points[segment][2][2]
+	local x1, y1 = points[segment][1][1], points[segment][1][2]
+	local new_x1, new_y1 = shortenLine(x1, y1, x2, y2, lengths[k][segment])
+	points[segment][1] = {new_x1, new_y1}
+	return points[segment][1]
+end
+
+
+-- shortens line towards x2, y2, by length
+function shortenLine(x1, y1, x2, y2, length)
+	-- direction
+	local dx = x2 - x1
+	local dy = y2 - y1
+	
+	-- original distance
+	local distance = math.sqrt(dx * dx + dy * dy)
+	
+	if distance == 0 then return x1, y1 end
+
+	-- normalize
+	local nx = dx / distance
+	local ny = dy / distance
+
+	-- move `length` units towards `x2, y2`
+	local new_x1 = x2 - nx * length
+	local new_y1 = y2 - ny * length
+	
+	return new_x1, new_y1
+end
+
+
+function _draw()
+	cls()
+	
+	for j = 1, #armature do
+		for i = 1, #armature[j] do
+		   line(armature[j][i][1][1], armature[j][i][1][2], armature[j][i][2][1], armature[j][i][2][2], i+6)
+		end
+	end
+	
+	circ(target_pos[1], target_pos[2], 7, 10)
+	
+	
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTE0IDA5OjE5OjE3Iixtb2RpZmllZD0iMjAyNS0w
+Mi0yNyAxNDowODozMyIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzM4Iix3b3Jrc3BhY2VfaW5kZXg9MX19XV0=
+:: [eoc]

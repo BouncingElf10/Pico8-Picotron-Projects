@@ -1,0 +1,383 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: functions.lua
+--[[pod_format="raw",created="2025-02-28 09:55:35",modified="2025-03-03 08:38:16",revision=361]]
+function makeBoid(x, y, dir, vel, acc)
+	add(boids, {x, y, dir, vel, acc})
+end
+
+function degToRad(degrees)
+    return degrees * (math.pi / 180)
+end
+
+function radToDeg(radians)
+    return radians * (180 / math.pi)
+end
+
+function lerp(a, b, t)
+    return a + (b - a) * t
+end
+
+function normalizeVector(x, y, z)
+    local magnitude = math.sqrt(x * x + y * y + (z or 0) * (z or 0))
+    if magnitude == 0 then return 0, 0, 0 end  -- Prevent division by zero
+    return x / magnitude, y / magnitude, (z or 0) / magnitude
+end
+
+function sumVectors(x1, y1, z1, x2, y2, z2)
+    return x1 + x2, y1 + y2, (z1 or 0) + (z2 or 0)
+end
+
+function distanceBetweenPoints(x1, y1, x2, y2)
+    return math.sqrt((x2 - x1)^2 + (y2 - y1)^2)
+end
+
+function vectorAngle(x, y)
+    return _atan2(y, x)
+end
+
+function _atan2(y, x)
+    if x > 0 then
+        return math.atan(y / x)
+    elseif x < 0 then
+        return math.atan(y / x) + math.pi
+    elseif y > 0 then
+        return math.pi / 2
+    elseif y < 0 then
+        return -math.pi / 2
+    else
+        return 0
+    end
+end
+
+function updateSlider(slider)
+	local mx, my, mb = mouse()
+	if mb != 0 and isMouseOver(slider) then
+		slider.dragging = true
+	elseif mb == 0 then
+		slider.dragging = false
+	end
+	if slider.dragging then
+		slider.value = slider.min + ((mx - slider.x) / slider.w) * (slider.max - slider.min)
+		slider.value = mid(slider.min, slider.value, slider.max)
+	end
+end
+
+function isMouseOver(slider)
+	local mx, my = mouse()
+	return mx >= slider.x and mx <= slider.x + slider.w and my >= slider.y - 3 and my <= slider.y + 3
+end
+
+:: label.png
+b64$iVBORw0KGgoAAAANSUhEUgAAAeAAAAEOCAIAAADe_FMwAAAeH0lEQVR4Ae2dPY8qR7eoqzEh
+8g-YmunMTqwtB52R_M22RoMzsNRCmnCERHQlovdeEaBzHCGdCIk-gDqAzCST2QlZZ9s3uGET7JMe
+ibxvUHa5dvUH1V-QMM_jUc_qqlXVVavpp1Mn-p--FgAA0D66l77hr7_3txj--pf8-x--ubec8X-_
+94DfEABcSNBJN9XpoCp2-ve-zk_Xhi19l19-F--_l72dZblwNEANWtBfXhlnvHG6l4ymzQtrk2_v
+wSxdnN2PVMdZgZiCLuSg1M01JSwb7f76e86jBYBW21kGv-5e44usO6qQmvTkLAtXwcbOKYI2tiVX
+sTlDJdTHUz4eozPr65qvbLWUHliKHgCgAQydnv1_mIJWE2R2-qcjdbSktZWdlU91vRpfVMO8Rb-V
+pRyd-60CgCuazv4tbsPmjW3knMUUtG6is4dp9rS6ka_9oDwpjgZog93019D_rVRp9uI6u3LTxk8R
+tNyTUQL73Zff8a_-fyVT2axL09UW-I--3GNngLun6DuelV_XuE1BF9JQg1_PX3--yqQyVpLNkq-e
+NFYwms0-OQA4j-G2yhc591U13sRGX0xLxelpNvux37MT-89-X_5hpOq1ZT_Xos_7wa8UALxvOpQA
+AKCdOA8vu5pXDAPKCgBgz_vzU2p-h9IAALSBn37_Qf0haACAFtk52awkaCcMLDOjwSgajErcwphV
+bpEkm-XMZiiZFh1WqTEAQO2UF3QhO7v7rbvfVt9uLYsIIcaTZYmh6LBy_9N-NtOf4mgAaI5u6Zmx
+59s72pC1CqLByDCv3iNjeVVNI1OtZm-wzXqmRCxjo6nHeg8AwCXpNH0DJVnlUAN3v9VdLJvSs_qq
+N3XRG4rXmzkYth1PluPJMiliGctRfigAcIeCNiQLAABtETQAAJSjW3qmEwbyGnu_-Sx3v40GI5tR
+d7-Ve1QQDUbufqv3n73pZj1T8XiylM3NejaeLFMz1ZBKTmYCADSN8-Cyq3nFMLjjekWHldufJmMA
+gNK8Pj-99PMPRucfv-3ZoTSF0I2MnQGgURA0AACCBgCAywjaCQMnDGrf0GY9K5pwdooN0WEVHVZZ
+TQCAmxG0Ewax58ee34Sj8xlPlg2t7PanqTEAwFXolpsWe35ze9qsZ7qI9WbqkDGxUYkDALRd0BIn
+DJowtXLxeLKUV9WUPUrHurVVM5XosFKx258mR5Odbn_a2g8A0HZBN2TnKlqXpk7VdL5nU12MnQHg
+JgXdNjsrRwshNutZ0tHRYWUpawCA2xa0dLQMajf1Zj1Tth1PlnpTxlLBakifpTINkDIA3BzOw8uu
+5hX-FvdtER1WuseNJgBAc7w_P-308w9G5x_--dmlNBLDxagZAK5OhxIAACBoAAC4iKCdMHDCoKFt
+RYNRNBiVmLhZz8rdsbfY9Ra7Qvlnj8DPCwCq0C1t59jz9aBeO7v7bbm548mynJ1P86EeVLQzAMDV
+BF27lPN9LYSQypbu1nt0NutZaUcX0u5pPsxJlttL3T8AQOOCFkI4YdCEqaXOlNSkkZWa9SDJeLKU
+jk5Z9rBSsdufpto5X7v2_1f7tNw2AEAqndIzY8_PPV9qukakxdz9Nktn5TTn9qfqLzXhNB-yawCA
+VtEtN80Jg9jzb_ic0WGly5oHDwB3K_jY850wkEGj_3P322gwksHZ5M16Jq-jydJcJ1fKp-mwt9jJ
+QHd61iyZ3Fvs9HxjwyX2DwCg4zy87GpeMQzuoC45dgYAqJfX56effv7B6Pzjtz87lCYV7AwAVwdB
+AwC0lC4lgHdCNBjpTXe-pSbQcjpVJjth0P4Tbtaz-FH5Zz9d74kOq0KbOb4ds_b2Fjs9zmkWvWnp
+Xen3lXGy57q7unytAC5J977tbMN4spTalUHqaCrRYeX2p_Vuasw1FHOaD1VgNIUQbn9a5daWuzLu
+K2O11ZbsSjVTRxvdFUB7Be2EQez5bXD0Zj2TGtUNqzqNTOXiHPPqo0ambKZyfDs_fno8vh2FECqQ
+sUrImqtck3PM-NEmdqWL7z525e630WDEOw83ROcOzqDsrAQ6niz1pmFnY3SznmWN6hJXQ-neUZaR
+sXSNMZSPlLW0tm7wcsWpuCvj1m3YVbI4upFzdhUdVu5_yzsPreWP3-5Uf1UF7YSBurYN6dyknVNH
+kzYvh6V-s6SjX0-zodS0Uva1dpVl5yvuKlkc_1rhaGgzP-38g-qTPd1yC8WeL_0sg6tj_Fc2lXOl
+f1WOntwGpFMM-V2dtu2nrl1Fh5Xbn0aDETqAtvHHb3-qsi4v6DYjdZzaOZ4s9VHd4zJWo-pQcmJR
+Hj89Ht_O9r7uLXZK3EYzRzq170reN-XW19pVfnFsdlV6YwBNI6Ws4zy8-PUS1oUTBu_noFVe9dJz
+jYn16uaOdxUdVkII2YwGI3e-xQjQEl6fn5J2-uO3PzuUpgpVHFR6rjGxRg-e967c-tTtT--SNHaG
+WwBBA99UAAQNAAAXELQTBurvKvuOBiMeHgDcN93SM2PPp3wAAG0UdHNEg5EQwt1vVayaeg8AwH3T
+KT3TCQMnDJqws7vfuvutrmbVVKM8OQC4e7rlpsWerzSt4hodzYMBACgp6EZx91seDABASUE7YSCD
+2PNrt3M0GGWZWh8FAEDQKdTuZcPCyTgZAADcNx1KAACAoAEAAEEDALxnQTth4IRBXfuIBiMeBgCA
+Tre0nWPPp3wAAK0TdCGiwUgI4e63KlZNvQcAAHQ6pWc6YeCEgY2d3f3W3W91NaumGuVJAAAYdEvP
+jD1faloG_Y6m0AAAlxO0Pe5_S6EBAC4k6NjznTCQwVk7R4NRlqn1UQAAqEHQNmrWLZyMkwEAAOh0
+KAEAAIIGAAAEDQDwbgXthIH6o4gAAE3QLTct9nxlaooIANAEHUoAAHCHgnbCIPZ8iggA0C5BY2cA
+gJYKGgAAEDQAAIIuQuz5lA8AoI2CBgAABA0AgKABAOAa-PHbn8mm8-CyK7ecEwZCiNjzU-sNosFI
+COHut0XvEg1G_iyj2Sib9Ww8Wdr3-7PJw8rtT5MxAEAqr89Pqf2d0naOPT-2-FQdp0q2FrFezM6l
+MYzs9qfRYcXvDwBK0L20vwYjKVkZRIORYV69R8byqppGplrN3uCb9Ww8Wapgs57Jftkp_418NSrj
+ZI_aCwBQF51y02LPd8LACYPY888aWV6VQw3c-VZ3sWxKz6qr3tRFbyhebxZiPFkqU0tr68LVR2W-
+SlDJhtMBAKrTLTdNqfmso6U0dbfeHPnyRc0A0C5B3xlSsuPJMnVI9meJOHUWAMDVBB17vhMGMig0
+0d1vo8HIZtTdb-UeFUSDkbvf6v2W-lU_HU_Whm11yRqjqclK6PoopgaAenEeXnY1rxgGt1WCzXpW
+r1ujw8rtT5MxAEAqr89PCBoA4JYE3aE0AADtBEEDANydoJ0wcMKgoW1Fg1E0GJWYuFnPSt_0t9iV
+m3j2psmEQvssVwoAuHW6pe0ce74e1Gtnd78tN3c8WV7Yzo3uCgAQdKuJBiMhhFS2dLfeo7NZz0rb
+8DQf2js6Oqzc-lReU2_tN1OHjD1nbVueNLUUAHD3OA8vtlYyZ4aBDGLPT_2vomOJdLGNmnXfpZvu
+sPpn2b_tatBb7E7zoY2d9abbn6qbysBo5gRZu1WlMM6uN-ntAtwNr89Pqf2d0ivGnm_ouRaketz9
+NstB5dzk9qfqr_oO_1PjWhrp6M16xg8UAJJ038k5o8PKMGzFpdS1uqOFEJv1TAYAADUI2gkDIUTs
+_Y3uz91vo8FIBmeTN_tZluzOarS32MnraT5UIk6d5fanckhPkLeW9x1PlnpT35Ua0mepzKyzlygF
+ANwBzsPLruYVw_AO6pJlZwCA2nl9fkrt71CaVLAzAFwdBA0AgKABAKA5QTthoMd684pEg5HRNHoU
+m-WsrpvaLKVyarxvDr3FTgUqzi9XVqFqLEJr63l2kWRC6pTosJJ-qWn6aDLTeFLJhIrvArwjQRt2
+jj0-9vw2ONrdb-UfqLvf6j1tYDxZXuAup-nQCO6Vy9TT-i5uf_r2p6kTjSG92VvsTvPhaT5UjjaS
+Abr2qUkdt8HO0WBkODqLzXqmrvIVMuLxZJkczUo2elLvpcdZdymNequljmXzrJplufSiGQVMDmWV
+9w7qaUzMOouxgeRZcta0_aCW_KknH43qgXcqaAMnDJLKvjzufqt_mkn76Mg3WX9z9JdcD4zOZE5y
+KeMVNV5ywy9ZE6PD6p9z9adGM_sN7y12p-nwNB8qZZ8tl14c9cLrQyowmjddz2SCYfnklvI3n4qx
+PZuvrI2p8x_NPorUELQQQsSe37bDJO2Tj-Ei5bx1yeTS5NzFkEiqU5qmyhve8nrWhVJw-gFt0D_x
+jT4aeHeCvnU265l8wVJNoV5CS93UI8fDSpeL0bzYR_5e61mvo-Ujl8PSy9UfDbwLQTthIK_x58ee
+L5ux51-3ANFgJK82P1_lifFkmVRG1kto_EX260vp6yRXlrHNy2xIpJBTeoud8c5nvf-ufiuLlqyY
+GrLUwW3VM-WjkroB4y6pG8j6xthv7zQfyqdmo_n8R6OPwj3hPLzsal4xDO6jNPrrCtQzi_iwyvke
+6KP5mWeXgjvm9fkJQQMA3JKgO5QGAKCdIGgAgLsQtBMGOc1rsVnPLrmUyqnxvlV2qO8na0v6kJGW
+c4pCB4wOK8tZOUcwFpR-qWnJ0dv6hVjuHBD0bdv5iowny-bcdLOejSfL8WSZKgV9lrFCzinsDxgd
+Vm5-Wnvd3P5UX1afaAzd3C-E7U9xNJyla58ae74uZaN5LaSP5FW_D0asnKWPZiUbPan30uOsu5Q4
+gr6UEaTu1thPUgo2_8laMHmcnBpaLmtzhJyVK5b3pn8h8G7p3PoB5M99PFmq372M1asi3w39PdHt
+oCcnlzLePeMuOaM60WGl-rKOoG84ddnku51zx_TE-OoZU1QdclbLX1wftT_CsYGcrd7ZLwQgi_79
+HcmwRv4rke_vohZIxe1PC234ip_6pEPvcgNt_4UAvBdBb9Yz_SakvldKAZd8baLDKkfWqRtWnVUq
+UFoiVVaoxWKNbqCFvxCAGgTthIG8xp6fbF4R9VKNJ8vkC5alAONtlP36Uvo6yZVlbKOSpJTzjaCv
+qe-HuGlyh3qm0UyuLGN9QaMUqfeytFXOTnKOYGwgdc2cgkeHVVapW-4LAci07sPLruYVw6DNBy4k
+GrAnx4_lF8z5whmjNd79Mr_Q2ssFN83r8xOCBgC4JUF3KA0AQDtB0AAALaVbKNsJg9jzVSyEUM1r
+EQ1GQgh3v21i4mY9G0_WelCFs4skE1KnRIeVDNz_NJmmjyYze4udEOI0H2YtBQDtoVPIzoapY8-X
+O69CCTWXmFjdzvXexe1PdaXqE40hvdlb7E7z4Wk_lJpOJgNAq_jap_o6jj2-neeJBiNdvrKpeozR
+HDbrmRFLCW7Ws-FkqfcUwphorJwcSu4neVP7zZzmQ37xAPcp6CROGLTK1NFgpETs7reqqdBH8zVq
+SNPwdZYNo8Pqn3v1p8kEw-J6U7_LsYGcOya3l09vscPUAPcv6LbZ2dLg1RfJcWWqlGu5o-pUVFxK
+qrm32OFogLsV9I3a2d1v69J0_i0Oq4ZkLdW8Wc_qOBovA9ytoJ0w0NUsm0KINphaytfdb6V8pYhV
+U8Z6M2ltw4ab9Uw1ZWwjx7NSlkvJddRdlHzVXVI3oDJT17TZ3mk_7C12MuCnD9B_nIeXXc0r-i1u
+aOprdFjlfA-00fzMs0sBwGV4fX5K7e9SmpsjX6b66Fnt4mWANtOhBAAACBoAAArQLZTthEHs_SoW
+QqjmtdisZ_PJslBC6pTosJKB258m0-TRZKYQorfYnebDrKUuRnRYGTdVp8gpVHIWALSBTiE7G6aO
+PV-vbCf5_tZx_1PdU-pEY8ho9ha7nHWuaGfLOuhfHQBoD137VF3Hsee35wyb9UwXkN5MHTImpsrL
+mJjPaT40HF0Xx7ejDB4-PaqmjJOjqUdIrcl4six0QABou6ANpKzbYGrDO3pTmUj1KFupZtaahs1r
+JDqs3P5UBqpT9hh21s2rmjIwRpN2Nj5Rhq9RM8A9C1qq2QmDNji6nNaVvC55Xyll6eiklO2RjpZB
+uU8aANynoG-Xy0lPbdazSwrL7U_lnZWsVX8JRwshjm-HEo4GgLsStBMGSs2x58tmGzS9Wc_UbceT
+pd6UsVSwGtJnqczUNS3d3Vvs5PU0H1o62kbKj58ej29HFaum8rKu6eS3J3nYC3_KAKAizsPLruYV
+w_AWCxEdVjnS1EfzM88u1fQpSty03CwAqIvX5ycEDQBwS4LuUBoAgHaCoAEAWkq3ULYTBrHnZzWv
+wmY9G0_WhRJSp0SHlQzc-jSZpo8mM3uLnRDiNB9mLVUXx7fj46fHrNHosDLuqI6QU6XkLABoCZ1C
+ds5ptpZ8feu4-amuKn2iMaQ3e4vdaT48zYdS08nkGilkZ8si6J8cAGgVXfvU2POVlJ0w0JvXZbOe
+6Q7Sm6lDxsRUfxkTczjNh80d7fh2VGqWsXS03p9Tk9SCjCdL_9MBwG0IurUY6tGbSkaqRwlLNbPW
+NGyeT2_xszd1dFi5-akMVKfsMeys_1c5WlezkZN6UuMs_QcHgHsQtBMG8hp7-o1qXfmr4lJF7awc
+nZSyjjJyUsHVv2cAcLeCllK_XTvrqtqsZ1WcVcjOQgi3P5V2VrJW-amOFkIc3471OhoA7k3QThi0
+U8qb9UzZdjxZ6k0ZSwWrIX2Wykxd09LdvcVOBpamVi5OlbLi_HY0NG0p69STVvwOAcDlcR5e-pJL
+bSuGwS0WIjqscqSpj_Znnl2q0SOUuGO5WQBQI6-PTwgaAOCWBN2hNAAA7QRBAwC0lG6hbCcMYs_X
+geqUPddis56NJ8tCCalTosNKBm5-mkzTR5OZvcVOCHGaD7OWaujgQojUs5_tyVmiw0pu-tbLa8yt
+ktxb7PQ9NPpwASSdQnbWm7Hny7_Wn9BeVW5-qr91_kRjSG-K9-Y0H8rXO5l89XOVtvOtlzc5t3Sy
+0al-SACao2ufGnu_4eiWsFnP9Bdeb6YOGRNTLWNMzOE0HzZ0luT2Sm-YWHY8WaqenDXvo7w2dj6b
+bGl5gHrplJ7phEFLfD2eLJVopH10AelSkENGM1UTNu7Q3_reYmejkuiwUn9nz5J1tFSHGhPzR42l
+cubeVnlT59pPLH0XgIbolpsWe77StIpvi1TLlEO_1Tavt9uf5idkWfIs_RON0epHbmd5s_Y2kQzQ
+XkHfB9Idm-WsikQKiSM6rHJkrXaSalulvJyzlButy6RXLy-A_xW0EwbyGnu_jIUQsedf-Qy6X5TF
+dNNJRxiCU3GqPvSJ_Xc-zYe9xU4GZ7ealLK9go1D6U7XJxo5qaOl9d3O8kaHVWphU_faJ_vfBjnE
+1wIujPPwsqt5xb-dfVtEh1WOQ-XR-MyzS9X1KapxzeSCWRZrYXkLbbWuc9VeH3jnvD4-IWgAgFsS
+dIfSAAC0EwQNAHAXgnbCQI-1Zms5vh1thlLTosPK6NmsZ0ZgSW_xU9eio0amnpbcIQDcDd3Sdo49
+-yZO_PjpsdzE6LBy_9Os0fFkefmz9Ba703yoB25-mr9PAHgXgo49X3d0Szi_HXURH9_Oj58eZace
+pGaqq96TJfTNembE0tGb9Ww8Weo9qUifymvR0aSm_eECvAc6pWc6YdASXz9_elQuVo6WnjVsq2eq
+BJVjrGPYeTxZKv8aIjZGG6W32Fl6HADer6Bjz489vyWONix84TteRs0S7AzwfujewRmOb8ereBkA
+oFE69qlOGKhr7PlOGDhhEHv_1c-w_Okxy87S3fKaOvH4dswa1RlPlpv1bLOeyaYMVNMgOqxS40Kk
+LnKaD3uLXW_xO82H-HYB7h7n4WVX84phcMkDHN_OWXauTnRYuf1pm59f_3cIAGd5fX5K7e-c_sGa
+s7MQov3uw84Ad8zNCxoAAEEDAECLBe2EgQrU31X2HQ1GPDwAuG_6JewshIg9P9kJAADXEXTs_ZfR
+cTQYCSHc-VbFqqn3AADcN50qk50wiD2-dju7_6273_pqVk01ypMDgLun2yo7K0fzYAAAygu6Odz9
+lgcDAFBA0E4YyGvs_Y3aORqMskytjwIA3DfOw8uu5hXDgLICANjz_vyU2t_hNAAA7QRBAwAgaAAA
+aE7QThjosd6sSDQY8TAAAEoK2rBz7Pmx59foaAAA0Onap5bWcTQYCSHc-VbFqqn3AACATqfcNClr
+Jwxizz9rZ3e-dfdbXc2qqUZ5EgAABt1y05SaLR1NoQEALiToQrj7LYUGAGhQ0E4YyGvs_bHny2bs
+_WftHA1GWabWRwEA4CvrPrzsal4xDCgrAIA9r89Pqf0dSgMA0E4QNAAAggYAgOYE7YSBHutNAACo
+l2__-fGXYnb_8FHGseeLDx_dMJA9-6R9_UxZAQDs8b7-rqqgxYePzpfPfwk6ESBoAIDrCVrX8YeP
+Thj85WIEDQDQIkFLL3-4_FUPggYAqE-QHUoDANBOCgjaCQN1lYETBrHnU0QAgCb45tsff7HN-fDx
+rz_9mfT4l8_UFQDAHu-771L7O5QGAKCdIGgAAAQNAAANCdoJAycMspr5RINRNBiV2J8xq9wim-Vs
+s56VrlF0WDW0sv1cIzNnSwDw7gTthEHs_bHnSykbzbOSdfdbd7_tvt1yi4wnyyp2dvvTLGmOJ8vx
+ZFnO0VXM7vanOBrg7ula5sWen2rtwr4bjKRkZRANRoZ59R4Zy6tqGplqNXuDSzNKa0vJqh4lzVSn
+y2Q9sPdscq692WWavm0AeA90CmU7YaBMrcf5RpZX5VADd7-VXSyb0rPqqjd10RuK15v5otTlqHqU
+mgup8wLGVELHzgAI_rydhRA2dk5Ktg1s1jPdv1WshzEBoDm65ex80_RbVbo7J2eznpX2cpW5AICg
+8xwtg9jzY8_XzaLWdvfbaDCyGXX3W71HBdFg5O63en8hOY4nS6ngLAuf1bdKUEvpU6LDyu1Pbews
+5_qdOXNT7wUA943z8LKrecW-PX6LGA49683SmRXnVrkRALSN1_cnBA0AcEuC7lAaAIB2gqABAG5f
+0E4YOGFg9DS9v2gwqnO1w0pv9ha7cuts1rOcZauwWc_MxUvvqvpOeD0AbkPQThjEnh97vpLyBexc
+s_sPK7c-rW7nJG5-WoujN_vZeLIcT5ZXlyN2BmgDXcu82POTPdUdHQ1G7n4bDUZCCHe-lT1GrHpk
+sj5LnysDNfcsp-mwnKOlvOR1PFnafBWMb4NhZD0oLcf8XRXdRhs_EgDQKZTthEHS1LU4WjevoWw1
+mj9XZSpTN4RS2Fk7CyFytJjl2fxlo8OqxK6KbgMA2kD3unZWFtadW3pubd8MTYIVpSaXspejjZ1L
+qLb0RAC4Ip3r2jnVufLvikVx_1P1V32ps5bfrGf5Xi602gW2AQCXoWuf6oSBDKSpZbNecbv7bTQY
+qVjvkdZWo9XpLXbyepoPi84dT5ab9UwG_ZnRYeX2p-J6Vos2y_ZINmd6oW3IJsoGuDrOw8uu5hX-
+9ngLyTFUC5cFgHfC6-NTan-nXVWhIY1iZwBogvclaAAABA0AABcUtBMGThhkNSsSDUY8DAAAnW__
+-fEXSzvHni8_fHTCQF715leZXz6X2Mf-_v6H--p--5fnAQDvEO-771L7u5bzY8-PaeYTDUZCCHe-
+VbFq6j0AAKDTKZTthIGuZqOZZWd3v3X3W13NqqlGeRIAAAbdRu2sHE2hAQCaEnRpOwsh3P2WQgMA
+NCVoKWUZSDUbzRw7R4NRlqn1UQAA_Mq6Dy_7mlf8W9wAAGDD6-NTan_H0gAAtBMEDQCAoAEAoCFB
+O2HghEFWEwAA6uWbb3-8xdLOseeLDx_dMJBXvflV5pfPlBUAwB7v__8qCVpZ2PnyWXz4aDYRNABA
+3YLuFlrFCYPY81UshFBNAACol2__-fGXEnYWQogPH8WHj04YiA8fv0r78pmyAgDY433-XWp-p5yd
+nTCgpgAAjfLNtz-_YiXoL5-Vn-jwUXz46ISB8_Wzbm2VSVkBAOzxvv_ukqCllP-603vSVE65AQCq
+C7pDaQAA2gmCBgBA0AAA0JCgnTBwwsDosZwbDUbRYFRif8ascosUYrOebdazrKGKi0eHVbktVckv
+d1MAuBlBO2EQe37s_UrKhezs7rfuflt9u7Usks94smxo5eiwcvvTyz9jtz-F0QC3SNcyL-b8pK-t
+HW3IWgXRYGSYV__RsbyqppGpVss3_GY9U-KVse7iZE-qxLPLjidL1ZOzps3KpZNlZqHFAaCd-H9X
+ACewu0DX8AAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=
+:: main.lua
+--[[pod_format="raw",created="2025-02-27 14:42:31",modified="2025-03-03 08:38:16",revision=1235]]
+include"functions.lua"
+
+function _init()	
+
+	boid_count = 50
+	sep_coh_ratio = 1.2
+	sep_slider = {x = 175, y = 25, w = 100, min = 0, max = 2, value = sep_coh_ratio, dragging = false}
+	count_slider = {x = 80, y = 14, w = 100, min = 1, max = 100, value = boid_count, dragging = false}
+	
+	generateBoids()
+end
+
+function generateBoids()
+	boids = {}
+	for i = 1, boid_count do
+		local rnd_vel = 1.5
+		makeBoid(rnd(480), rnd(270), {x = 0, y = 0, dir = degToRad(rnd(360)), tdir = 0}, rnd_vel, rnd_vel)
+	end
+end
+
+function _update()
+	updateSlider(sep_slider)
+	updateSlider(count_slider)
+	sep_coh_ratio = sep_slider.value
+	if boid_count ~= math.floor(count_slider.value) then
+		boid_count = math.floor(count_slider.value)
+		generateBoids()
+	end
+	
+	for i = 1, #boids do
+		local al = boidAlignment(boids[i])
+		local sep = boidSeparation(boids[i])
+		local coh = boidCohesion(boids[i])
+		
+		boids[i][3].tdir = radToDeg((sep * sep_coh_ratio) + (coh * (2 - sep_coh_ratio)) + al) / 3.0;
+
+		boids[i][4] = lerp(boids[i][4], boids[i][5], 0.01)
+		
+		boids[i][3].dir = degToRad(lerp(radToDeg(boids[i][3].dir), boids[i][3].tdir, 0.05))
+
+		local speed = boids[i][4]
+		local vx, vy = math.cos(boids[i][3].dir), math.sin(boids[i][3].dir)
+		boids[i][3] = {x = vx, y = vy, dir = (boids[i][3].dir), tdir = (boids[i][3].tdir)}
+		
+		boids[i][1] += boids[i][3].x * speed
+		boids[i][2] += boids[i][3].y * speed
+		boids[i][1] %= 480 
+		boids[i][2] %= 270
+	end
+end
+
+function boidCohesion(boid)
+	local boid_count = 0
+	local center_of_mass_x, center_of_mass_y = 0, 0
+	
+	for i = 1, #boids do
+		local other = boids[i]
+		local dist = distanceBetweenPoints(boid[1], boid[2], other[1], other[2])
+		
+		if other ~= boid and dist < 150 then
+			boid_count += 1
+			center_of_mass_x += other[1]
+			center_of_mass_y += other[2]
+		end
+	end
+		
+	if boid_count > 0 then
+		center_of_mass_x /= boid_count
+		center_of_mass_y /= boid_count
+	end
+	
+	local center_vector_x = center_of_mass_x - boid[1]
+	local center_vector_y = center_of_mass_y - boid[2]
+
+	center_vector_x, center_vector_y = normalizeVector(center_vector_x, center_vector_y)
+	
+	return vectorAngle(center_vector_x, center_vector_y)
+end
+
+function boidAlignment(boid)
+	local boid_count = 0
+	local average_x_vector = 0
+	local average_y_vector = 0 
+
+	for i = 1, #boids do
+		local other = boids[i]
+		local dist = distanceBetweenPoints(boid[1], boid[2], other[1], other[2])
+
+		if other ~= boid and dist < 50 then
+			boid_count += 1
+			local other_x_norm, other_y_norm = normalizeVector(other[3].x,other[3].y)
+			average_x_vector += other_x_norm
+			average_y_vector += other_y_norm
+		end
+	end
+
+	if boid_count > 0 then
+	    average_x_vector /= boid_count
+	    average_y_vector /= boid_count
+	    average_x_vector, average_y_vector = normalizeVector(average_x_vector, average_y_vector)
+	end
+	return vectorAngle(average_x_vector, average_y_vector)
+end
+
+function boidSeparation(boid)
+	local boid_count = 0
+	local separation_x, separation_y = 0, 0 
+
+	for i = 1, #boids do
+		local other = boids[i]
+		local dist = distanceBetweenPoints(boid[1], boid[2], other[1], other[2])
+
+		if other ~= boid and dist < 30 then
+			boid_count += 1
+			local away_x = boid[1] - other[1]
+			local away_y = boid[2] - other[2]
+
+			local norm_x, norm_y = normalizeVector(away_x / dist, away_y / dist)
+
+			separation_x += norm_x
+			separation_y += norm_y
+		end
+	end
+
+	if boid_count > 0 then
+	    separation_x /= boid_count
+	    separation_y /= boid_count
+	    separation_x, separation_y = normalizeVector(separation_x, separation_y)
+	end
+	return vectorAngle(separation_x, separation_y)
+end
+
+function _draw()
+	cls()
+--	print("x: "..string.format("%.2f", boids[1][1]).." y:  "..string.format("%.2f", boids[1][2]).." dir: "..string.format("%.2f", radToDeg(boids[1][3].dir)).." vel: "..string.format("%.2f", boids[1][4]).." tvel: "..string.format("%.2f", boids[1][5]))
+	print("fps: "..stat(7))
+	print("boid count: "..#boids)
+	print("separation cohesion ratio: "..sep_coh_ratio..":"..(2-sep_coh_ratio))
+	
+	line(sep_slider.x, sep_slider.y, sep_slider.x + sep_slider.w, sep_slider.y, 7)
+	circfill(sep_slider.x + (sep_slider.value - sep_slider.min) / (sep_slider.max - sep_slider.min) * sep_slider.w, sep_slider.y, 3, 7)
+	
+	line(count_slider.x, count_slider.y, count_slider.x + count_slider.w, count_slider.y, 7)
+	circfill(count_slider.x + (count_slider.value - count_slider.min) / (count_slider.max - count_slider.min) * count_slider.w, count_slider.y, 3, 7)
+		
+	
+
+	for i = 1, #boids do
+		local beak_length = 11
+		local beak_size = 3
+		local beak_offset = 48
+		local beak_color = 7
+		local boid_color = 7
+
+		local x, y, dir, vx, vy = boids[i][1], boids[i][2], boids[i][3].dir, boids[i][3].x, boids[i][3].y
+		circ(x, y, beak_size, boid_color)
+		local beak_point_middle = {x+math.cos(dir)*beak_length/2.6, y+math.sin(dir)*beak_length/2.6}
+		circfill(beak_point_middle[1], beak_point_middle[2], beak_size, 0)
+		
+		local beak_point_middle = {x+math.cos(dir)*beak_length, y+math.sin(dir)*beak_length}
+		local beak_point_left = {x+math.cos(dir-beak_offset*360)*beak_size, y+math.sin(dir-beak_offset*360)*beak_size}
+		local beak_point_right = {x+math.cos(dir+beak_offset*360)*beak_size, y+math.sin(dir+beak_offset*360)*beak_size}
+		line(beak_point_left[1],beak_point_left[2],beak_point_middle[1], beak_point_middle[2], beak_color)
+		line(beak_point_right[1],beak_point_right[2],beak_point_middle[1], beak_point_middle[2], beak_color)
+	end
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTI3IDE0OjQyOjIyIixtb2RpZmllZD0iMjAyNS0w
+My0wMyAwODozODoxNiIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzE1MyIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2NhdGlvbj0iZnVuY3Rpb25zLmx1YSMzMiIsd29y
+a3NwYWNlX2luZGV4PTF9fV1d
+:: [eoc]
