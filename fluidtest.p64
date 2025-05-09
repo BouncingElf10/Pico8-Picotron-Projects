@@ -1,0 +1,95 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: main.lua
+--[[pod_format="raw",created="2024-12-10 12:29:55",modified="2024-12-12 14:52:15",revision=572]]
+function _init()
+
+	liquid = false
+
+	size = 40
+	max_pixels = size * size
+	grid_height = 270
+	grid_width = 480
+	p = userdata("f64", 4, max_pixels)
+	
+	indx = 0
+	for j=0, size do
+		for i=0, size do
+			p:set(0, indx, i+200) -- x
+			p:set(1, indx, j+100) -- y
+			p:set(2, indx, 9) -- color
+			p:set(3, indx, flr(rnd(2))) -- left right bias
+--			p:set(3, indx, rnd(2)-1) -- dx
+--			p:set(4, indx, rnd(2)-1) -- dy
+			indx += 1
+		end
+	end
+end
+
+function _update()
+	-- testing to see how performant
+--	ptable = p
+	for i=0, max_pixels do
+		local x,y = p:get(0,i), p:get(1,i)
+		local dir = p:get(3,i)
+		if pget(x,y+1) == 0 then
+			p:set(1,i,y+1)
+		elseif (pget(x-1,y+1) == 0 or pget(x+1,y+1) == 0) and (pget(x+1,y) == 0 or pget(x-1,y) == 0) then
+			if dir == 0 then
+				if pget(x-1,y+1) == 0 then
+					p:set(0,i,x-1, y+1)
+				else
+					p:set(3,i,1)
+				end
+			elseif dir == 1 then
+				if pget(x+1,y+1) == 0 then
+					p:set(0,i,x+1, y+1)
+				else
+					p:set(3,i,0)
+				end
+			end
+		else
+			if liquid then
+				if dir == 0 then
+					if pget(x-1,y) == 0 then
+						p:set(0,i,x-1,y)
+					else
+						p:set(3,i,1)
+					end
+				elseif dir == 1 then
+					if pget(x+1,y) == 0 then
+						p:set(0,i,x+1,y)
+					else
+						p:set(3,i,0)
+					end
+				end
+			end
+		end
+	end
+	
+--	-- add dx,dy to x,y for each pixel
+--	p:add(
+--		p, p, -- reading and writing to same userdata
+--		3,    -- offset to read from: dx,dy start at 3
+--		0,    -- offset to write to:  x,y starts at 0
+--		2,    -- number of elements
+--		5,    -- input stride between spans: same as p:width()
+--		5,    -- output stride between spans: same as p:width()
+--		max_pixels -- number of spans to add (one span for each pixel)
+--	)
+end
+
+function _draw()
+	cls()
+--	circ(240, 135, 56, 7)
+--	circ(240, 135, 57, 7)
+	line(0,269,480,269, 5)
+	pset(p)
+end
+
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTEyLTEwIDEyOjI5OjQxIixtb2RpZmllZD0iMjAyNC0x
+Mi0xMiAxNDo1MjoxNSIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzEzIix3b3Jrc3BhY2VfaW5kZXg9MX19XV0=
+:: [eoc]

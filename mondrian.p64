@@ -1,0 +1,100 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOCAwNzo1NToyMSIscmV2aXNpb249MTM0XV1sejQAfgAAABIxAADzIXtbMF09e2JtcD1weHUA
+QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4AH-AxAP--
+-------------------------------------------------------------9dQbT04fX0=
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOCAwNzo1NToyMSJdXQ==
+:: map/
+:: map/0.map
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOCAwNzo1NToyMSIscmV2aXNpb249MTI4XV1sejQAaAAAAFgQAADwCHt7Ym1wPXVzZXJkYXRh
+KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
+CADSeT0wLHRpbGVfaD0xNgoAEHcKAIB6b29tPTF9fQ==
+:: map/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOCAwNzo1NToyMSJdXQ==
+:: sfx/
+:: sfx/0.sfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ5Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOCAwNzo1NToyMSIscmV2aXNpb249MTI5XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
+Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
+-70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
+:: sfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOCAwNzo1NToyMSJdXQ==
+:: main.lua
+--[[pod_format="raw",created="2025-01-17 10:35:48",modified="2025-05-08 07:55:21",revision=235]]
+function _init()
+	uppb = 0.8
+	lowb = 0.2
+	cols = {0, 7, 16, 10, 8, 7, 16, 10, 8} -- double the amount of colors exept 0
+end
+
+function _update()
+
+end
+
+function _draw()
+	if btnp() != 0 then
+		used_cols = {}
+		col_count = {0, 0, 0, 0, 0}
+		cls(5)
+		rectfillb(30, 30, 200, 200, 7, 8)
+		mondrian(30, 30, 200, 200, 4	)	
+	end
+end
+
+function mondrian(x1, y1, x2, y2, steps)
+	if steps <= 0 then
+		return
+	end
+	
+	if flr(rnd(2)) == 0 then -- Horizonal cut
+		local split_x = flr(rnd((x2 - x1) * (uppb - lowb)) + x1 + (x2 - x1) * lowb)
+		if abs(split_x - x1) < 2 or abs(split_x - x2) < 2 then return end
+		
+		rectfillb(x1, y1, split_x, y2, rnd_cols(), 0)
+		rectfillb(split_x, y1, x2, y2, rnd_cols(), 0)
+		
+		mondrian(x1, y1, split_x, y2, steps - 1)
+		mondrian(split_x, y1, x2, y2, steps - 1)
+
+	else -- Vertical cut
+		local split_y = flr(rnd((y2 - y1) * (uppb - lowb)) + y1 + (y2 - y1) * lowb)
+		if abs(split_y - y1) < 2 or abs(split_y - y2) < 2 then return end
+		
+		rectfillb(x1, y1, x2, split_y, rnd_cols(), 0)
+		rectfillb(x1, split_y, x2, y2, rnd_cols(), 0)
+		
+		mondrian(x1, y1, x2, split_y, steps - 1)
+		mondrian(x1, split_y, x2, y2, steps - 1)
+
+	end
+end
+
+function rnd_cols()
+	return cols[ceil(rnd(#cols))]
+end
+
+function rectfillb(x1, y1, x2, y2, col, colb)
+	add(used_cols, col)
+	rectfill(x1, y1, x2, y2, col)
+	line(x1, y1, x2, y1, colb)
+	line(x1, y1, x1, y2, colb)
+	line(x2, y2, x2, y1, colb)
+	line(x2, y2, x1, y2, colb)
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOCAwNzo1NToyMSIscnVudGltZT0xNyx3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzE3Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9p
+bmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1hcCIsd29ya3NwYWNlX2luZGV4PTN9LHtsb2NhdGlv
+bj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5kZXg9NH19XV0=
+:: [eoc]

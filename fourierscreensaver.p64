@@ -1,0 +1,128 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: func.lua
+--[[pod_format="raw",created="2025-03-27 14:30:08",modified="2025-03-29 09:26:52",revision=196]]
+function normalizeSignal(points)
+  local complex_signal = {}
+  local min_x, max_x = 480, 0
+  local min_y, max_y = 270, 0
+  
+  -- Find bounds
+--  for _, p in ipairs(points) do
+--    min_x = min(min_x, p.x)
+--    max_x = max(max_x, p.x)
+--    min_y = min(min_y, p.y)
+--    max_y = max(max_y, p.y)
+--  end
+  
+  -- Normalize to [-1, 1] range
+  for _, p in ipairs(points) do
+    local x_norm = ((p.x - min_x)/(max_x - min_x))*2 - 1
+    local y_norm = ((p.y - min_y)/(max_y - min_y))*2 - 1
+    add(complex_signal, {real=-x_norm, imag=y_norm})  -- Flip Y for screen coords
+  end
+  
+  return resampleToPowerOf2(complex_signal)
+end
+
+function resampleToPowerOf2(signal, closed_curve)
+    local current_length = #signal
+    if current_length == 0 then return {} end
+    
+    local target_length = 1
+    while target_length < current_length do
+        target_length = target_length * 2
+    end
+    
+    local resampled = {}
+    for i = 1, target_length do
+        local pos = (i-1)/(target_length-1) * current_length + 1
+        local idx = flr(pos)
+        local frac = pos - idx
+        
+        local next_idx = idx + 1
+        if closed_curve then
+            idx = (idx - 1) % current_length + 1
+            next_idx = (next_idx - 1) % current_length + 1
+        end
+        
+        if not closed_curve and idx >= current_length then
+            add(resampled, signal[current_length])
+        else
+            local s1 = signal[idx]
+            local s2 = signal[next_idx] or signal[1]
+            add(resampled, {
+                real = s1.real + frac*(s2.real - s1.real),
+                imag = s1.imag + frac*(s2.imag - s1.imag)
+            })
+        end
+    end
+    
+    return resampled
+end
+:: main.lua
+--[[pod_format="raw",created="2025-03-27 12:29:05",modified="2025-03-31 13:54:50",revision=493]]
+include"func.lua"
+
+function _init()
+	x_sine_waves = {{ampl=-0.29583333333333,freq=1,phas=0.095974344563093},{ampl=-0.23472222222222,freq=2,phas=0.071240409757214},{ampl=-0.15277777777778,freq=3,phas=0.042532122063708},{ampl=-0.05,freq=4,phas=0.012466376809635},{ampl=0.083333333333333,freq=5,phas=-0.018957813934491},{ampl=0.225,freq=6,phas=-0.047231111622636},{ampl=0.375,freq=7,phas=-0.073323733451551},{ampl=0.52222222222222,freq=8,phas=-0.09823574802426},{ampl=0.62361111111111,freq=9,phas=-0.11430894014088},{ampl=0.67916666666667,freq=10,phas=-0.12387017732671},{ampl=0.7125,freq=11,phas=-0.13117530505396},{ampl=0.73194444444444,freq=12,phas=-0.13540849241149},{ampl=0.7375,freq=13,phas=-0.13661309501493},{ampl=0.7375,freq=14,phas=-0.13722545030037},{ampl=0.7375,freq=15,phas=-0.13753315110539},{ampl=0.7375,freq=16,phas=-0.13753315110539}}
+	y_sine_waves = {{ampl=0.51851851851852,freq=1,phas=0.099653726111089},{ampl=0.52296296296296,freq=2,phas=0.096981410579559},{ampl=0.54222222222222,freq=3,phas=0.087193018862306},{ampl=0.59111111111111,freq=4,phas=0.06330033564125},{ampl=0.64296296296296,freq=5,phas=0.034712779488148},{ampl=0.6962962962963,freq=6,phas=0.0057119418615375},{ampl=0.73185185185185,freq=7,phas=-0.027979378108321},{ampl=0.75703703703704,freq=8,phas=-0.051237888504523},{ampl=0.76148148148148,freq=9,phas=-0.061531977359595},{ampl=0.76,freq=10,phas=-0.068543616482111},{ampl=0.75555555555556,freq=11,phas=-0.074026410374512},{ampl=0.75111111111111,freq=12,phas=-0.077330826347116},{ampl=0.74666666666667,freq=13,phas=-0.079648406293954},{ampl=0.74222222222222,freq=14,phas=-0.080049054728783},{ampl=0.74074074074074,freq=15,phas=-0.080183424239829},{ampl=0.74074074074074,freq=16,phas=-0.080183424239829}}
+	lmx, lmy = mouse()
+end
+
+function _update()
+	mx, my, md = mouse()
+	mx = (mx - 240) / 480 / 300
+	my = (my - 135) / 270 / 300
+	
+	lmx = lerp(mx, lmx, 0.2)
+	lmy = lerp(my, lmy, 0.2)
+	
+	for i = 1, #x_sine_waves do
+		x_sine_waves[i].ampl += lmx
+		x_sine_waves[i].phas += lmx
+	end
+	for i = 1, #y_sine_waves do
+		y_sine_waves[i].ampl += lmy
+		y_sine_waves[i].phas += lmy
+	end
+end
+
+function lerp(a, b, t)
+	return a + (b - a) * t
+end
+
+function _draw()
+	cls()
+	
+	pi = 3.14159265358979
+	two_pi = 2 * pi
+	
+	for i = 0, 479 do
+	local x, y = 0, 0
+	local phase_i = two_pi * i
+	
+	for j = 1, #x_sine_waves do    
+		local wave = x_sine_waves[j]
+		x = x + wave.ampl * sin(phase_i * wave.freq + wave.phas)
+	end
+	
+	for j = 1, #y_sine_waves do    
+		local wave = y_sine_waves[j]
+		y = y + wave.ampl * sin(phase_i * wave.freq + wave.phas)
+	end
+	
+	local col = flr(i/32) % 16	
+	pset(x*100+240, y*100+135, col)
+
+	end
+    print(stat(7),0,0,7)
+    print(#x_sine_waves*480)
+    print(maxx)
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAzLTI3IDEyOjI4OjQ5Iixtb2RpZmllZD0iMjAyNS0w
+My0zMSAxMzo1NDo1MCIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzQ5Iix3b3Jrc3BhY2VfaW5kZXg9MX19XV0=
+:: [eoc]

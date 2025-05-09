@@ -1,0 +1,1417 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoxNiIscmV2aXNpb249MzEyNF1dbHo0AFwCAADuMgAA8yF7WzBdPXtibXA9cHh1
+AEMgEBAE8FYHEAfAF9AXwAcQB-BWLGZsYWdzPTAscGFuX3gIAMp5PTAsem9vbT04fSw_AP8YQFdw
+l0C3INcQpwgXALcY1yhnmFeYtyjHGBcApwgXENcgt0CXcFdAVgAcP-8n8DIAHP8d8DMvDyAeLxUg
+vh0Qzh0A7gAdPg1uIA5NHj0Q7gDOHQAdLh0ALi0gTRA98BRbAB3ACw8ccA5QDnAOQC5gBAD-JB4w
+PkA_EB4PFy4gXn0QDo0ADQANEN0Q3RBNUA8VMAyQDCAPFgwLcAsMCxArcCsgC5ALEHMAHC--PAAB
+Hf8IQFhwmEC4INgQ2AD4UADYENgguECYcFh5AR3wAPA1WJAIPxgIkAgOBw8ODggAIQ0HBwAWHQYA
+oT4IkFhgtjAGlQYEAB_23gAd8RyPKG8pLygvJz8oXykPKA8nPyYPJz8oTykfJg8lHyQPJQ8mDydP
+KC8pDyVPDgDxAh8nTygPKR8jDyQPEy8kDyUfIABiDyMPJC8QEAAwHycvEABwEy8QDxMPJBoAAhYA
+lB8oDyYfEA8SBRcA8QIfJR8mLycDDxAFHxQPEg8VHxQAID8mEgAiDxIUAAJlAMAvJg8QHQQvFA8S
+HxOXAJAfJQ8mDR8WBD8kABAQJADDHyUPFg8dDxcPHxQvFQCzDyUvJB8dLxcPFgQTAP8GJh8kBQ8f
+HxcXDx0EPxQFDyYPJQUNlQEdH-AxAP----------------------------------------------
+----------------TlBtPTh9fQ==
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoxNiJdXQ==
+:: map/
+:: map/0.map
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoxNiIscmV2aXNpb249MzA4M11dbHo0AHsAAABaEAAA8Ah7e2JtcD11c2VyZGF0
+YSgiaTE2IiwzMgMAXyIwMDAyBABwDwEAYg_AAP--------9-DwQAZw8BAP--------LxCCIpLGhp
+ZGRlbj1mYWxzZSxwYW5feD0wCADSeT0wLHRpbGVfaD0xNgoAEHcKAKB6b29tPTAuNX19
+:: map/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoxNiJdXQ==
+:: pal/
+:: pal/0.pal
+b64$LS1bW3BvZCxiZ19jb2xvcj0wLGJsYWNrZXN0X2NvbG9yPTAsY3JlYXRlZD0iMjAyNS0wNC0z
+MCAwOTo0NzoyMiIsaGlkZGVuPXtbMF09ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2V9LGhpZGRlbl90b2dnbGVzPXtbMF09ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2V9LGh1
+ZV9vZmZzZXQ9LTAuNzg5NDczNjg0MjEwNTMsaWNvbj11c2VyZGF0YSgidTgiLDE2LDE2LCIwMDAx
+MDEwMTAxMDEwMTAxMDEwMTAxMDAwMDAwMDAwMDAwMDEwNzA3MDcwNzA3MDcwNzA3MDYwMTAwMDAw
+MDAwMDAwMTA3MDcwNzA3MDcwNzA3MDcwNjA2MDEwMDAwMDAwMDAxMDcwNzA3MDcwNzA3MDcwNzA2
+MDYwNjAxMDAwMDAwMDEwNzA3MDcwNzA3MDcwNzA3MDYwNjA2MDYwMTAwMDAwMTA3MDcwNzA3MDcw
+NzA3MDcwNzA3MDcwNzAxMDAwMDAxMDcwNzA3MDcwNzA3MDcwNzA3MDcwNzA3MDEwMDAwMDEwNzA3
+MDYwNjAxMDEwZDBkMDEwMTA3MDcwMTAwMDAwMTA3MDcwNjA2MDEwMTBkMGQwMTAxMDcwNzAxMDAw
+MDAxMDcwNzAxMDEwNzA3MDYwNjBkMGQwNzA3MDEwMDAwMDEwNzA3MDEwMTA3MDcwNjA2MGQwZDA3
+MDcwMTAwMDAwMTA3MDcwZDBkMDEwMTBkMGQwNjA2MDcwNzAxMDAwMDAxMDcwNzBkMGQwMTAxMGQw
+ZDA2MDYwNzA3MDEwMDAwMDEwNzA3MDcwNzA3MDcwNzA3MDcwNzA3MDcwMTAwMDAwMTA3MDcwNzA3
+MDcwNzA3MDcwNzA3MDcwNzAxMDAwMDAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMCIpLGxv
+Y2tlZD17WzBdPXRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRy
+dWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVl
+LHRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSxm
+YWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxz
+ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxm
+YWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxz
+ZSxmYWxzZSxmYWxzZSxmYWxzZX0sbW9kaWZpZWQ9IjIwMjUtMDQtMzAgMDk6NDc6MjIiLG9rcGFs
+X3ZlcnNpb249IjEuMi4yIixwaWNrZXJzX21vZGU9ImxpbmVhcl9odWUiLHJldmlzaW9uPTAsdGVz
+dF9jdWJlX2NvbG9ycz17WzBdPXsxNSwzMSw0fSx7MzEsNCwyMH0sezQsMjAsMjF9LHsxMCw5LDI1
+fSx7OSwyNSwyNH0sezgsMjQsMn0sezI2LDExLDI3fSx7MTEsMjcsM30sezI3LDMsMTl9LHsyOCwx
+NywxOX0sezI4LDEyLDE2fSx7MTIsMTYsMX0sezYsMjksMTN9LHsyOSwxMywxOH0sezEzLDE4LDF9
+LHs3LDIzLDE0fSx7MjMsMTQsMTN9LHsxNCwzMCwxOH0sezcsNiwyMn0sezYsMjIsNX0sezIyLDUs
+MjF9LHsxLDEsMX0sezEsMSwxfSx7MSwxLDF9fSx0ZXN0X21vZGU9ImN1YmVzIix0ZXN0X3JhbXBf
+Y29sb3JzPXVzZXJkYXRhKCJ1OCIsMTAsMjcsIjAwMTgwODE5MDkwYTFhMGIxYjAwMDYwMDAwMDAw
+MDAwMDAwMDAzMDAxNjAwMDAwMDAwMDAwMDAwMTMwMDA1MDAwMDAwMDAwMDAwMDAwMTAwMGQwMDAw
+MDAwMDAwMDAwMDEwMDAxZDAwMDAwMDAwMDAwMDAwMTEwMDE3MDAwMDAwMDAwMDAwMDAwYzAwMGUw
+MDAwMDAwMDAwMDAwMDFjMDAxZTEyMDIxNTE0MDQxZjBmMDcwMDAwMDAwMDAwMDAwMDAwMDAwMDAw
+MDAxNDA0MWYwZjA4MTgwMjAwMDAxNTA1MTYwNjA3MTcwZTFlMDAwMDAxMTAxMTBjMWMxZDBkMTIw
+MDAwMTMwMzFiMGIxYTBhMDkxOTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIp
+LHdoaXRlc3RfY29sb3I9N11dbHo0AF8BAAAVAgAA9QV1c2VyZGF0YSgiaTMyIiw2NCwiMAEAwDFk
+MmI1MzAwN2UyNQgA8BcwMDg3NTEwMGFiNTIzNjAwNWY1NzRmMDBjMmMzYzcwMGZmZjFlOAgAQDAw
+NGQIABFhNgBgZmZlYzI3CgAgZTQ4AEAyOWFkJABgODM3NjljIAAxNzdhOACwY2NhYTAwMjQ2M2Iv
+APAeMGE1YTEwMDY1NDY4ODAwMTI1MzU5MDA3NDJmMjkwMDQ1MmQzMjAwYTI4ODc5QADwDWFjYzUw
+MGI5MDAzZTAwZTI2YjAyMDA5NWYwNDJQACBiMsAAoDY0ZGZmNjAwYmSJAACWAEAwZGFiQABXODU1
+NzABACExMQcAITAyPgAxMDAz0ABBMDA0NAcAMTA1NQcAMTA2NgcAIzA3PgAhODgHAEIwOTkwyAAR
+YQcAIjBi1wAxMGNjBwAxMGRkBwBSMGVlMDAqAR8wfgBrUDAwMCIp
+:: pal/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTA0LTMwIDA5OjUwOjEwIixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoxNiJdXQ==
+:: sfx/
+:: sfx/0.sfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ5Iixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoxNiIscmV2aXNpb249MzA2MF1dbHo0AH0BAACkCwAA8B9weHUAAygAAAQABA9A
+EAIOAAGgASACoA4ADxAADfDJDg9BAgNADw_QDzUPIwYHCgD-AwgJCgtADJAPDA8NDw4MQAzw-wEA
+6-AqqgEQBg8rEAEgASAB8AACEAIPIBABIA8hChABDzEgD-8gD7jwvw8oD--wxg-4Cg--D4AP9w8N
+AfAJOAAXIDgAEQU3AE8gAfDILgAEHwUtAAChMA6QAQiQAvCrBDUAXxcPDvCeOQAO-woED_MQATAO
+8MMPaA-yD1OwAaAPYgAPXfCqOgAQEEc6AD4gD2bUAA8zAAUSIGsADy4A-----68f-wEArBDI0gfy
+C0APQQ84DzwPQg86D0z--ypR-SpFDxH9KvBwHgCUN-0vAf0vCP0vEQDWOw9E-S4R-S4PDgr9LhUA
+GjQVAPMDBkAPPA0D-S0BDQH9LQUNBf0tKwAg-bAJABgHCAAr-7kRAAUZAD---wMsABYfuVYAKA8I
+ABUHOwAOXwAPCACsH-8BAP_WUP----_N
+:: sfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoxNiJdXQ==
+:: background.lua
+--[[pod_format="raw",created="2025-05-05 08:17:39",modified="2025-05-07 12:57:16",revision=333]]
+cube_points={}
+cube_edges={}
+
+function gen_cube()
+    for i=1,15 do
+        add(cube_points,{x=-1,y=-1,z=i*2-3})
+        add(cube_points,{x=1,y=-1,z=i*2-3})
+        add(cube_points,{x=1,y=1,z=i*2-3})
+        add(cube_points,{x=-1,y=1,z=i*2-3})
+    end
+    for i=1,15 do
+        local base=(i-1)*4
+        add(cube_edges,{base+1,base+2})
+        add(cube_edges,{base+2,base+3})
+        add(cube_edges,{base+3,base+4})
+        add(cube_edges,{base+4,base+1})
+        if i<15 then
+            local next_base=base+4
+            for j=1,4 do
+                add(cube_edges,{base+j,next_base+j})
+            end
+        end
+    end
+end
+
+function init_background()
+    gen_cube()
+    angle=0
+    background_index = 0
+end
+pi = 3.1415926535
+
+radian_dirs = {0, 0.25, 0.5, 0.75}
+
+function update_background()
+	angle = lerp(angle, radian_dirs[background_index+1], 0.1)
+end
+
+function rotate_z(p,a)
+    local c=cos(a)
+    local s=sin(a)
+    return{x=p.x*c-p.y*s,y=p.x*s+p.y*c,z=p.z}
+end
+
+function project(p,dist)
+    local z=p.z+dist
+    return{x=p.x/z,y=p.y/z}
+end
+
+function draw_background_cube()
+    local dist=3
+    local proj_points={}
+    local min_z=3
+    local max_z=33 -- adjust to match your tunnel depth
+
+    for i=1,#cube_points do
+        local p=rotate_z(cube_points[i],angle)
+        local pr=project(p,dist)
+        proj_points[i]={x=pr.x*479+240+16,y=pr.y*269+135+16,z=p.z}
+    end
+
+    for i=1,#cube_edges do
+        local a_idx=cube_edges[i][1]
+        local b_idx=cube_edges[i][2]
+        local a=proj_points[a_idx]
+        local b=proj_points[b_idx]
+
+        -- calculate average z for the edge
+        local avg_z=(a.z+b.z)/2
+
+        -- map z to color between 32 and 46
+        local t=(avg_z-min_z)/(max_z-min_z)
+        local col=46 - t*(46-32)
+        col=mid(32,col,46) -- clamp to range
+			if is_player_dead then col = 61 end
+        line(a.x,a.y,b.x,b.y,flr(col))
+    end
+end
+
+:: enemies.lua
+--[[pod_format="raw",created="2025-04-11 08:12:24",modified="2025-05-07 12:57:16",revision=3414]]
+include"functions.lua"
+
+function make_enemy(type,x,y,w,h, health)
+	add(enemies, {type=type, x = x, y=y, dx=0, dy=0, tx=x, ty=y, col={up=false, down=false, left=false, right=false}, col_type={up=0, down=0, left=0, right=0}, col_cooldown = false, w=w, h=h, side="right", det=50, speed=0.02, rnd=rnd(10) + 5, health=health})
+end
+
+function update_enemies()
+	for i=1, #enemies do
+	
+		local enem = enemies[i]
+		
+		if enem.dx >= 0 then enem.side = "right" else enem.side = "left" end
+		
+		if enem.type == "floater" then
+			enem = map_collisions(enem)
+			enem = floaterAI(enem)
+			enem = entity_apply_velocity(enem, "neg")
+			
+			if enem.col_type.right != 0 and enem.col_type.right != 0 then
+				for i = #enemies, 1, -1 do
+					if enem == enemies[i] then
+						create_particles_box("smoke", enem.x - 100, enem.y+16, enem.x + 100, enem.y - 16, 200)
+						shake += 0.5
+						enem = floater_crawler_collisions(enem, 100)
+						map_conversion(enem.x, enem.y, 100)
+						enem.x = 999999
+						enem.health -= 1
+					end
+				end
+			end
+			
+			if time() % 2 == 0 or pythag(enem.x - enem.tx, enem.y - enem.ty) < enem.det then
+				enem.tx = rnd(480)
+				enem.ty = rnd(50)+90
+			end
+		elseif enem.type == "crawler" then
+			enem.dy -= const_gravity * time_scale
+			if enem.col_type.down == 2 and enem.health != 0 then
+				mset(enem.x/16, enem.y/16+1, 005)
+			end
+			enem = map_collisions(enem)
+			enem = acc_entity_collisions(enem)
+			enem = crawlerAI(enem)
+			enem = entity_apply_velocity(enem, "pos")
+		elseif enem.type == "button" then
+			enem.dy -= const_gravity * time_scale
+			enem = map_collisions(enem)
+			enem = buttonAI(enem)
+			enem = entity_apply_velocity(enem, "pos")
+		end
+	end
+	for i = #enemies, 1, -1 do
+		if enemies[i].health <= 0 then
+			if enemies[i].type == "floater" or enemies[i].type == "button" then
+				deli(enemies, i)
+			elseif enemies[i].type == "crawler" then
+				if enemies[i].col_type.down != 0 and enemies[i].dy > -1 then
+					map_conversion(enemies[i].x, enemies[i].y, 20)
+					floater_death_collisions(enemies[i], 20)
+					create_particles_box("death", enemies[i].x - 20, enemies[i].y + 16, enemies[i].x + 20, enemies[i].y - 16, 90)
+					shake += 0.2
+					deli(enemies, i)
+				end
+			end
+		end
+	end
+end
+
+function buttonAI(button)
+	button_collisions(button, 20)
+	return button
+end
+
+function crawlerAI(crawler)
+	crawler_max_speed, crawler_acceleration = 0.5, 0.3
+	crawler.dx += (rnd(2)-1)/1000
+	
+	if (crawler.col_type.right != 0 or crawler.col_type.left != 0) and crawler.col_cooldown == false or time() % crawler.rnd == 10 then
+		if not (crawler.col_type.right == "button" or crawler.col_type.left == "button") then
+			crawler.dx = -crawler.dx
+			crawler.col_cooldown = true
+		end
+	end
+	
+	if crawler.col_type.right == 0 and crawler.col_type.left == 0 then
+		crawler.col_cooldown = false
+	end
+	
+	
+	if crawler.dx > 0 then
+		if crawler.dx < crawler_max_speed then
+			crawler.dx += crawler_acceleration * time_scale
+		end
+	end
+	if crawler.dx < 0 then
+		if crawler.dx > -crawler_max_speed then
+			crawler.dx -= crawler_acceleration * time_scale
+		end
+	end
+
+	return crawler
+end
+
+function floaterAI(floater)
+	local dir_x, dir_y = normalize((floater.x - floater.tx), (floater.y - floater.ty))
+	floater.dx = lerp(floater.dx, dir_x, floater.speed)
+	floater.dy = lerp(floater.dy, dir_y, floater.speed) + cos(time()) / 20
+	return floater
+end
+
+function draw_enemies()
+	for i=1, #enemies do
+		local enem = enemies[i]
+		
+		local flip = false
+		if enem.side == "left" then flip 	= true end
+		
+		if enem.type == "floater" then
+			spr(003, enem.x-enem.w/2, enem.y-enem.h/2, flip)
+		elseif enem.type == "crawler" then
+			spr(004, enem.x-enem.w/2, enem.y-enem.h/2, flip)
+		elseif enem.type == "button" then
+			spr(007, enem.x-enem.w/2, enem.y-enem.h/2, flip)
+		end
+		if debug and enem.type == "floater" then
+			
+			circ(enem.x, enem.y, enem.det, 10)
+			circ(enem.x, enem.y, 100, 10)
+			circ(enem.tx, enem.ty, 5, 12)
+			line(enem.x, enem.y, enem.x - enem.dx * 50, enem.y - enem.dy * 50, 7)
+		end
+	end
+end
+:: functions.lua
+--[[pod_format="raw",created="2025-04-10 09:19:26",modified="2025-05-07 12:57:16",revision=3248]]
+function boxes_intersect(x1a, y1a, x1b, y1b, x2a, y2a, x2b, y2b)
+	local x1_min, x1_max = min(x1a, x1b), max(x1a, x1b)
+	local y1_min, y1_max = min(y1a, y1b), max(y1a, y1b)
+	local x2_min, x2_max = min(x2a, x2b), max(x2a, x2b)
+	local y2_min, y2_max = min(y2a, y2b), max(y2a, y2b)
+
+	return not (x1_max < x2_min or x2_max < x1_min or y1_max < y2_min or y2_max < y1_min)
+end
+
+function lerp(a, b, t)
+	return a + (b - a) * t
+end
+
+function normalize(x, y)
+	local len = pythag(x, y)
+	if len ~= 0 and len ~= 1 then
+		x_norm = x / len
+		y_norm = y / len
+	else
+		return 0, 0
+	end
+	return x_norm, y_norm
+end
+
+function pythag(a, b)
+	return sqrt(a*a+b*b)
+end
+
+function entity_friction(entity)
+	if entity.dx > 0 then
+		entity.dx -= const_friction * time_scale
+	elseif  player.dx < 0 then
+		entity.dx += const_friction * time_scale
+	else
+		entity.dx = 0
+	end
+		
+	-- stops really small velocities
+	if abs(player.dx - 0.01) < 0.1 then
+		player.dx = 0
+	end
+	
+	return entity
+end
+
+function entity_apply_velocity(entity, sign)
+	-- apply veloctiy
+	if sign == nil then sign = "pos" end
+	if sign == "pos" then
+		entity.x += entity.dx * time_scale
+		entity.y += entity.dy * time_scale
+	elseif sign == "neg" then
+		entity.x -= entity.dx * time_scale
+		entity.y -= entity.dy * time_scale
+	else
+		printh("err, apply vel sign does not match")
+	end
+	return entity
+end
+
+function map_collisions(entity)
+	local x, y, width, height  = entity.x, entity.y, entity.w, entity.h
+	entity.col_type.down = mget(x / 16, (y + height / 2) / 16)
+	entity.col_type.up = mget(x / 16, (y - height / 2 - 1) / 16)
+	entity.col_type.left = mget((x - width / 2 - 1) / 16, y / 16)
+	entity.col_type.right = mget((x + width / 2) / 16, y / 16)
+	--vertical
+	if entity.col_type.down != 0 then
+		if entity.dy > 0 then
+			entity.dy = 0
+			entity.y = flr(entity.y/16)*16+8
+			entity.col.down = true
+		end
+	end
+	if entity.col_type.up != 0 then
+		if entity.dy < 0 then
+			entity.dy = 0
+			entity.y = flr(entity.y/16)*16+8
+			entity.col.up = true
+		end
+	end
+	--horizontal
+	if entity.col_type.left != 0 then
+		if entity.dx < 0 then
+			entity.dx = 0
+			entity.x = flr(entity.x/16)*16+8
+			entity.col.left = true
+		end
+	end
+	if entity.col_type.right != 0 then
+		if entity.dx > 0 then
+			entity.dx = 0
+			entity.x = flr(entity.x/16)*16+8
+			entity.col.right = true
+		end
+	end
+	return entity
+end
+--	entity.col_type.down = mget(x / 16, (y + height / 2) / 16)
+--	entity.col_type.up = mget(x / 16, (y - height / 2 - 1) / 16)
+--	entity.col_type.left = mget((x - width / 2 - 1) / 16, y / 16)
+--	entity.col_type.right = mget((x + width / 2) / 16, y / 16)
+--rect(player.x - player.w / 2 - 1, player.y - player.h / 2 - 1, player.x + player.w / 2, player.y + player.h / 2, 18)
+
+function acc_entity_collisions(entity)
+	local x, y, w, h = entity.x, entity.y, entity.w, entity.h
+	local px, py, pw, ph = player.x, player.y, player.w, player.h
+	
+	if entity.type != "player" and false then
+		if 	boxes_intersect(x-w/2-1, y-h/2-1+h, x+w/2, y+h/2+h, px-pw/2-1, py-ph/2-1, px+pw/2, py+ph/2) and entity.col_type.down == 0 then
+			entity.col_type.down = "player"
+		end
+		if 	boxes_intersect(x-w/2-1, y-h/2-1-h, x+w/2, y+h/2-h, px-pw/2-1, py-ph/2-1, px+pw/2, py+ph/2) and entity.col_type.up == 0 then
+			entity.col_type.up = "player"
+		end
+		if 	boxes_intersect(x-w/2-1+w, y-h/2-1, x+w/2+w, y+h/2, px-pw/2-1, py-ph/2-1, px+pw/2, py+ph/2) and entity.col_type.right == 0 then
+			entity.col_type.right = "player"
+		end
+		if 	boxes_intersect(x-w/2-1-w, y-h/2-1, x+w/2-w, y+h/2, px-pw/2-1, py-ph/2-1, px+pw/2, py+ph/2) and entity.col_type.left == 0 then
+			entity.col_type.left = "player"
+		end
+	end
+	
+	for i = 1, #enemies do
+		enem = enemies[i]
+		if entity != enem then
+			ex, ey, ew, eh = enem.x, enem.y, enem.w, enem.h
+			if 	boxes_intersect(x-w/2-1, y-h/2-1+h, x+w/2, y+h/2+h, ex-ew/2-1, ey-eh/2-1, ex+ew/2, ey+eh/2) and entity.col_type.down == 0 then
+				entity.col_type.down = enem.type
+			end
+			if 	boxes_intersect(x-w/2-1, y-h/2-1-h, x+w/2, y+h/2-h, ex-ew/2-1, ey-eh/2-1, ex+ew/2, ey+eh/2) and entity.col_type.up == 0 then
+				entity.col_type.up = enem.type
+			end
+			if 	boxes_intersect(x-w/2-1+w, y-h/2-1, x+w/2+w, y+h/2, ex-ew/2-1, ey-eh/2-1, ex+ew/2, ey+eh/2) and entity.col_type.right == 0 then
+				entity.col_type.right = enem.type
+			end
+			if 	boxes_intersect(x-w/2-1-w, y-h/2-1, x+w/2-w, y+h/2, ex-ew/2-1, ey-eh/2-1, ex+ew/2, ey+eh/2) and entity.col_type.left == 0 then
+				entity.col_type.left = enem.type
+			end
+		end
+	end
+
+	return entity
+end
+
+function player_floater_collisions(entity, det)
+	for i = 1, #enemies do
+		enem = enemies[i]
+		if entity != enem and enem.type == "floater" then
+			if pythag(entity.x - enem.x, entity.y - enem.y) < det then
+				enem.dy = - 4
+				entity.dy = - 4
+			end
+		elseif entity != enem and enem.type == "crawler" then
+			if pythag(entity.x - enem.x, entity.y - enem.y) < det then
+				enem.dy = - 2
+				entity.dy = - 6
+			end
+		end
+	end
+	return entity
+end
+
+function player_floater_collisions_line(entity, det)
+	mini = 0
+	index = 0
+	local dist = {}
+	for i = 1, #enemies do
+		enem = enemies[i]
+		if entity != enem and enem.type == "floater" then
+			local pyth = pythag(entity.x - enem.x, entity.y - enem.y)
+			if pyth < det and mini < pyth then
+				maxi = pyth
+				index = i
+			end
+		end
+	end
+	if index == 0 then
+		return false
+	end
+	return index
+end
+
+function floater_crawler_collisions(entity, det)
+	for i = 1, #enemies do
+		enem = enemies[i]
+		if entity != enem then
+			local dist = pythag(entity.x - enem.x, entity.y - enem.y)
+			if dist < det then
+				enem.dy = -5 + (rnd(100) / 100)
+				enem.dx = dist/10 * -((entity.x - enem.x) / abs(entity.x - enem.x))
+				enem.health -= 1
+				create_particles_box("smoke", enem.x - 20, enem.y+16, enem.x + 20, enem.y - 16, 150)
+			end
+		end
+	end
+	return entity
+end
+
+function button_collisions(entity, det)
+	local dist = pythag(entity.x - player.x, entity.y - player.y)
+	if dist < det then
+		player.dy = -5
+		local x = rnd(440) + 20
+		local y = 135
+		make_enemy("floater", x, y, 16, 16, 2)
+		create_particles_box("smoke", x - 10, y+10, x + 10, y - 10, 150)
+		entity.health = 0
+	end
+
+	return entity
+end
+
+function floater_death_collisions(entity, det)
+	for i = 1, #enemies do
+		enem = enemies[i]
+		if entity != enem then
+			if pythag(entity.x - enem.x, entity.y - enem.y) < det then
+				enem.health -= 1
+			end
+		end
+	end
+	if pythag(entity.x - player.x, entity.y - player.y) < det then
+		is_player_dead = true
+	end
+	return entity
+end
+
+function map_conversion(x, y, r)
+	for j = 0, r*2 / 16  do
+		for i = 0, r*2 / 16 do
+			mx, my = ((x-r)+i*16)/16, ((y-r)+j*16)/16
+			if mget(mx, my) == 005 then
+				mset(mx, my, 002)
+			end
+		end
+	end
+end
+
+-- draws a filled pie portion
+-- x,y - circle center
+-- r - radius
+-- c - color
+-- s,e - start and end arc angle
+function piefill(x,y,r,c,s,e)
+ -- safety: can't use this method without a valid draw target
+ if(not get_draw_target()) return
+ -- whole circle, no need for calculations
+ if s==e then
+  circfill(x,y,r,c)
+  return
+ end
+
+ local d = r+r -- math diameter
+ local d_ = d+1 -- pixel diameter
+ local svec,evec = vec(r*cos(s),r*sin(s)),vec(r*cos(e),r*sin(e)) -- arc points of starting and ending angles
+ local rd = function(n) return flr(n+0.5) end -- rounding function for convenience
+ -- linear representation of the arc
+ local offset = (s>0.5 and -svec.x-d or svec.x)+3*r
+ local arclen = ((e>0.5 and -evec.x-d or evec.x)+3*r-offset)%(d+d)
+
+ local sprite = userdata("u8",d_,d_)
+ get_draw_target():blit(sprite,x-r,y-r,0,0,d_,d_) -- copy background to sprite for transparency
+ sprite:mutate("u8",d_*d_) -- needs to be flat for lerp
+
+ local y_,dx,sx,ex,x1,x2,chk1,chk2,ps
+ for dy = 1-r, r-1 do
+  y_ = (r+dy)*d_+r -- flat index row offset
+  dx = sqrt(r*r-(dy*dy)) -- x of the circle
+  sx,ex = sin(s)==0 and r+1 or dy*cos(s)/sin(s), sin(e)==0 and r+1 or dy*cos(e)/sin(e) -- x of the angles
+  if(sx<ex) x1,x2,chk1,chk2=sx,ex,svec,evec else x1,x2,chk1,chk2=ex,sx,evec,svec
+
+  -- determine which points to include
+  ps = {}
+  if(((dy>0 and dx-d or -dx)+3*r-offset)%(d+d) >= arclen) add(ps,rd(-dx))
+  if(mid(0,x1,chk1.x)==x1 and mid(0,dy,chk1.y)==dy) add(ps,rd(x1))
+  if(mid(0,x2,chk2.x)==x2 and mid(0,dy,chk2.y)==dy) add(ps,rd(x2))
+  if(((dy>0 and -dx-d or dx)+3*r-offset)%(d+d) >= arclen) add(ps,rd(dx))
+  if(dy==0 and #ps==3) deli(ps,2)
+
+  -- draw row to sprite
+  if #ps>1 then
+   sprite:set(y_+ps[1],c)
+   sprite:set(y_+ps[2],c)
+   sprite:lerp(y_+ps[1],ps[2]-ps[1])
+
+   if #ps==4 then
+    sprite:set(y_+ps[3],c)
+    sprite:set(y_+ps[4],c)
+    sprite:lerp(y_+ps[3],ps[4]-ps[3])
+   end
+  end
+ end
+
+ sprite:mutate("u8",d_,d_) -- unflatten
+ sprite:blit(get_draw_target(),0,0,x-r,y-r,d_,d_) -- draw sprite to display
+end
+
+function map_range(value, in_min, in_max, out_min, out_max)
+    return (value - in_min) / (in_max - in_min) * (out_max - out_min) + out_min
+end
+
+function doshake()
+	if not screenshake then
+		return
+	end
+ -- this function does the
+ -- shaking
+ -- first we generate two
+ -- random numbers between
+ -- -16 and +16
+ local shakex=16-rnd(32)
+ local shakey=16-rnd(32)
+
+ -- then we apply the shake
+ -- strength
+ shakex*=shake
+ shakey*=shake
+ 
+ -- then we move the camera
+ -- this means that everything
+ -- you draw on the screen
+ -- afterwards will be shifted
+ -- by that many pixels
+ camera(shakex+16,shakey+16)
+ 
+ -- finally, fade out the shake
+ -- reset to 0 when very low
+ shake = shake*0.95
+ if (shake<0.05) shake=0
+end
+
+function shuffle(t)
+    for i = #t, 2, -1 do
+        local j = flr(rnd(i)) + 1
+        t[i], t[j] = t[j], t[i]
+    end
+end
+
+function to_hex(num)
+    return string.format("%04X", num)
+end
+
+
+
+
+:: main.lua
+--[[pod_format="raw",created="2025-01-17 10:35:48",modified="2025-05-07 12:57:16",revision=3862]]
+include"player.lua"
+include"functions.lua"
+include"enemies.lua"
+include"particles.lua"
+include"wave.lua"
+include"mainmenu.lua"
+include"background.lua"
+
+enemies = {}
+
+-- Trying to get deeper into the coputer
+-- Maxtix scene
+-- Player is the cursor
+
+-- TODO
+
+-- Less TODO
+-- Tutorial
+-- Death screen
+
+function _init()
+	fetch("pal/0.pal"):poke(0x5000)
+	menu_init()
+	init_player()
+	init_particles()
+	init_wavesystem()
+	init_background()	
+
+	const_gravity, const_friction = -0.1, 0.1
+	game_started = false
+	shake = 0
+	pi = 3.1415926535
+	time_scale = 1
+	debug = true
+	timer = 0
+	difficulty = 3
+	screenshake = true
+
+--	spawn_enemies()
+--	
+--	make_enemy("floater", 240, 135, 16, 16)
+--	make_enemy("floater", 300, 135, 16, 16)
+--	make_enemy("crawler", 200, 220, 16, 16)
+--	make_enemy("crawler", 280, 220, 16, 16)
+end
+
+function print_debug() 
+	color(7)
+	print("x: "..player.x.." y: "..player.y.." dx: "..player.dx.." dy: "..player.dy, 0,0, 7)
+	print("jump: "..tostr(can_player_jump))
+	print("e: "..#enemies)
+	print("is dead: "..tostr(is_player_dead))
+	print("slow "..slow_timer)
+	print("time scale: "..time_scale)
+	print("wave: "..wave)
+	print("nc: "..cur_num_crawlers.." nf:"..cur_num_floaters.." nb: "..cur_num_buttons)
+	print("part: "..num_part)
+	print("bp: "..#bp.." lbp: "..#leftover_bp)
+	if #particles > 1 then
+		print(tostr(particles[1][1].x))
+	end
+	pset(player.x, player.y, 19)
+	color(12)
+	pset(player.x, player.y+player.h/2)
+	pset(player.x, player.y-player.h/2-1)
+	pset(player.x-player.w/2-1, player.y)
+	pset(player.x+player.w/2, player.y)
+	if time_scale > 0.5 then
+		circ(player.x, player.y, 16, 14)
+	else
+		circ(player.x, player.y, 26, 14)
+	end
+	print(player.col_type.down, player.x, player.y+player.h, 7)
+	print(player.col_type.up, player.x, player.y-player.h, 7)
+	print(player.col_type.right, player.x+player.h, player.y, 7)
+	print(player.col_type.left, player.x-player.h, player.y, 7)
+	
+	rect(player.x - player.w / 2 - 1, player.y - player.h / 2 - 1, player.x + player.w / 2, player.y + player.h / 2, 18)
+	
+	for i = 1, #enemies do
+		enem = enemies[i]
+		pset(enem.x, enem.y+enem.h/2)
+		pset(enem.x, enem.y-enem.h/2-1)
+		pset(enem.x-enem.w/2-1, enem.y)
+		pset(enem.x+enem.w/2, enem.y)
+		print(enem.col_type.down, enem.x, enem.y+enem.h, 7)
+		print(enem.col_type.up, enem.x, enem.y-enem.h, 7)
+		print(enem.col_type.right, enem.x+enem.h, enem.y, 7)
+		print(enem.col_type.left, enem.x-enem.h, enem.y, 7)
+		print(tostr(enem.col_cooldown), enem.x+16, enem.y-16, 8)
+		print(tostr(enem.health), enem.x+7, enem.y-16, 8)
+	end
+end
+
+function _update()
+	timer += 1
+	if game_started then
+		game_update()
+	else
+		menu_update()
+	end
+	update_background()
+end
+
+function _draw()
+	
+	if game_started then
+		game_draw()
+	else
+		menu_draw()
+	end
+	update_glitch_transition()
+--	glitchfx(0.5)
+--	glitchfxlines(20)		
+end
+
+function game_update()
+	update_wavesystem()
+	death_anim()
+	doshake()
+	update_particles()
+end
+
+function game_draw()
+	if not is_player_dead then
+		cls(0)
+	end
+	
+--	draw_background()
+	draw_background_cube()
+	
+	map()
+	glitchfxlines(5, 270-15, 270)
+	glitchfx(0.4, 270-15, 270)
+	
+	if not is_player_dead then
+		if btn(5) and has_slowdown then time_scale = lerp(time_scale, 0.1, 0.1) else time_scale = lerp(time_scale, 1, 0.1) end
+		player = map_collisions(player)
+	end
+	update_player()
+	player = entity_apply_velocity(player, "pos")
+	player = acc_entity_collisions(player)
+	if btn(4) or btn(2) then
+		player = player_floater_collisions(player, (time_scale > 0.5) and 16 or 26)
+	end
+	if player.col_type.down == 5 then
+		player.dy = -5
+		is_player_dead = true
+	end
+	
+	update_enemies()
+	
+	draw_enemies()
+	draw_player()
+	if not is_player_dead and has_slowdown then
+		logic_draw_slowpie(player)
+	end
+	if has_aim then
+		logic_draw_slow_line()
+	end
+	draw_particles()
+	print("\^w\^tWave: "..to_hex(wave), 20, 20, 7)
+	print(wave, 300, 40, 7)
+--	for i = 1, 270/2 do
+--		line(0, i*2 + timer%2, 479, i*2 + timer%2, 0)
+--	end
+
+	if debug then
+		print_debug()
+	end
+end
+:: mainmenu.lua
+--[[pod_format="raw",created="2025-04-26 10:27:43",modified="2025-05-07 12:57:16",revision=930]]
+function menu_init()
+	startup_text = {
+		"Umbracorp Systems Initialization",
+		"Version 3.2.7 [64-bit] - Last updated Apr 28 2025 14:55:03",
+		"",
+		"Usage: umbracorpctl ACTION [OPTIONS] [-o outfile] [-i infile]",
+		"For help, type 'umbracorpctl HELP'",
+		"For options, type 'umbracorpctl HELP-OPTIONS'",
+		"",
+		"PS C:\\Users\\operator>",
+		"PS C:\\Users\\operator> start init.exe"
+	}
+	init_text = {
+		"C:\\Program Files\\Umbracorp>umbracorpctl start --service all",
+		"Starting core services...",
+		" > Authentication Service .............. 	[ OK ]",
+		" > Data Management Module ............. 	[ OK ]",
+		" > Network Communications ............. 	[ OK ]",
+		" > Security Subsystems ................. 	[ OK ]",
+		"",
+		"System check: PASSED",
+		"",
+		"Welcome to Umbracorp Terminal Interface",
+		"Autoconfiguring environment variables...",
+		"Detecting hardware devices... Done.",
+		"Establishing secure network connections... Done.",
+		"Launching user shell..."
+	}
+	index_timer = 0
+--	increasing_index = flr(rnd(20) + 10)
+	increasing_index = 1
+	text_index = 1
+	startup_text_show = false
+	current_text = {}
+	
+	menu_index = 0
+	menu_selection = 0
+	mouse_pressed = false
+end
+
+function menu_update()
+	startup_anim()
+	select_menu()
+	index_timer += 1 
+end
+
+function select_menu()
+	local mx, my, mb = mouse()
+	for i=-1, 5 do
+		if my > 20 + #startup_text * 10 + i * 10 and  my < 30 + #startup_text * 10 + i * 10 then
+				if menu_selection != i and menu_index != 0 then
+					sfx(1)
+				end
+				menu_selection = i
+		end
+	end
+	if mb == 0 then
+		mouse_pressed = false
+	end
+	if mb == 1 and not mouse_pressed then
+		if menu_index == 1 then
+			if menu_selection == 0 then
+				start_glitch_transition()
+--				game_started = true
+			elseif menu_selection == 1 then
+				menu_index = 2
+				sfx(2)
+			end
+		elseif menu_index == 2 then
+			if menu_selection == 0 then
+				difficulty += 1 
+				sfx(4)
+			elseif menu_selection == 1 then
+				screenshake = not screenshake
+				sfx(4)
+			elseif menu_selection == 2 then
+				menu_index = 3
+				sfx(2)
+			elseif menu_selection == 3 then
+				menu_index = 1
+				sfx(3)
+			end
+		elseif menu_index == 3 then
+			if menu_selection == 5 then
+				menu_index = 2
+				sfx(3)
+			end
+		end
+		mouse_pressed = true
+	end
+	difficulty %= 5
+end
+
+function menu_draw()
+	cls()
+	for i = 1, #current_text do
+		print(current_text[i], 10, i*10, 7)
+	end
+	if menu_index == 1 then
+		print("> start.exe", 10 + ((menu_selection == 0) and 10 or 0), 20 + #startup_text * 10, 7)
+		print("> settings.exe", 10 + ((menu_selection == 1) and 10 or 0), 30 + #startup_text * 10, 7)
+	elseif menu_index == 2 then
+		print("> difficulty", 10 + ((menu_selection == 0) and 10 or 0), 20 + #startup_text * 10, 7)
+		print("> screen shake", 10 + ((menu_selection == 1) and 10 or 0), 30 + #startup_text * 10, 7)
+		print("> credits", 10 + ((menu_selection == 2) and 10 or 0), 40 + #startup_text * 10, 7)
+		print("> back", 10 + ((menu_selection == 3) and 10 or 0), 50 + #startup_text * 10, 7)
+	elseif menu_index == 3 then
+		print("This game and all its code, assets, and sound \nhave been fully made by BouncingElf10\n\nHope you enjoy :-) this is my first time", 10, 20 + #startup_text * 10, 15)
+		print("> back", 10 + ((menu_selection == 5) and 10 or 0), 70 + #startup_text * 10, 7)
+	end
+	if menu_index == 2 then
+		local ofst = 150
+		local lengths = {4*6, 4*6, 6*6, 7*6, 4*6}
+		local dist = {0, 34, 66, 110, 162}
+		local dif = difficulty+1
+		rectfill(ofst + dist[dif] - 5, 20 + #startup_text * 10 - 3, ofst + lengths[dif] + dist[dif], 30 + #startup_text * 10, 7)
+		print("Easy", ofst, 20 + #startup_text * 10, ((difficulty == 0) and 0 or 7))
+		print("Fair", ofst + 34, 20 + #startup_text * 10, ((difficulty == 1) and 0 or 7))
+		print("Medium", ofst + 66, 20 + #startup_text * 10, ((difficulty == 2) and 0 or 7))
+		print("Quartile", ofst + 110, 20 + #startup_text * 10, ((difficulty == 3) and 0 or 7))
+		print("Hard", ofst + 162, 20 + #startup_text * 10, ((difficulty == 4) and 0 or 7))
+		ofst -= 50
+		rectfill(ofst - 5, 30 + #startup_text * 10 - 3, ofst + 6*4, 40 + #startup_text * 10, ((screenshake) and 7 or 0))
+		print(((screenshake) and "True" or "False"), ofst, 30 + #startup_text * 10, ((screenshake) and 0 or 7))
+	
+	end
+end
+
+function startup_anim()
+	if increasing_index == index_timer and menu_index == 0 then
+		if text_index == #init_text and not startup_text_show then
+			text_index = 1
+			current_text = {}
+			startup_text_show = true
+			sfx(0)
+		end
+		if text_index == #startup_text and startup_text_show then
+			menu_index = 1
+		end
+		if not startup_text_show then
+			add(current_text, init_text[text_index])
+--			increasing_index += flr(rnd(20) + 10)
+			increasing_index += 1
+		else
+			add(current_text, startup_text[text_index])
+--			increasing_index += flr(rnd(10) + 5)
+			increasing_index += 1
+		end
+		text_index += 1
+	end
+end
+
+glitch_start_time = 0
+glitch_active = false
+
+function start_glitch_transition()
+	glitch_start_time = timer
+	glitch_active = true
+end
+
+function update_glitch_transition()
+	local duration = 200
+	if glitch_start_time + duration > timer and glitch_active then
+		local index = (glitch_start_time + duration) - timer
+		
+		if index > duration / 2 then
+			local corrected_index = map_range(index, 0, duration / 2, 270, 0)
+			rectfill(0,270,480, -corrected_index,0)
+			glitchfxlines(270+corrected_index)
+			print(-corrected_index, 200, 200, 7)
+		elseif index == duration / 2 then
+			game_started = true
+		elseif index < duration / 2 then
+			local corrected_index = map_range(index, 0, duration / 2, 0, 270)
+			rectfill(0,0,480,corrected_index,0)
+			glitchfxlines(corrected_index)
+		end
+		if index < 0 then
+			glitch_active = false
+		end
+		print(index, 100, 100, 7)
+	end
+end
+:: particles.lua
+--[[pod_format="raw",created="2025-04-24 09:59:28",modified="2025-05-07 12:57:16",revision=1888]]
+function init_particles()
+	particles = {}
+	num_part = 0
+	bp = {} --background particles
+	leftover_bp = {}
+	rnd_char = {"Q","W","E","R","T","Z","U","I","O","P","A","S","D","F","G","H","J","K","L","Y","X","C","V","B","N","M"}
+end
+
+function update_particles()
+	for i = #particles, 1, -1 do
+		local group = particles[i]
+		for j = #group, 1, -1 do
+			if group[1].name == "smoke" then
+				smoke_particles(group[j])
+			elseif group[1].name == "death" then
+				death_particles(group[j])
+			end
+			
+
+			if p.l <= 0 then
+				deli(group, j)
+			end
+		end
+		if #group == 0 then
+			deli(particles, i)
+		end
+	end
+	
+	num_part = 0
+	for i = 1, #particles do
+		num_part += #particles[i]
+	end
+	
+	if num_part > 1000 then
+		deli(particles, 1)
+	end
+end
+
+death_colors = {8, 2, 1, 5, 0}
+
+function death_particles(p)
+	p.x += p.dx * time_scale
+	p.y += p.dy * time_scale
+
+	-- strong gravity, quick arc
+	p.dy += 0.06 * time_scale
+	p.dx *= 0.98 -- slight friction for realism
+
+	-- faster decay
+	p.l -= 1.5 * time_scale
+
+	-- dramatic radius drop
+	p.r = max(0, (p.l / p.max_life) * 4)
+
+	-- flicker color based on life and some chaos
+	local life_frac = p.l / p.max_life
+	local base_index = flr((1 - life_frac) * (#death_colors - 1)) + 1
+	local random_offset = rnd(2) - 1
+	local final_index = mid(1, flr(base_index + random_offset + 0.5), #death_colors)
+
+	p.col = death_colors[final_index]
+end
+
+smoke_colors = {7, 6, 22, 5, 21, 2, 0}
+function smoke_particles(p)
+	p.x += p.dx * time_scale
+	p.y += p.dy * time_scale
+			
+	p.dy -= 0.02 * time_scale
+	p.dx += rnd(0.02) - 0.01
+	
+	p.l -= 1  * time_scale
+	p.r = (p.l / 100) * 3
+	
+	local life_frac = p.l / p.max_life
+	local base_index = flr((1 - life_frac) * (#smoke_colors - 1)) + 1
+
+	local random_offset = rnd(1.5) - 0.5
+	local final_index = mid(1, flr(base_index + random_offset + 0.5), #smoke_colors)
+	
+	p.col = smoke_colors[final_index]
+end
+
+function create_particles_box(name, x1, y1, x2, y2, count)
+	local x_min, x_max = min(x1, x2), max(x1, x2)
+	local y_min, y_max = min(y1, y2), max(y1, y2)
+
+	local group = {}
+
+	for i = 1, count do
+		local x = rnd(x_max - x_min) + x_min
+		local y = rnd(y_max - y_min) + y_min
+		
+		local dx = (rnd(1) - 0.5)
+		if name == "smoke" then
+			dx *= 2
+		elseif name == "death" then
+			dx *= 7
+		end
+		
+		local dy = -rnd(0.5)
+		local life = 40 + rnd(60)
+		add(group, {x = x, y = y, dx = dx, dy = dy, col = 7, l = life, max_life = life, r = 3, name = name})
+	end
+	add(particles, group)
+end
+
+function draw_particles()
+	for i = 1, #particles do
+		for j = 1, #particles[i] do
+			p = particles[i][j]
+			circfill(p.x, p.y, p.r, p.col)
+		end
+	end
+end
+
+function draw_background()
+	if time()* 10 % 2 == 0 then
+		if #bp < 200 then
+			add(bp, {x=rnd(480), y = -10, char=rnd_char[flr(rnd(#rnd_char))+1], col=48})
+		end
+	end
+	if time()* 10 % 2 == 0 then
+		for i = #bp, 1, -1 do
+			add(leftover_bp, {char=bp[i].char, x=bp[i].x, y=bp[i].y, col=bp[i].col})
+			bp[i].y += 10
+			bp[i].char = rnd_char[flr(rnd(#rnd_char))+1]
+			if bp[i].y > 280 then
+				deli(bp, i)
+			end
+		end
+		for i = #leftover_bp, 1, -1 do
+			leftover_bp[i].col -= 1
+			if leftover_bp[i].col == 33 then
+				deli(leftover_bp, i)
+			end
+		end
+	end
+	for i = 1, #bp do
+		print(tostr(bp[i].char), bp[i].x, bp[i].y, bp[i].col)
+	end
+	for i = 1, #leftover_bp do
+		print(tostr(leftover_bp[i].char), leftover_bp[i].x, leftover_bp[i].y, leftover_bp[i].col)
+	end
+end
+
+function glitchfx(percent, start_row, end_row)
+	local fb_start = 0x10000
+	local screen_width = 480
+	local screen_height = 270
+	
+	start_row = start_row or 0
+	end_row = end_row or (screen_height - 1)
+	
+	for y = start_row, end_row do
+		if rnd() < percent then
+			local shift = flr(rnd(16))
+			local row_addr = fb_start + y * screen_width
+			memcpy(row_addr + shift, row_addr, screen_width - shift)
+		end
+	end
+end
+
+
+function glitchfxlines(lines, start_row, end_row)
+	lines = lines or 64
+	start_row = start_row or 0
+	end_row = end_row or 269
+	
+	local fb = 0x10000
+	local row_size = 480
+	local temp = 0x30000 -- temp buffer
+	
+	local range = end_row - start_row + 1
+	
+	for i=1,lines do
+		local row1 = flr(rnd(range)) + start_row
+		local row2 = flr(rnd(range - 1)) + start_row
+		if row2 >= row1 then row2 += 1 end
+		
+		-- swap rows via temp buffer
+		memcpy(temp, fb + row1 * row_size, row_size)
+		memcpy(fb + row1 * row_size, fb + row2 * row_size, row_size)
+		memcpy(fb + row2 * row_size, temp, row_size)
+	end
+end
+
+
+
+:: player.lua
+--[[pod_format="raw",created="2025-04-10 09:15:13",modified="2025-05-07 12:57:16",revision=3395]]
+include"functions.lua"
+
+function draw_player()
+	local flip = false
+	if player.side == "left" then flip = true end
+	sprt = is_player_dead and 006 or 001
+	spr(sprt, player.x-(player.w/2), player.y-(player.h/2), flip)
+end
+
+function update_player()	
+	-- controls
+	if btn(0) then
+		player.side = "left"
+		if player.dx > -player_max_speed then
+			player.dx -= player_acceleration * time_scale
+		end
+	end
+	if btn(1) then
+		player.side = "right"
+		if player.dx < player_max_speed then
+			player.dx += player_acceleration * time_scale
+		end
+	end
+	
+	--jump
+	can_player_jump = player.col.down or player.col.left or player.col.right
+	if btnp(2) and can_player_jump then
+		player.dy -= player_jump_force
+		if player.col.left then
+			player.dx += player_jump_force
+		end
+		if player.col.right then
+			player.dx -= player_jump_force
+		end
+		can_player_jump = false
+		player.col = {up=false, down=false, left=false, right=false}
+	end
+	
+	player.dy -= const_gravity * time_scale
+	
+	-- friction
+	if not (btn(0) or btn(1)) then
+		player = entity_friction(player)
+	end
+end
+
+function logic_draw_slowpie(player)
+	if slow_timer == 0 then
+		time_scale = 1
+		slow_cooldown = true
+	end
+	if 	slow_timer < 250 and slow_cooldown then
+		time_scale = 1
+	end
+	if 	slow_timer > 250 then
+		slow_cooldown = false
+	end
+
+	if time_scale > 0.5 and slow_timer < 500 then
+		slow_timer += 1
+	elseif time_scale < 0.5 and slow_timer > 0 and not slow_cooldown then
+		slow_timer -= 1
+	end
+	local angle = map_range(slow_timer, 0, 500, 0, 1)
+	
+	if pie_lerp_x == nil then pie_lerp_x, pie_lerp_y = player.x, player.y end
+
+	pie_lerp_x = lerp(player.x, pie_lerp_x, 0.6)
+	pie_lerp_y = lerp(player.y, pie_lerp_y, 0.6)
+	if slow_timer != 500 then
+		circfill(pie_lerp_x+30,pie_lerp_y-30,16,5)
+		if slow_timer != 0 then
+			piefill(pie_lerp_x+30-16,pie_lerp_y-30-16,14,((slow_cooldown) and 8 or 28),0,angle)
+		end
+		circfill(pie_lerp_x+30,pie_lerp_y-30,7,5)
+		circfill(pie_lerp_x+30,pie_lerp_y-30,5,0)
+	end
+end
+
+function logic_draw_slow_line()
+	if time_scale < 0.5 then
+		index = player_floater_collisions_line(player, 50)
+		if index != false then
+			enem = enemies[index]
+			local x = enem.x - (player.x - enem.x)
+			local y = enem.y - (player.y - enem.y)
+			line(x, y, enem.x, enem.y, 30)
+			
+			if btn(4) then
+				if btn(0) then player.x, player.y = player.x - 1, player.y - 1 end
+				if btn(1) then player.x, player.y = player.x + 1, player.y - 1 end
+				
+				local target_x, target_y = normalize((player.x - enem.x), (player.y - enem.y))
+				player.x, player.y = enem.x + target_x * 40, enem.y + target_y * 40
+				
+				if btn(2) then 
+					enem.dx, enem.dy = target_x*10, target_y*10 
+					time_scale = 1
+				end
+			end
+		end
+	end
+end
+
+function death_anim()
+	if is_player_dead then
+		time_scale = lerp(time_scale, 0, 0.05)
+		time_scale = max(time_scale, 0)
+	end
+end
+
+function init_player()
+	player = {type="player", x = 240, y=250, dx=0, dy=0, col={up=false, down=false, left=false, right=false}, col_type={up=0, down=0, left=0, right=0}, side="right", w=16, h=16}
+	player_max_speed, player_acceleration, player_jump_force, slow_timer = 4, 0.3, 5, 500
+	can_player_jump, is_player_dead = true, false
+end
+:: wave.lua
+--[[pod_format="raw",created="2025-04-25 10:18:24",modified="2025-05-07 12:57:16",revision=1439]]
+function init_wavesystem()
+	wave = 4
+	hazards = false
+	has_slowdown = false
+	has_aim = false
+
+	cur_num_floaters = 0
+	cur_num_crawlers = 0
+	cur_num_buttons = 0
+end
+
+function count_enemies()
+	local temp_c, temp_c_live, temp_f, temp_b = 0, 0, 0, 0
+	for i = 1, #enemies do
+		if enemies[i].type == "crawler" then
+			temp_c += 1
+			temp_c_live += enemies[i].health
+		elseif enemies[i].type == "floater" then
+			temp_f += 1
+		elseif enemies[i].type == "button" then
+			temp_b += 1
+		end
+	end
+	return temp_f, temp_c, temp_b, temp_c_live
+end
+
+function update_wavesystem()
+	cur_num_floaters, cur_num_crawlers, cur_num_buttons, cur_num_crawlers_lives = count_enemies()
+
+	if cur_num_crawlers <= 0 then 
+		wave += 1
+
+		if wave >= 3 then has_slowdown = true end
+		if wave >= 10 then has_aim = true end
+		if wave >= 15 then hazards = true end
+
+		spawn_enemies()
+
+		background_index += 1
+		background_index %= 4
+	end
+
+	if cur_num_floaters == 0 and cur_num_buttons == 0 and cur_num_crawlers_lives > 0 then
+		make_enemy("button", rnd(440) + 20, 20, 16, 16, 2)
+	end
+end
+
+function spawn_enemies()
+	local stage = flr(wave / 10) + 1
+
+	local base_crawlers = 1
+	local base_floaters = 1
+
+	local extra_crawlers = min(flr(wave / 5), 3)
+	local extra_floaters = min(flr(wave / 7), 2)
+
+	local num_crawlers = base_crawlers + extra_crawlers
+	local num_floaters = base_floaters + extra_floaters
+
+	num_crawlers = max(1, num_crawlers + flr(rnd(2)) - 1)
+	num_floaters = max(1, num_floaters + flr(rnd(3)) - 1)
+
+	local crawler_health = 1 + flr(wave / 10)
+
+	for i = 1, num_floaters do
+		make_enemy("floater", rnd(440) + 20, 135, 16, 16, 2)
+	end
+
+	for i = 1, num_crawlers do
+		make_enemy("crawler", rnd(440) + 20, 220, 16, 16, crawler_health)
+	end
+end
+
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wNyAxMjo1NzoyMCIscnVudGltZT0xNyx3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249ImVuZW1pZXMubHVhIzEiLHdvcmtzcGFj
+ZV9pbmRleD0xfSx7bG9jYXRpb249InBsYXllci5sdWEjMSIsd29ya3NwYWNlX2luZGV4PTF9LHts
+b2NhdGlvbj0iZnVuY3Rpb25zLmx1YSMxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJw
+YXJ0aWNsZXMubHVhIzEiLHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249IndhdmUubHVhIzEi
+LHdvcmtzcGFjZV9pbmRleD0xfSx7bG9jYXRpb249Im1haW5tZW51Lmx1YSMxIix3b3Jrc3BhY2Vf
+aW5kZXg9MX0se2xvY2F0aW9uPSJiYWNrZ3JvdW5kLmx1YSMxIix3b3Jrc3BhY2VfaW5kZXg9MX0s
+e2xvY2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9pbmRleD0yfSx7bG9jYXRpb249Im1hcC8w
+Lm1hcCIsd29ya3NwYWNlX2luZGV4PTN9LHtsb2NhdGlvbj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2Vf
+aW5kZXg9NH19XV0=
+:: [eoc]

@@ -1,0 +1,163 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTA3IDE1OjMzOjE3Iixtb2RpZmllZD0iMjAyNS0w
+Mi0xMiAwOTowNDo0MyJdXQ==
+:: pal/
+:: pal/0.pal
+b64$LS1bW3BvZCxiZ19jb2xvcj0yMCxoaWRkZW5fdG9nZ2xlcz17WzBdPWZhbHNlLGZhbHNlLGZh
+bHNlLGZhbHNlfSxibGFja2VzdF9jb2xvcj0wLGNyZWF0ZWQ9IjIwMjQtMDgtMjMgMTg6MTM6MDEi
+LGhpZGRlbj17WzBdPXRydWUsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2V9LGlj
+b249dXNlcmRhdGEoInU4IiwxNiwxNiwiMDAwMTAxMDEwMTAxMDEwMTAxMDEwMTAwMDAwMDAwMDAw
+MDAxMDcwNzA3MDcwNzA3MDcwNzA2MDEwMDAwMDAwMDAwMDEwNzA3MDcwNzA3MDcwNzA3MDYwNjAx
+MDAwMDAwMDAwMTA3MDcwNzA3MDcwNzA3MDcwNjA2MDYwMTAwMDAwMDAxMDcwNzA3MDcwNzA3MDcw
+NzA2MDYwNjA2MDEwMDAwMDEwNzA3MDcwNzA3MDcwNzA3MDcwNzA3MDcwMTAwMDAwMTA3MDcwNzA3
+MDcwNzA3MDcwNzA3MDcwNzAxMDAwMDAxMDcwNzA2MDYwMTAxMGQwZDAxMDEwNzA3MDEwMDAwMDEw
+NzA3MDYwNjAxMDEwZDBkMDEwMTA3MDcwMTAwMDAwMTA3MDcwMTAxMDcwNzA2MDYwZDBkMDcwNzAx
+MDAwMDAxMDcwNzAxMDEwNzA3MDYwNjBkMGQwNzA3MDEwMDAwMDEwNzA3MGQwZDAxMDEwZDBkMDYw
+NjA3MDcwMTAwMDAwMTA3MDcwZDBkMDEwMTBkMGQwNjA2MDcwNzAxMDAwMDAxMDcwNzA3MDcwNzA3
+MDcwNzA3MDcwNzA3MDEwMDAwMDEwNzA3MDcwNzA3MDcwNzA3MDcwNzA3MDcwMTAwMDAwMTAxMDEw
+MTAxMDEwMTAxMDEwMTAxMDEwMTAxMDAiKSxsb2NrZWQ9e1swXT1mYWxzZSxmYWxzZSxmYWxzZSxm
+YWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxz
+ZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSxmYWxzZSx0cnVlLHRy
+dWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRydWUsdHJ1ZSx0cnVlLHRydWUsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFs
+c2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2UsZmFsc2Us
+ZmFsc2UsZmFsc2V9LG1vZGlmaWVkPSIyMDI1LTAyLTA3IDEzOjQ2OjUzIixva3BhbF92ZXJzaW9u
+PSIxLjAuMyIscmV2aXNpb249MTgsdGVzdF9jdWJlX2NvbG9ycz17WzBdPXsxNSwzMSw0fSx7MzEs
+NCwyMH0sezQsMjAsMjF9LHsxMCw5LDI1fSx7OSwyNSwyNH0sezgsMjQsMn0sezI2LDExLDI3fSx7
+MTEsMjcsM30sezI3LDMsMTl9LHsyOCwxNywxOX0sezI4LDEyLDE2fSx7MTIsMTYsMX0sezYsMjks
+MTN9LHsyOSwxMywxOH0sezEzLDE4LDF9LHs3LDIzLDE0fSx7MjMsMTQsMTN9LHsxNCwzMCwxOH0s
+ezcsNiwyMn0sezYsMjIsNX0sezIyLDUsMjF9LHsxLDEsMX0sezEsMSwxfSx7MSwxLDF9fSx3aGl0
+ZXN0X2NvbG9yPTddXWx6NAAaAQAAFQIAAPEHdXNlcmRhdGEoImkzMiIsNjQsIjAwZgEA8IIwMGRj
+ZWZmZDAwYzNlM2ZjMDBhOWQ1ZmEwMDhjYzlmODAwNzFiY2Y1MDA1Y2FkZWYwMDQ1YTFlNDAwM2I5
+MWRjMDAyYTg1YzMwMDIzNzViNzAwMWQ2YWEzMDAxNjVkOGEwMDEyNGY3YjAwMGU0MzZhMDAwOTM3
+NTUwMDA2MmI0NjAwMDMxZDMyMDAwMTEwMWUwAQBFMjA2MAEA4DQ5MmQzODAwYTI4ODc5uABAYWNj
+NbAAkDAwNGMwMGViNl4AYDA5MGVjNEgA8AYwYjI1MTAwNjRkZmY2MDBiZDlhZGZ-AEAwZGFiQACg
+ODU2ZDAwZTdmMugADwEA4FAwMDAiKQ==
+:: pal/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTA3IDE1OjMyOjEzIixtb2RpZmllZD0iMjAyNS0w
+Mi0xMiAwOTowNDo0MyJdXQ==
+:: 0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTA3IDE1OjMzOjE3Iixtb2RpZmllZD0iMjAyNS0w
+Mi0xMiAwOTowNDo0MyIscmV2aXNpb249MTE4XV1sejQAfgAAABIxAADzIXtbMF09e2JtcD1weHUA
+QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAy3k9MCx6b29tPTh9LD4AH-AxAP--
+-------------------------------------------------------------9dQbT04fX0=
+:: functions.lua
+--[[pod_format="raw",created="2025-02-06 12:36:16",modified="2025-02-12 09:04:43",revision=279]]
+function convertPosition(mx, my)
+    return (mx * x_scale + x_offset) / zoom + tx,
+           (my * y_scale - y_offset) / zoom + ty
+end
+
+
+function checkMandlebrot(real_c, imag_c, max_iterations)
+    -- Early escape for main cardioid and period-2 bulb
+    local q = (real_c - 0.25) * (real_c - 0.25) + imag_c * imag_c
+    if q * (q + (real_c - 0.25)) <= 0.25 * imag_c * imag_c then
+        return max_iterations
+    end
+    if (real_c + 1) * (real_c + 1) + imag_c * imag_c <= 0.0625 then
+        return max_iterations
+    end
+
+    local real = 0.0
+    local imag = 0.0
+    local real_sq, imag_sq
+    
+    for i=0, max_iterations do
+        real_sq = real * real
+        imag_sq = imag * imag
+        if real_sq + imag_sq > 4.0 then
+            return i
+        end
+        imag = 2 * real * imag + imag_c
+        real = real_sq - imag_sq + real_c
+    end
+    return max_iterations
+end
+:: main.lua
+--[[pod_format="raw",created="2025-02-06 12:22:21",modified="2025-02-12 09:04:43",revision=492]]
+include"functions.lua"
+
+function _init()
+	poke4(0x5000, get(fetch"/ram/cart/pal/0.pal"))
+	height = 270
+	width = 480
+	ratio = 480 / 270
+	scale_factor = 5
+	itterations = 50
+	zoom = 1
+	tx = 0
+	ty = 0
+	
+	-- Precompute constants
+	aspect_ratio = 270 / 480
+	inv_width = 1 / 480
+	inv_height = 1 / 270
+	x_scale = 3 * inv_width
+	x_offset = -2
+	y_scale = 3 * aspect_ratio * inv_height
+	y_offset = 1.5 * aspect_ratio
+	
+	max_i = 480 // scale_factor
+	max_j = 270 // scale_factor
+	change_time = 0
+end
+
+function _update()
+    zoom_factor = zoom * 0.05 
+    translation_factor = 0.1 / zoom
+
+    if btn(4) then zoom -= zoom_factor end
+    if btn(5) then zoom += zoom_factor end
+    if btn(0) then tx -= translation_factor end
+    if btn(1) then tx += translation_factor end
+    if btn(2) then ty -= translation_factor end
+    if btn(3) then ty += translation_factor end
+    change_time += 1
+end
+
+
+function _draw()
+--	cls()
+	
+	local step_x = (scale_factor * x_scale) / zoom
+	local start_x = (x_offset / zoom) + tx
+	local step_y = (scale_factor * y_scale) / zoom
+	local start_y = (-y_offset / zoom) + ty
+	
+	for j=0, max_j do
+		local normalized_y = start_y + j * step_y
+		local current_x = start_x
+		for i=0, max_i do
+			local escape = checkMandlebrot(current_x, normalized_y, itterations)
+			local brot_color = escape // (itterations * 0.05)
+			rectfill(i * scale_factor, j * scale_factor, 
+				 	 (i + 1) * scale_factor - 1, (j + 1) * scale_factor - 1, 
+					 brot_color)
+			current_x += step_x
+		end
+	end
+	print(stat(7), 0,0,8)
+	print(tx.." "..ty.." "..zoom)
+	if key("e") then
+		print("clip")
+		printh(tx..", "..ty..", "..zoom, "@clip")
+	end
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAyLTA2IDEyOjIyOjA5Iixtb2RpZmllZD0iMjAyNS0w
+Mi0xMiAwOTowNDo0MyIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzY2Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJmdW5jdGlvbnMubHVhIzQiLHdvcmtz
+cGFjZV9pbmRleD0xfSx7bG9jYXRpb249IjAuZ2Z4Iix3b3Jrc3BhY2VfaW5kZXg9Mn19XV0=
+:: [eoc]

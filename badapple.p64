@@ -1,0 +1,281 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: file.lua
+--[[pod_format="raw",created="2025-04-01 08:03:34",modified="2025-04-09 07:42:46",revision=513]]
+include"functions.lua"
+
+local w, h = 440, 233
+window {
+    x = 7,
+    y = 30,
+    width = w,
+    height = h,
+    title = "RLEV Player",
+    draw = _draw
+}
+
+on_event("drop_items", function(msg)
+	assert(#msg.items > 0)
+	local path = msg.items[1].fullpath
+	
+	loaded_video = true
+
+	printh(path:ext())
+	if not path then
+		printh("err: bad path (spaces in filename?)")
+		return
+	end
+	
+	if path:ext() == "rlev" then
+		video_data = {}
+		video_header, video_data = parseRLEV(fetch(path))
+		_init()
+	end
+	
+	return
+end)
+
+
+function parseRLEV(rlev_string)
+	local video_header = {bit_length=0, fps=0, res_x=0, res_y=0}
+	local video_data_bits = {}
+	
+	local lines = {}
+	for line in rlev_string:gmatch("([^\n]+)\n") do
+		table.insert(lines, line)
+	end
+		
+	-- Parse each line
+	for _, line in ipairs(lines) do
+			-- Check if line starts with RLEV
+			if line:sub(1,4) == "RLEV" then
+				-- Split the line by spaces and extract the values
+				local parts = {}
+				for part in line:gmatch("%S+") do
+					table.insert(parts, part)
+				end
+			
+				if #parts >= 5 then
+					video_header.bit_length = tonumber(parts[3])
+					video_header.fps = tonumber(parts[2])
+					video_header.res_x = tonumber(parts[4])
+					video_header.res_y = tonumber(parts[5])
+				end
+			else
+				all_bits = stringToBits(line)
+				length_numbers = bitsToNumbers(all_bits, video_header.bit_length)
+				add(video_data_bits, {all_bits[1], length_numbers})
+				if lines[i] != nil then
+					lines[i] = nil
+				end
+--				add(video_data_bits, all_bits)
+			end
+	end
+	frame = 0
+	return video_header, video_data_bits
+end
+
+:: functions.lua
+--[[pod_format="raw",created="2025-04-01 08:41:11",modified="2025-04-09 07:42:46",revision=442]]
+function stringToBits(str)
+    local bits = {}
+    for i = 1, #str do
+        local byte = string.byte(str, i)
+        for bit = 7, 0, -1 do
+            table.insert(bits, (byte >> bit) & 1)
+        end
+    end
+    -- Ensure the first bit is valid (0 or 1)
+    assert(bits[1] == 0 or bits[1] == 1, "Invalid starting bit")
+    return bits
+end
+
+function bitsToNumbers(bitTable, bitLength)
+    if not bitTable or #bitTable == 0 or not bitLength or bitLength <= 0 then
+        return {}
+    end
+    
+    local numbers = {}
+    local currentNumber = 0
+    local bitCount = 0
+    
+    -- Start from bit 2 (skip the first bit)
+    for i = 2, #bitTable do
+        currentNumber = (currentNumber * 2) + bitTable[i]
+        bitCount = bitCount + 1
+        
+        if bitCount == bitLength then
+            table.insert(numbers, currentNumber)
+            currentNumber = 0
+            bitCount = 0
+        end
+    end
+	
+    return numbers
+end
+
+function sum(t)
+    local sum = 0
+    for k,v in pairs(t) do
+        sum = sum + v
+    end
+
+    return sum
+end
+
+function numbersToBinary(numbers, length)
+    local binaryTable = {}
+    
+    -- If no length specified, find the maximum needed length
+    if not length then
+        length = 0
+        for _, num in ipairs(numbers) do
+            local n = math.abs(math.floor(num))
+            local bitLength = n == 0 and 1 or math.floor(math.log(n, 2)) + 1
+            if bitLength > length then
+                length = bitLength
+            end
+        end
+    end
+    
+    for i, num in ipairs(numbers) do
+        local isNegative = num < 0
+        local n = math.abs(math.floor(num))
+        local bits = {}
+        
+        -- Convert to binary
+        if n == 0 then
+            table.insert(bits, "0")
+        else
+            while n > 0 do
+                table.insert(bits, 1, tostring(n % 2))
+                n = math.floor(n / 2)
+            end
+        end
+        
+        -- Add leading zeros
+        while #bits < length do
+            table.insert(bits, 1, "0")
+        end
+        
+        -- Add negative sign if needed
+        local binaryStr = table.concat(bits)
+        if isNegative then
+            binaryStr = "-" .. binaryStr
+        end
+        
+        binaryTable[i] = binaryStr
+    end
+    
+    return binaryTable
+end
+
+function indexOfMax(tbl)
+
+    local maxIndex = 1
+    local maxValue = tbl[1]
+
+    for i = 2, #tbl do
+        if tbl[i] > maxValue then
+            maxValue = tbl[i]
+            maxIndex = i
+        end
+    end
+
+    return maxIndex
+end
+:: main.lua
+--[[pod_format="raw",created="2025-03-31 13:55:32",modified="2025-04-09 07:42:46",revision=794]]
+include"file.lua"
+include"functions.lua"
+video_header = {bit_length=0, fps=0, res_x=0, res_y=0}
+video_data = {{0, {0}}}
+loaded_video = false
+
+function _init()
+	
+--	rlev_string = fetch("")
+--	video_header = parseRLEV(rlev_string)
+
+	video_bit_length = video_header.bit_length
+	video_fps = video_header.fps
+	video_res_x = video_header.res_x
+	video_res_y = video_header.res_y
+	frame = 0
+end
+
+
+
+COLOR = {
+    RED = "\27[31m",
+    WHITE = "\27[37m",
+    YELLOW = "\27[33m",
+    RESET = "\27[0m"
+}
+
+size = 3
+
+function runLine(i)
+	bit_sign = video_data[i][1]
+	x_pos = 0
+	for j = 1, #video_data[i][2] do
+		for k = 0, video_data[i][2][j] do
+--			pset(x_pos, (i-1) % video_res_y, bit_sign*7)
+			rectfill((x_pos) * size, ((i-1) % video_res_y) * size, (x_pos + size) * size, (((i-1) % video_res_y) + size) * size, bit_sign*7)
+			x_pos += 1
+		end
+		bit_sign = 1 - bit_sign 
+	end	
+end
+
+last_time = time()
+
+function _draw()
+	cls(4)
+
+	frame += 1
+	
+	if loaded_video then
+		for i = 1+(frame*video_res_y), video_res_y+(frame*video_res_y) do
+			local sum = sum(video_data[i][2], 10)
+			if  sum == video_res_x then
+				runLine(i)
+--				printh(COLOR.WHITE..(i+1).."-INFO: "..video_data[i][1].." "..table.concat(video_data[i][2], ", ").." - "..sum.." - "..""..COLOR.RESET)
+			elseif abs(sum - video_res_x) <= 4 then
+				runLine(i)
+--				printh(COLOR.YELLOW..(i+1).."-WARN: "..video_data[i][1].." "..table.concat(video_data[i][2], ", ").." - "..sum.." - ".."".." (acceptable error)"..COLOR.RESET)
+			else
+				local max_index = indexOfMax(video_data[i][2])
+				if video_data[i-1][2][max_index] != nil then
+					video_data[i][2][max_index] = video_data[i-1][2][max_index]
+				else
+					video_data[i][2][max_index] = 66
+				end
+				runLine(i)
+--				printh(COLOR.RED..(i+1).."-ERROR: "..video_data[i][1].." "..table.concat(video_data[i][2], ", ").." - "..sum.." - ".."".." (unacceptable error, trying to fix...)"..COLOR.RESET)
+			end
+		end
+	end
+	
+	color(7)
+	print(video_bit_length.." "..video_fps.." "..video_res_x.." "..video_res_y)
+	print(#video_data)
+	print(1+(frame*video_res_y))
+	print(video_res_y+(frame*video_res_y))
+	print(bit_sign)
+	print(tostr(loaded_video))
+	print(stat(7))
+	print((stat(0)/1000000).."MiB")
+	print(flr(t()))
+
+--	print(video_data[1][1].." "..video_data[1][2][1])
+end
+
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAzLTMxIDEzOjU1OjIyIixtb2RpZmllZD0iMjAyNS0w
+NC0wOSAwNzo0Mjo0NiIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzEyIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJmaWxlLmx1YSM3MCIsd29ya3NwYWNl
+X2luZGV4PTF9LHtsb2NhdGlvbj0iZnVuY3Rpb25zLmx1YSM5NCIsd29ya3NwYWNlX2luZGV4PTF9
+fV1d
+:: [eoc]

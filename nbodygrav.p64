@@ -1,0 +1,61 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: main.lua
+--[[pod_format="raw",created="2025-03-27 09:50:13",modified="2025-03-27 11:47:01",revision=202]]
+function _init()
+	bodies = {}
+	addBodyToSim(100, 20, 1, 0, 0, 0, 20, 9, 7)
+	addBodyToSim(300, 140, 0, 0,  0, 0, 500, 9, 7) 
+	addBodyToSim(10, 250, 1, 0,  0, 0, 100, 9, 7) 
+end
+
+function addBodyToSim(x,y,dx,dy,ddx,ddy,mass,size,color)
+	add(bodies, {x=x,y=y,dx=dx,dy=dy,ddx=ddx,ddy=ddy,mass=mass,size=size,color=color})
+end
+
+function _update()
+	for i=1, #bodies do
+		bodies[i].ddx, bodies[i].ddy = 0, 0 
+		for j=1, #bodies do
+			if i == j then goto continue end
+
+            x1, y1, mass1 = bodies[i].x, bodies[i].y, bodies[i].mass
+            x2, y2, mass2 = bodies[j].x, bodies[j].y, bodies[j].mass
+
+            G = 1
+            softening = 10
+
+            dx = x2 - x1
+            dy = y2 - y1
+            distance = sqrt(dx*dx + dy*dy)
+
+            force = G * (mass1 * mass2) / (distance^2 + softening^2)
+
+            fx = force * (dx / distance)
+            fy = force * (dy / distance)
+
+            bodies[i].ddx = bodies[i].ddx + (fx / mass1)
+            bodies[i].ddy = bodies[i].ddy + (fy / mass1)
+            ::continue::
+		end
+		
+		dt = 1
+		bodies[i].dx = bodies[i].dx + bodies[i].ddx * dt
+		bodies[i].dy = bodies[i].dy + bodies[i].ddy * dt
+		bodies[i].x = bodies[i].x + bodies[i].dx * dt
+		bodies[i].y = bodies[i].y + bodies[i].dy * dt
+	end
+end
+
+function _draw()
+	cls()
+	for i=1, #bodies do
+		circfill(bodies[i].x, bodies[i].y, bodies[i].size, bodies[i].color)
+	end
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAzLTI3IDA5OjQ5OjU4Iixtb2RpZmllZD0iMjAyNS0w
+My0yNyAxMTo0NzowMSIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzQiLHdvcmtzcGFjZV9pbmRleD0xfX1dXQ==
+:: [eoc]

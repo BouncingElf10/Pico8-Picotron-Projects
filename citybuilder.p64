@@ -1,0 +1,188 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAxMjo1MjoxOSIscmV2aXNpb249MjUyXV1sejQAIgEAAHQyAADzFHtbMF09e2JtcD1weHUA
+QyAQEATw8CxmbGFncz0wLHBhbl94CADKeT0wLHpvb209OH0sMQB--xUQ9bD_EDYAHG8fFbU_tR45
+ACU-PtUeAgADAFUAD8AAIQ45AA-DABUf1QIAAx8_UQAmD40AFQ_3AS3xCB8B3xUfHw8VsA4fHw4Q
+DxYADRANAA0QDgAUDQ0AGRwMABewBACeAE1QDhwOUE0AEAA-3vwB_gAhDwIABQ9LASYPJgIFD3QC
+Hl--FRLVHnECOS-VHjUCAw_GAj0v-hJHAk0PMQAeSH8ecH4CAEnwAH5wAgAPgQAeDzEA--------
+----------------------------------------------------xFBtPTh9fQ==
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAxMjo1MjoxOSJdXQ==
+:: map/
+:: map/0.map
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAxMjo1MjoxOSIscmV2aXNpb249MjE0XV1sejQAaAAAAFgQAADwCHt7Ym1wPXVzZXJkYXRh
+KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
+CADSeT0wLHRpbGVfaD0xNgoAEHcKAIB6b29tPTF9fQ==
+:: map/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAxMjo1MjoxOSJdXQ==
+:: sfx/
+:: sfx/0.sfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ5Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAxMjo1MjoxOSIscmV2aXNpb249MjE0XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
+Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
+Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
+-70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
+:: sfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAxMjo1MjoxOSJdXQ==
+:: main.lua
+--[[pod_format="raw",created="2025-01-17 10:35:48",modified="2025-05-09 12:52:19",revision=367]]
+function _init()
+	road_map = userdata("u8", 16, 16)
+	map_width = road_map:width()
+	map_height = road_map:height()
+	
+--	for x = 0, map_width - 1 do
+--		road_map:set(x, 0, 1)
+--		road_map:set(x, map_height - 1, 1)
+--	end
+--	
+--	for y = 0, map_height - 1 do
+--		road_map:set(0, y, 9)
+--		road_map:set(map_width - 1, y, 9)
+--	end
+	road_map:set(0, 0, 011)
+	road_map:set(0, map_height - 1, 010)
+	road_map:set(map_width - 1, 0, 012)	
+	road_map:set(map_width - 1, map_height - 1, 013)
+	
+
+	
+	
+--	for i = 0, map_width - 1 do
+--		for j = 0, map_height  - 1 do
+--			if road_map:get(i, j) == 0 then
+--				local tile = return_best_fit_tile(i, j)
+--				road_map:set(i, j, tile)
+--			end
+--		end
+--	end
+	
+end
+
+function _update()
+	road_map:set(8, 7, 009)
+	road_map:set(8, 8, return_best_fit_tile(8, 8))
+	mx, my, mb = mouse()
+	if mb != 0 then
+		local tile = return_best_fit_tile(mx, my)
+		road_map:set(flr(mx/16), flr(my/16), tile)
+	end
+end
+
+function return_best_fit_tile(x, y)
+	local tiles = {
+		straight_ver = 009,
+		straight_hor = 001,
+		corner_tl = 013,  -- top-left
+		corner_tr = 010,  -- top-right
+		corner_bl = 012,  -- bottom-left
+		corner_br = 011,  -- bottom-right
+		t_up = 002,    -- T facing up
+		t_down = 004,  -- T facing down
+		t_left = 005,  -- T facing left
+		t_right = 003, -- T facing right
+		cross = 006
+	}
+	
+	local u = road_map:get(x, y - 1)
+	local r = road_map:get(x + 1, y)
+	local d = road_map:get(x, y + 1)
+	local l = road_map:get(x - 1, y)
+	
+	if x < 0 then 
+		l = 008
+	elseif x > map_width - 1 then
+		r = 008
+	elseif y < 0 then
+		u = 008
+	elseif y > map_height -1 then
+		d = 008
+	end
+
+	if u == 008 or u == 001 or u == 002 or u == 010 or u == 013 then
+		tiles.straight_ver = nil
+		tiles.corner_tl = nil
+		tiles.corner_tr = nil
+		tiles.t_up = nil
+		tiles.t_right = nil
+		tiles.t_left = nil
+		tiles.cross = nil
+	else
+		tiles.straight_hor = nil
+		tiles.corner_bl = nil
+		tiles.corner_br = nil
+		tiles.t_down = nil
+	end
+	
+	if r == 008 or r == 003 or r == 009 or r == 010 or r == 011 then
+		tiles.straight_hor = nil
+		tiles.corner_br = nil
+		tiles.corner_tr = nil
+		tiles.t_up = nil
+		tiles.t_right = nil
+		tiles.t_down = nil
+		tiles.cross = nil
+	end
+	
+	if d == 008 or d == 001 or d == 004 or d == 011 or d == 012 then
+		tiles.straight_ver = nil
+		tiles.corner_br = nil
+		tiles.corner_bl = nil
+		tiles.t_left = nil
+		tiles.t_right = nil
+		tiles.t_down = nil
+		tiles.cross = nil    
+	end
+	
+	if l == 008 or l == 005 or l == 009 or l == 012 or l == 013 then
+		tiles.straight_hor = nil
+		tiles.corner_tr = nil
+		tiles.corner_br = nil
+		tiles.t_left = nil
+		tiles.t_up = nil
+		tiles.t_down = nil
+		tiles.cross = nil        
+	end
+	
+	return random_tile(tiles)
+end
+
+function random_tile(tiles)
+    local tile_values = {}
+    for _, v in pairs(tiles) do
+        if v != nil then
+            add(tile_values, v)
+        end
+    end
+    if #tile_values == 0 then
+        return 016
+    end
+    return tile_values[ceil(rnd(#tile_values))]
+end
+
+
+
+function _draw()
+	cls()
+	for i = 0, map_width - 1 do
+		for j = 0, map_height  - 1 do
+			local tile = road_map:get(i, j)
+			spr(tile, i*16, j*16)
+		end
+	end
+end
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAxMjo1MjoxOSIscnVudGltZT0xNyx3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzM1Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9p
+bmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1hcCIsd29ya3NwYWNlX2luZGV4PTN9LHtsb2NhdGlv
+bj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5kZXg9NH19XV0=
+:: [eoc]

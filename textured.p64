@@ -1,0 +1,198 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAwOToyOTowNyIscmV2aXNpb249NzJdXWx6NACnAAAAOjEAAPMhe1swXT17Ym1wPXB4dQBD
+IBAQBPBWBxAHwBfQF8AHEAfwVixmbGFncz0wLHBhbl94CADKeT0wLHpvb209OH0sPgCQ_wHaC-gA
+C9wbAgCBjA8XPBtMXiwEADGMDjwVABDcIAA-2vsBWQAcL-DwMQD-------------------------
+--------------------------------------_mUG09OH19
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAwOToyOTowNyJdXQ==
+:: map/
+:: map/0.map
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAwOToyOTowNyIscmV2aXNpb249NjddXWx6NABoAAAAWBAAAPAIe3tibXA9dXNlcmRhdGEo
+ImkxNiIsMzIDAC8iMAEA--------------------_-EIIiksaGlkZGVuPWZhbHNlLHBhbl94PTAI
+ANJ5PTAsdGlsZV9oPTE2CgAQdwoAgHpvb209MX19
+:: map/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAwOToyOTowNyJdXQ==
+:: sfx/
+:: sfx/0.sfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ5Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAwOToyOTowNyIscmV2aXNpb249NjhdXWx6NACgAAAACwoAAP8wcHh1AAMoAAAEAAQPQBAC
+DgABoAEgAqAOAA8QAA3wygECA0APD5AEBQYHQAyQCAkKC0AMkA8MDw0PDgxADPD-AQDr-yeqARAG
+DyAQASABIAHwAAIQAg4QASAPISABMA9A8MMPKA--8MYP_AoP-w_AD-cPDQHwCQEQBg4wAP------
+vR--AQCsz8gPQAAPEED--7Dw-wEA-_pQ-----yk=
+:: sfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAwOToyOTowNyJdXQ==
+:: main.lua
+--[[pod_format="raw",created="2025-01-17 10:35:48",modified="2025-05-09 09:29:07",revision=131]]
+function _init()
+    model = {
+        vec(-1, -1, -1),
+        vec(1, -1, -1),
+        vec(1, 1, -1),
+        vec(-1, 1, -1),
+        vec(-1, -1, 1),
+        vec(1, -1, 1),
+        vec(1, 1, 1),
+        vec(-1, 1, 1)
+    }
+
+    triangles = {
+        {1, 2, 3}, {1, 3, 4}, -- back face
+        {5, 6, 7}, {5, 7, 8}, -- front face
+        {1, 5, 8}, {1, 8, 4}, -- left face
+        {2, 6, 7}, {2, 7, 3}, -- right face
+        {4, 3, 7}, {4, 7, 8}, -- top face
+        {1, 2, 6}, {1, 6, 5}  -- bottom face
+    }
+
+    pos = vec(0, 0, 5) -- move cube into view
+    rot = vec(0, 0, 0)
+    scale = 1
+end
+
+window {
+    x = 7,
+    y = 30,
+    width = 440,
+    height = 233,
+    title = "renderer", 
+    draw = _draw
+}
+
+function _update()
+    if btn(2) then rot.x = rot.x - 0.01 end
+    if btn(3) then rot.x = rot.x + 0.01 end
+    if btn(0) then rot.y = rot.y - 0.01 end
+    if btn(1) then rot.y = rot.y + 0.01 end
+
+    if key("w") then pos.y = pos.y + 0.05 end
+    if key("s") then pos.y = pos.y - 0.05 end
+    if key("a") then pos.x = pos.x - 0.05 end
+    if key("d") then pos.x = pos.x + 0.05 end
+
+    if btn(4) then scale = scale + 0.01 end
+    if btn(5) then scale = scale - 0.01 end    	
+end
+
+function _draw()
+    cls()
+    local transformed_model = transform_model(model, rot, pos, scale)
+
+    -- Build list of transformed triangles with average z
+    local tri_list = {}
+    for _, tri in ipairs(triangles) do
+        local v1 = transformed_model[tri[1]]
+        local v2 = transformed_model[tri[2]]
+        local v3 = transformed_model[tri[3]]
+        local avg_z = (v1.z + v2.z + v3.z) / 3
+        table.insert(tri_list, {v = {v1, v2, v3}, z = avg_z})
+    end
+
+    -- manual insertion sort (descending by z)
+    for i = 2, #tri_list do
+        local key = tri_list[i]
+        local j = i - 1
+        while j >= 1 and tri_list[j].z < key.z do
+            tri_list[j + 1] = tri_list[j]
+            j = j - 1
+        end
+        tri_list[j + 1] = key
+    end
+
+    -- Draw triangles in sorted order
+    for _, t in ipairs(tri_list) do
+        draw_triangle_3d(1, t.v, 440/2, 233/2)
+    end
+end
+
+
+
+function draw_triangle_3d(sprite, model, dx, dy)
+    local tex = get_spr(sprite)
+    local texw, texh = tex:width()-0.001, tex:height()-0.001
+    local tri = {
+        {x = project(model[1]).x, y = project(model[1]).y, u = 0, v = 0},
+        {x = project(model[2]).x, y = project(model[2]).y, u = texw, v = 0},
+        {x = project(model[3]).x, y = project(model[3]).y, u = 0, v = texh}
+    }
+    tquad(tri, tex, dx, dy)
+end
+
+function project(v)
+    local fov = 400
+    local scale_proj = fov / (fov + v.z)
+    return {x = v.x * scale_proj * 100, y = v.y * scale_proj * 100}
+end
+
+function transform_model(model, rot, pos, scale)
+    local cosx, sinx = cos(rot.x), sin(rot.x)
+    local cosy, siny = cos(rot.y), sin(rot.y)
+    local cosz, sinz = cos(rot.z), sin(rot.z)
+
+    local transformed = {}
+    for i,v in ipairs(model) do
+        -- scale
+        local x = v.x * scale
+        local y = v.y * scale
+        local z = v.z * scale
+
+        -- rotate X
+        local y1 = y * cosx - z * sinx
+        local z1 = y * sinx + z * cosx
+        -- rotate Y
+        local x1 = x * cosy + z1 * siny
+        local z2 = -x * siny + z1 * cosy
+        -- rotate Z
+        local x2 = x1 * cosz - y1 * sinz
+        local y2 = x1 * sinz + y1 * cosz
+
+        -- translate
+        table.insert(transformed, vec(x2 + pos.x, y2 + pos.y, z2 + pos.z))
+    end
+    return transformed
+end
+
+function tquad(coords,tex,dx,dy)
+    local screen_max = get_display():height()-1
+    local p0,spans = coords[#coords],{}
+    local x0,y0,u0,v0=p0.x+dx,p0.y+dy,p0.u,p0.v
+    for i=1,#coords do
+        local p1 = coords[i]
+        local x1,y1,u1,v1=p1.x+dx,p1.y+dy,p1.u,p1.v
+        local _x1,_y1,_u1,_v1=x1,y1,u1,v1
+        if(y0>y1) x0,y0,x1,y1,u0,v0,u1,v1=x1,y1,x0,y0,u1,v1,u0,v0
+        local dy=y1-y0
+        local dx,du,dv=(x1-x0)/dy,(u1-u0)/dy,(v1-v0)/dy
+        if(y0<0) x0-=y0*dx u0-=y0*du v0-=y0*dv y0=0
+        local cy0=ceil(y0)
+        local sy=cy0-y0
+        x0+=sy*dx
+        u0+=sy*du
+        v0+=sy*dv
+        for y=cy0,min(ceil(y1)-1,screen_max) do
+            local span=spans[y]
+            if span then tline3d(tex,span.x,y,x0,y,span.u,span.v,u0,v0)
+            else spans[y]={x=x0,u=u0,v=v0} end
+            x0+=dx
+            u0+=du
+            v0+=dv
+        end
+        x0,y0,u0,v0=_x1,_y1,_u1,_v1
+    end
+end
+
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
+NS0wOSAwOToyOToxMCIscnVudGltZT0xNyx3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+Izk2Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9p
+bmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1hcCIsd29ya3NwYWNlX2luZGV4PTN9LHtsb2NhdGlv
+bj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5kZXg9NH19XV0=
+:: [eoc]

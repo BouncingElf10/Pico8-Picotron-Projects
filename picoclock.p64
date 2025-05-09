@@ -1,0 +1,177 @@
+picotron cartridge // www.picotron.net
+version 2
+
+:: gfx/
+:: gfx/0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTI3IDEyOjQzOjA5Iixtb2RpZmllZD0iMjAyNC0x
+Mi0wMiAxMTo0NzozOSIscmV2aXNpb249Mjg0XV1sejQAiwAAADExAADzIXtbMF09e2JtcD1weHUA
+QyAQEATwVgcQB8AX0BfABxAH8FYsZmxhZ3M9MCxwYW5feAgAynk9MCx6b29tPTh9LD4APyCnQAIA
+Ch8QUAAcL-DwMQD-------------------------------------------------------------
+--_mUG09OH19
+:: gfx/.info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTI3IDEyOjQ0OjM0Iixtb2RpZmllZD0iMjAyNC0x
+Mi0wMiAxMTo0Nzo0MCJdXQ==
+:: 0.gfx
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTI3IDEyOjQ0OjUyIixtb2RpZmllZD0iMjAyNC0x
+MS0yNyAxMzoyNTozMyIscmV2aXNpb249ODldXWx6NACLAAAAMTEAAPMhe1swXT17Ym1wPXB4dQBD
+IBAQBPBWBxAHwBfQF8AHEAfwVixmbGFncz0wLHBhbl94CADKeT0wLHpvb209OH0sPgA-IKdAAgAK
+HxBQABwv8PAxAP--------------------------------------------------------------
+-6ZQbT04fX0=
+:: main.lua
+--[[pod_format="raw",created="2024-11-27 11:42:45",modified="2024-12-02 11:47:39",revision=768]]
+function _init()
+	padel1 = {}
+	padel1.x = 440
+	padel1.y = 270 / 2
+	padel1.targety = 0
+	padel1.acura = 1
+	padel2 = {}
+	padel2.x = 20
+	padel2.y = 270 / 2
+	padel2.targety = 0
+	padel2.acura = 1
+	ball = {}
+	ball.x = 40
+	ball.y = 270 / 2
+	ball.dx = 0
+	ball.dy = 0
+	ball.dir = 45	
+	ball.vel = 3
+	randoffset = 0
+	hour = date("%H")
+	mi = date("%M")
+	sec = date("%S")
+end
+--480 x 270
+function _update()
+	ballUpdate()
+	if btn(3) then padel2.y += 5 end
+	if btn(2) then padel2.y -= 5 end
+	if tonum(date("%S")) > 49 and tonum(date("%M")) != mi then
+		padel1.acura = 1 - ((tonum(date("%S")) - 49)/10)
+	end
+	if tonum(date("%M")) > 58 then
+		padel2.acura = 0
+	end
+end
+
+function _draw()
+	cls()
+	drawPadel()
+	padelAI()
+	circfill(ball.x, ball.y, 7, 7)
+	print(hour,0,0,7)
+	print(mi,470,0,7)
+	if date("%S") % 2 == 0 then
+		print(date("%H:%M:%S"),200,0,7)	
+	else
+		print(date("%H %M %S"),200,0,7)	
+	end
+	print(padel2.acura .. " " .. padel1.acura)
+end
+
+function padelAI()
+	local x = ball.x
+	local y = ball.y 
+	local dir = ball.dir
+	if time() % 1 == 0 then
+		--padel1.targety = rnd(270)
+		--padel2.targety = rnd(270)
+		randoffset = rnd(270) - 135
+	end
+	
+	for i=0, 1000 do
+		local dx = cos(dir/360) * ball.vel
+		local dy = sin(dir/360) * ball.vel
+		line(x,y,x+dx*10,y+dy*10,10)
+		x += dx *1
+		y += dy *1
+		if y < 0 or y > 270 or (x > 440 and (y < padel1.y + 28 and y > padel1.y - 28)) or (x < 40 and (y < padel2.y + 28 and y > padel2.y - 28)) then
+			dir *= -1
+		if (x > 440 and (y < padel1.y + 28 and y > padel1.y - 28)) or (x < 40 and (y < padel2.y + 28 and y > padel2.y - 28)) then
+			if x > 480 then
+				padel1.targety = y * (padel1.acura) + randoffset * (1 - padel1.acura)
+			elseif x < 0 then
+				padel2.targety = y * (padel2.acura) + randoffset * (1 - padel2.acura)
+			end
+			x -= dx *1
+			y -= dy *1
+		end
+		end
+	end
+
+	padel1.y = lerp(padel1.y, padel1.targety, 0.1)
+	padel2.y = lerp(padel2.y, padel2.targety, 0.1)
+	
+	if padel1.y > 230 then padel1.y = 230 end
+	if padel1.y < 30 then padel1.y = 30 end
+	if padel2.y > 230 then padel2.y = 230 end
+	if padel2.y < 30 then padel2.y = 30 end
+end
+
+function lerp(a,b,t)
+ local result=a+t*(b-a)
+ return result
+end
+
+function ballUpdate()
+	local hitTop = ball.y < 0
+	local hitBottom = ball.y > 270
+	
+	local leftPaddleCollision = ball.x < 40 and 
+		ball.y >= padel2.y - 32 and 
+		ball.y <= padel2.y + 32
+    
+	local rightPaddleCollision = ball.x > 440 and 
+		ball.y >= padel1.y - 32 and 
+		ball.y <= padel1.y + 32
+    
+	if hitTop or hitBottom or leftPaddleCollision or rightPaddleCollision then
+		
+		ball.dir *= -1
+		ball.dir = ball.dir + rnd(-5, 5)
+		
+		if leftPaddleCollision or rightPaddleCollision then
+			ball.dir = (ball.dir + 180) % 360
+			ball.vel = ball.vel + (rnd(-50, 50) / 1000)
+		end
+	end
+	
+	if ball.x < 0 or ball.x > 480 then
+		if ball.x < 0 then
+			hour += 1
+			padel2.acura = 1
+		end
+		if ball.x > 480 then
+			mi += 1
+			padel1.acura = 1
+		end
+		ball.x = 40
+		ball.y = 270 / 2
+		ball.dir = 45
+	end
+	ball.dx = cos(ball.dir/360) * ball.vel
+	ball.dy = sin(ball.dir/360) * ball.vel
+	
+	ball.x += ball.dx
+	ball.y += ball.dy
+end
+
+function drawPadel()
+	for i=-1,1 do
+		spr(001, padel1.x, 	padel1.y+(i*16))
+	end
+	for i=-1,1 do
+		spr(001, padel2.x, 	padel2.y+(i*16))
+	end
+end
+
+:: map.lua
+--[[pod_format="raw",created="2024-11-27 12:30:56",modified="2024-11-27 12:42:33",revision=21]]
+
+:: .info.pod
+b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI0LTExLTI3IDExOjQyOjIxIixtb2RpZmllZD0iMjAyNC0x
+Mi0wMiAxMTo0Nzo0MCIscnVudGltZT0xMix3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzE3Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9p
+bmRleD0yfX1dXQ==
+:: [eoc]
