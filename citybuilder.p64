@@ -4,185 +4,443 @@ version 2
 :: gfx/
 :: gfx/0.gfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
-NS0wOSAxMjo1MjoxOSIscmV2aXNpb249MjUyXV1sejQAIgEAAHQyAADzFHtbMF09e2JtcD1weHUA
-QyAQEATw8CxmbGFncz0wLHBhbl94CADKeT0wLHpvb209OH0sMQB--xUQ9bD_EDYAHG8fFbU_tR45
-ACU-PtUeAgADAFUAD8AAIQ45AA-DABUf1QIAAx8_UQAmD40AFQ_3AS3xCB8B3xUfHw8VsA4fHw4Q
-DxYADRANAA0QDgAUDQ0AGRwMABewBACeAE1QDhwOUE0AEAA-3vwB_gAhDwIABQ9LASYPJgIFD3QC
-Hl--FRLVHnECOS-VHjUCAw_GAj0v-hJHAk0PMQAeSH8ecH4CAEnwAH5wAgAPgQAeDzEA--------
-----------------------------------------------------xFBtPTh9fQ==
+NS0xMyAxMjo0OTo1MyIscmV2aXNpb249MTIzMF1dbHo0AEQBAABwMwAA8xR7WzBdPXtibXA9cHh1
+AEMgEBAE8PAsZmxhZ3M9MCxwYW5feAgAynk9MCx6b29tPTh9LDEAf-8VEPWw-hA2ABxPHxW1PgIA
+Ch8eUQAiL9UeAgACD58AIy8e1QIAAy-_EiMBHj8S1R4CAAMP6gAgX-8VENUeAgACDzgBJh8eUQA_
+DhMCD8IBKw8pASQ-9bAewwAoD54BOy-_EhEBIg8CAAQPhQI4L-4QSwAfL7U_AgADDzIBIEh-HnB_
+AgBJ8AB_cAIAD54AId4VDxYFDRUNBQ0VPhUNCgACqwB2BU1VPlVNBQoAD1UBIE8ACR4ZAgASPwn_
+ECsAFx8giAAeLxAJgAAvDyMAAB8JiQAcL-DwMQD-------------------------------------
+----------------------8xUG09OH19
 :: gfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
-NS0wOSAxMjo1MjoxOSJdXQ==
+NS0xMyAxMjo0OTo1MyJdXQ==
 :: map/
 :: map/0.map
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ4Iixtb2RpZmllZD0iMjAyNS0w
-NS0wOSAxMjo1MjoxOSIscmV2aXNpb249MjE0XV1sejQAaAAAAFgQAADwCHt7Ym1wPXVzZXJkYXRh
-KCJpMTYiLDMyAwAvIjABAP--------------------vxCCIpLGhpZGRlbj1mYWxzZSxwYW5feD0w
-CADSeT0wLHRpbGVfaD0xNgoAEHcKAIB6b29tPTF9fQ==
+NS0xMyAxMjo0OTo1MyIscmV2aXNpb249MTE2Ml1dbHo0AGgAAABYEAAA8Ah7e2JtcD11c2VyZGF0
+YSgiaTE2IiwzMgMALyIwAQD--------------------78QgiKSxoaWRkZW49ZmFsc2UscGFuX3g9
+MAgA0nk9MCx0aWxlX2g9MTYKABB3CgCAem9vbT0xfX0=
 :: map/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
-NS0wOSAxMjo1MjoxOSJdXQ==
+NS0xMyAxMjo0OTo1MyJdXQ==
 :: sfx/
 :: sfx/0.sfx
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM1OjQ5Iixtb2RpZmllZD0iMjAyNS0w
-NS0wOSAxMjo1MjoxOSIscmV2aXNpb249MjE0XV1sejQAoAAAAAsKAAD-MHB4dQADKAAABAAED0AQ
-Ag4AAaABIAKgDgAPEAAN8MoBAgNADw_QBAUGB0AMkAgJCgtADJAPDA8NDw4MQAzw-wEA6-8nqgEQ
-Bg8gEAEgASAB8AACEAIOEAEgDyEgATAPQPDDDygP--DGD-gKD-8PgA-3Dw0B8AkBEAYOMAD-----
--70f-wEArM-ID0AADxBA--_w8P8BAP-qUP----8p
+NS0xMyAxMjo0OTo1MyIscmV2aXNpb249MTE2Ml1dbHo0AKAAAAALCgAA-zBweHUAAygAAAQABA9A
+EAIOAAGgASACoA4ADxAADfDKAQIDQA8PkAQFBgdADJAICQoLQAyQDwwPDQ8ODEAM8P8BAOv-J6oB
+EAYPIBABIAEgAfAAAhACDhABIA8hIAEwD0Dwww8oD--wxg-4Cg--D4AP9w8NAfAJARAGDjAA----
+--_9H-8BAKzPyA9AAA8QQP--sPD-AQD-6lD-----KQ==
 :: sfx/.info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
-NS0wOSAxMjo1MjoxOSJdXQ==
-:: main.lua
---[[pod_format="raw",created="2025-01-17 10:35:48",modified="2025-05-09 12:52:19",revision=367]]
-function _init()
-	road_map = userdata("u8", 16, 16)
-	map_width = road_map:width()
-	map_height = road_map:height()
-	
---	for x = 0, map_width - 1 do
---		road_map:set(x, 0, 1)
---		road_map:set(x, map_height - 1, 1)
---	end
---	
---	for y = 0, map_height - 1 do
---		road_map:set(0, y, 9)
---		road_map:set(map_width - 1, y, 9)
---	end
-	road_map:set(0, 0, 011)
-	road_map:set(0, map_height - 1, 010)
-	road_map:set(map_width - 1, 0, 012)	
-	road_map:set(map_width - 1, map_height - 1, 013)
-	
+NS0xMyAxMjo0OTo1MyJdXQ==
+:: 3d.lua
+--[[pod_format="raw",created="2025-05-12 11:09:40",modified="2025-05-13 12:49:53",revision=818]]
+function gen_3d_map()
+	city_mesh = {}
+	local plane = {
+		{x = -0.5, y = 0.0, z = -0.5, u = 0.0 , v = 0.0 , spr=16},  -- bottom-left corner at origin
+		{x = 0.5 , y = 0.0, z = -0.5, u = 16.0, v = 0.0 , spr=16},  -- bottom-right
+		{x = 0.5 , y = 0.0, z = 0.5 , u = 16.0, v = 16.0, spr=16},  -- top-right
+		{x = -0.5, y = 0.0, z = 0.5 , u = 0.0 , v = 16.0, spr=16}   -- top-left
+	}
+	for i = -(map_width/2), map_width/2 do
+		for j = -(map_height/2), map_height/2 do
+			local sprite = road_map:get(i+map_width/2,j+map_height/2)
+			if sprite != 17 then
+				add(city_mesh, transform_quad(plane, {x=1, y=1, z=1}, {x=0, y=0, z=0}, {x=i, y=0, z=j}, sprite))
+			end
+		end
+	end
+	for i = 1, #buildings_locations do
+		local x, y, w, h = unpack(buildings_locations[i])
+		local world_x = x - map_width/2 + w/2
+		local world_z = y - map_height/2 + h/2
+		gen_building_mesh(world_x, world_z, flr(rnd(3) + 2), w, h)
+	end
+end
 
+function gen_building_mesh(i, j, height, w, h)
+	local plane = {
+		{x = -0.5, y = 0.0, z = -0.5, u = 0.0 , v = 0.0 , spr=16},  -- bottom-left corner at origin
+		{x = 0.5 , y = 0.0, z = -0.5, u = 16.0 * w, v = 0.0 , spr=16},  -- bottom-right
+		{x = 0.5 , y = 0.0, z = 0.5 , u = 16.0 * w, v = 16.0*height, spr=16},  -- top-right
+		{x = -0.5, y = 0.0, z = 0.5 , u = 0.0 , v = 16.0*height, spr=16}   -- top-left
+	}
+	add(city_mesh, transform_quad(plane, {x=w, y=1, z=height}, {x=1.57, y=0, z=0}, {x=i-0.5, y=-height/2, z=j-0.5-h/2}, 18))
+	add(city_mesh, transform_quad(plane, {x=w, y=1, z=height}, {x=1.57, y=0, z=0}, {x=i-0.5, y=-height/2, z=j-0.5+h/2}, 18))
+	plane[2].u = 16 * h
+	plane[3].u = 16 * h
+	add(city_mesh, transform_quad(plane, {x=h, y=1, z=height}, {x=1.57, y=1.57, z=0}, {x=i-0.5-w/2, y=-height/2, z=j-0.5}, 18))
+	add(city_mesh, transform_quad(plane, {x=h, y=1, z=height}, {x=1.57, y=1.57, z=0}, {x=i-0.5+w/2, y=-height/2, z=j-0.5}, 18))
+	plane[2].u = 16 * w
+	plane[3].u = 16 * w
+	plane[3].v = 16 * h
+	plane[4].v = 16 * h
+	add(city_mesh, transform_quad(plane, {x=w, y=1, z=h}, {x=0, y=0, z=0}, {x=i-0.5, y=-height, z=j-0.5}, 17))
+end
+
+
+
+function tquad3d(vert, tex)
+	local coords = {
+		project(vert[1]),
+		project(vert[2]),
+		project(vert[3]),
+		project(vert[4])
+	}
+	tquad(coords, tex, 1, 1)
+end
+
+function project(v)
+	local fov = 90
+	local scale_proj = fov / (fov + v.z)
+--	print("Before projection:"..v.x.." "..v.y.." "..v.z)
+--	print("Projected:"..(v.x * scale_proj * 100).." "..(v.y * scale_proj * 100))
+	return {x = v.x * scale_proj * 100, y = v.y * scale_proj * 100, u=v.u, v=v.v}
+end
+
+
+function tquad(coords,tex,dx,dy)
+	local screen_max = get_display():height()-1
+	local p0,spans = coords[#coords],{}
+	local x0,y0,u0,v0=p0.x+dx,p0.y+dy,p0.u,p0.v
+	for i=1,#coords do
+		local p1 = coords[i]
+		local x1,y1,u1,v1=p1.x+dx,p1.y+dy,p1.u,p1.v
+		local _x1,_y1,_u1,_v1=x1,y1,u1,v1
+		if(y0>y1) x0,y0,x1,y1,u0,v0,u1,v1=x1,y1,x0,y0,u1,v1,u0,v0
+		local dy=y1-y0
+		local dx,du,dv=(x1-x0)/dy,(u1-u0)/dy,(v1-v0)/dy
+		if(y0<0) x0-=y0*dx u0-=y0*du v0-=y0*dv y0=0
+		local cy0=ceil(y0)
+		local sy=cy0-y0
+		x0+=sy*dx
+		u0+=sy*du
+		v0+=sy*dv
+		for y=cy0,min(ceil(y1)-1,screen_max) do
+			local span=spans[y]
+			if span then tline3d(tex,span.x,y,x0,y,span.u,span.v,u0,v0)
+			else spans[y]={x=x0,u=u0,v=v0} end
+			x0+=dx
+			u0+=du
+			v0+=dv
+		end
+		x0,y0,u0,v0=_x1,_y1,_u1,_v1
+	end
+end
+
+function transform_quad(quad, scale, rot, pos, spr)
+	local function rotate(v)
+		local cx, cy, cz = math.cos(rot.x), math.cos(rot.y), math.cos(rot.z)
+		local sx, sy, sz = math.sin(rot.x), math.sin(rot.y), math.sin(rot.z)
+
+		-- X rotation
+		local y = v.y * cx - v.z * sx
+		local z = v.y * sx + v.z * cx
+		v.y, v.z = y, z
+
+		-- Y rotation
+		local x = v.x * cy + v.z * sy
+		z = -v.x * sy + v.z * cy
+		v.x, v.z = x, z
+
+		-- Z rotation
+		x = v.x * cz - v.y * sz
+		y = v.x * sz + v.y * cz
+		v.x, v.y = x, y
+
+		return v
+	end
+
+	local transformed = {}
+	for i = 1, #quad do
+		local v = {
+			x = quad[i].x * scale.x,
+			y = quad[i].y * scale.y,
+			z = quad[i].z * scale.z,
+			u = quad[i].u,
+			v = quad[i].v,
+			spr = spr
+		}
+		v = rotate(v)
+		v.x = v.x + pos.x
+		v.y = v.y + pos.y
+		v.z = v.z + pos.z
+		transformed[i] = v
+	end
+	return transformed
+end
+
+function lerp(a, b, t)
+	return a + (b - a) * t
+end
+
+:: main.lua
+--[[pod_format="raw",created="2025-01-17 10:35:48",modified="2025-05-13 12:49:53",revision=1600]]
+include"tilegen.lua"
+include"3d.lua"
+function _init()
+	tile_init()
+	gen_3d_map()
 	
+	global_scale = {x=0.4, y=0.4, z=0.4}
+	global_rot = {x=-3, y=0, z=0}
+	global_pos = {x=2.7, y=1.8, z=0}
 	
---	for i = 0, map_width - 1 do
---		for j = 0, map_height  - 1 do
---			if road_map:get(i, j) == 0 then
---				local tile = return_best_fit_tile(i, j)
---				road_map:set(i, j, tile)
---			end
---		end
---	end
+	rotation_speed = 0.1
+	scale_speed = 0.99
+	move_speed = 0.1
 	
+	prev_mx, prev_my = 0, 0
+	target_rot = {x = 0, y = 0, z = 0}
+	rotation_lerp_speed = 0.1
+
+	mouse_sensitivity = 0.01
 end
 
 function _update()
-	road_map:set(8, 7, 009)
-	road_map:set(8, 8, return_best_fit_tile(8, 8))
 	mx, my, mb = mouse()
-	if mb != 0 then
-		local tile = return_best_fit_tile(mx, my)
-		road_map:set(flr(mx/16), flr(my/16), tile)
+	
+	if mb == 1 then
+		local dx = mx - prev_mx
+		local dy = my - prev_my
+
+		target_rot.y += dx * mouse_sensitivity
+		target_rot.x += dy * mouse_sensitivity
+	end
+	
+	if mb == 0 and (target_rot.x > 2 or target_rot.x < -2) then
+		target_rot.x = 0.2
+	end
+
+	global_rot.x = lerp(global_rot.x, target_rot.x, rotation_lerp_speed)
+	global_rot.y = lerp(global_rot.y, target_rot.y, rotation_lerp_speed)
+
+	prev_mx = mx
+	prev_my = my
+
+
+	if key("w") then global_pos.z = global_pos.z - move_speed end
+	if key("s") then global_pos.z = global_pos.z + move_speed end
+	if key("a") then global_pos.x = global_pos.x - move_speed end
+	if key("d") then global_pos.x = global_pos.x + move_speed end
+	if key("q") then global_pos.y = global_pos.y - move_speed end
+	if key("e") then global_pos.y = global_pos.y + move_speed end
+
+	if btn(4) then
+		global_scale.x = global_scale.x / scale_speed
+		global_scale.y = global_scale.y / scale_speed
+		global_scale.z = global_scale.z / scale_speed
+	end
+	if btn(5) then
+		global_scale.x = global_scale.x * scale_speed
+		global_scale.y = global_scale.y * scale_speed
+		global_scale.z = global_scale.z * scale_speed
 	end
 end
-
-function return_best_fit_tile(x, y)
-	local tiles = {
-		straight_ver = 009,
-		straight_hor = 001,
-		corner_tl = 013,  -- top-left
-		corner_tr = 010,  -- top-right
-		corner_bl = 012,  -- bottom-left
-		corner_br = 011,  -- bottom-right
-		t_up = 002,    -- T facing up
-		t_down = 004,  -- T facing down
-		t_left = 005,  -- T facing left
-		t_right = 003, -- T facing right
-		cross = 006
-	}
-	
-	local u = road_map:get(x, y - 1)
-	local r = road_map:get(x + 1, y)
-	local d = road_map:get(x, y + 1)
-	local l = road_map:get(x - 1, y)
-	
-	if x < 0 then 
-		l = 008
-	elseif x > map_width - 1 then
-		r = 008
-	elseif y < 0 then
-		u = 008
-	elseif y > map_height -1 then
-		d = 008
-	end
-
-	if u == 008 or u == 001 or u == 002 or u == 010 or u == 013 then
-		tiles.straight_ver = nil
-		tiles.corner_tl = nil
-		tiles.corner_tr = nil
-		tiles.t_up = nil
-		tiles.t_right = nil
-		tiles.t_left = nil
-		tiles.cross = nil
-	else
-		tiles.straight_hor = nil
-		tiles.corner_bl = nil
-		tiles.corner_br = nil
-		tiles.t_down = nil
-	end
-	
-	if r == 008 or r == 003 or r == 009 or r == 010 or r == 011 then
-		tiles.straight_hor = nil
-		tiles.corner_br = nil
-		tiles.corner_tr = nil
-		tiles.t_up = nil
-		tiles.t_right = nil
-		tiles.t_down = nil
-		tiles.cross = nil
-	end
-	
-	if d == 008 or d == 001 or d == 004 or d == 011 or d == 012 then
-		tiles.straight_ver = nil
-		tiles.corner_br = nil
-		tiles.corner_bl = nil
-		tiles.t_left = nil
-		tiles.t_right = nil
-		tiles.t_down = nil
-		tiles.cross = nil    
-	end
-	
-	if l == 008 or l == 005 or l == 009 or l == 012 or l == 013 then
-		tiles.straight_hor = nil
-		tiles.corner_tr = nil
-		tiles.corner_br = nil
-		tiles.t_left = nil
-		tiles.t_up = nil
-		tiles.t_down = nil
-		tiles.cross = nil        
-	end
-	
-	return random_tile(tiles)
-end
-
-function random_tile(tiles)
-    local tile_values = {}
-    for _, v in pairs(tiles) do
-        if v != nil then
-            add(tile_values, v)
-        end
-    end
-    if #tile_values == 0 then
-        return 016
-    end
-    return tile_values[ceil(rnd(#tile_values))]
-end
-
-
 
 function _draw()
 	cls()
+--	for i = 0, map_width - 1 do
+--		for j = 0, map_height  - 1 do
+--			local tile = road_map:get(i, j)
+--			spr(tile, i*16, j*16)
+--		end
+--	end
+--	print(global_pos.x.." "..global_pos.y.." "..global_pos.z)
+--	print(global_rot.x.." "..global_rot.y.." "..global_rot.z)
+--	print(global_scale.x.." "..global_scale.y.." "..global_scale.z)
+--	print(target_rot.x.." "..target_rot.y.." "..target_rot.z)
+	print(stat(7))
+	
+	local transformed_quads = {}
+	
+	for i = 1, #city_mesh do
+		local transformed = transform_quad(city_mesh[i], global_scale, global_rot, global_pos)
+		add(transformed_quads, {quad = transformed, z = average_z(transformed), spr = get_spr(city_mesh[i][1].spr)})
+	end
+
+	for i = 2, #transformed_quads do
+		local key = transformed_quads[i]
+		local j = i - 1
+		while j >= 1 and transformed_quads[j].z < key.z do
+			transformed_quads[j + 1] = transformed_quads[j]
+			j = j - 1
+		end
+		transformed_quads[j + 1] = key
+	end
+	
+	for i = 1, #transformed_quads do
+		tquad3d(transformed_quads[i].quad, transformed_quads[i].spr)
+	end
+end
+
+function average_z(quad)
+	local sum_z = 0
+	for i = 1, #quad do
+		sum_z = sum_z + quad[i].z
+	end
+	return sum_z / #quad
+end
+:: tilegen.lua
+--[[pod_format="raw",created="2025-05-12 10:42:19",modified="2025-05-13 12:49:53",revision=755]]
+include"3d.lua"
+
+function tile_init()
+	road_map = userdata("u8", 8,8)
+	map_width = road_map:width()
+	map_height = road_map:height()
+	
+	buildings_locations = {}
+	
+	place_buildings(100)
+	
 	for i = 0, map_width - 1 do
 		for j = 0, map_height  - 1 do
-			local tile = road_map:get(i, j)
-			spr(tile, i*16, j*16)
+			if road_map:get(i, j) == 0 then
+				local tile = return_best_fit_tile(i, j)
+				road_map:set(i, j, tile)
+			end
 		end
 	end
 end
+
+function is_area_clear(x, y, w, h)
+	for i = -1, w do
+		for j = -1, h do
+			local check_x = x + i
+			local check_y = y + j
+			if check_x >= 0 and check_x < map_width and check_y >= 0 and check_y < map_height then
+				if road_map:get(check_x, check_y) != 0 then
+					return false
+				end
+			end
+		end
+	end
+	return true
+end
+
+function place_buildings(count)
+	local attempts = 0
+	local max_attempts = count * 50
+	local placed = 0
+
+	while placed < count and attempts < max_attempts do
+		attempts += 1
+
+		local build_w = ceil(rnd(3)) + 1  -- slightly smaller max
+		local build_h = ceil(rnd(3)) + 1
+
+		local build_x = flr(rnd(map_width - build_w))
+		local build_y = flr(rnd(map_height - build_h))
+	
+		if is_area_clear(build_x, build_y, build_w, build_h) then
+			add(buildings_locations, {build_x, build_y, build_w, build_h})
+			for i = 0, build_w - 1 do
+				for j = 0, build_h - 1 do
+					road_map:set(build_x + i, build_y + j, 17)
+				end
+			end
+			placed += 1
+		end
+	end
+end
+
+
+function return_best_fit_tile(x, y)
+	connected = {left="nothing", up="nothing", right="nothing", down="nothing"}
+	temp_table = {}	
+	
+	left_id = road_map:get(x-1, y)
+	right_id = road_map:get(x+1, y)
+	up_id = road_map:get(x, y-1)
+	down_id = road_map:get(x, y+1)
+	
+	if x-1 < 0 then left_id = 2 end
+	if x+1 > map_width - 1 then right_id = 2 end
+	if y-1 < 0 then up_id = 1 end
+	if y+1 > map_height - 1 then down_id = 1 end
+	
+	if get_side(left_id, "right") then connected.left = "connected" elseif get_side(left_id, "right") != nil then connected.left = "blocked" end
+	if get_side(right_id,"left") then connected.right = "connected" elseif get_side(right_id, "left") != nil then connected.right = "blocked" end
+	if get_side(up_id,   "down") then connected.up = "connected" elseif get_side(up_id, "down") != nil then connected.up = "blocked" end
+	if get_side(down_id, "up") then connected.down = "connected" elseif get_side(down_id, "up") != nil then connected.down = "blocked" end
+	
+	if road_map:get(x-1, y) == 17 then connected.left = "blocked" end
+	if road_map:get(x+1, y) == 17 then connected.right = "blocked" end
+	if road_map:get(x, y-1) == 17 then connected.up = "blocked" end
+	if road_map:get(x, y+1) == 17 then connected.down = "blocked" end
+
+	get_tile(tiles)
+	
+	if #temp_table == 0 then
+		get_tile(end_tiles)
+	end
+	
+	return temp_table[ceil(rnd(#temp_table))]
+end
+
+function get_tile(tiles)
+	for i = 1, #tiles do
+		left_match = connected.left == "connected" and tiles[i].left == true
+			or connected.left == "blocked" and tiles[i].left == false
+			or connected.left == "nothing"
+		
+		right_match = connected.right == "connected" and tiles[i].right == true
+			or connected.right == "blocked" and tiles[i].right == false
+			or connected.right == "nothing"
+		
+		up_match = connected.up == "connected" and tiles[i].up == true
+			or connected.up == "blocked" and tiles[i].up == false
+			or connected.up == "nothing"
+		
+		down_match = connected.down == "connected" and tiles[i].down == true
+			or connected.down == "blocked" and tiles[i].down == false
+			or connected.down == "nothing"
+
+		if left_match and up_match and right_match and down_match then
+			add(temp_table, tiles[i].id)
+		end
+	end
+end
+
+function get_side(tile, side)
+	for i = 1, #tiles do
+		if tiles[i].id == tile then
+			if tiles[i].id == 0 then
+				return nil
+			end
+			return tiles[i][side]
+		end
+	end
+end
+
+tiles = {
+	{left=true, up=false, right=true, down=false, id=1},   -- horizontal straight
+	{left=false, up=true, right=false, down=true, id=2},   -- vertical straight
+	{left=false, up=true, right=true, down=false, id=3},   -- up-right corner
+	{left=true, up=true, right=false, down=false, id=4},   -- up-left corner
+	{left=false, up=false, right=true, down=true, id=5},   -- down-right corner
+	{left=true, up=false, right=false, down=true, id=6},   -- down-left corner
+	{left=true, up=true, right=false, down=true, id=7},    -- left t
+	{left=true, up=true, right=true, down=false, id=8},    -- up t
+	{left=false, up=true, right=true, down=true, id=9},    -- right t
+	{left=true, up=false, right=true, down=true, id=10},   -- down t
+	{left=true, up=true, right=true, down=true, id=11},    -- cross
+}
+
+end_tiles = {
+	{left=true, up=false, right=false, down=false, id=12},  -- end left
+	{left=false, up=true, right=false, down=false, id=13},  -- end up
+	{left=false, up=false, right=true, down=false, id=14},  -- end right
+	{left=false, up=false, right=false, down=true, id=15}   -- end down
+}
 :: .info.pod
 b64$LS1bW3BvZCxjcmVhdGVkPSIyMDI1LTAxLTE3IDEwOjM3OjQ1Iixtb2RpZmllZD0iMjAyNS0w
-NS0wOSAxMjo1MjoxOSIscnVudGltZT0xNyx3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
-IzM1Iix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJnZngvMC5nZngiLHdvcmtzcGFjZV9p
-bmRleD0yfSx7bG9jYXRpb249Im1hcC8wLm1hcCIsd29ya3NwYWNlX2luZGV4PTN9LHtsb2NhdGlv
-bj0ic2Z4LzAuc2Z4Iix3b3Jrc3BhY2VfaW5kZXg9NH19XV0=
+NS0xMyAxMjo0OTo1MyIscnVudGltZT0xNyx3b3Jrc3BhY2VzPXt7bG9jYXRpb249Im1haW4ubHVh
+IzgxIix3b3Jrc3BhY2VfaW5kZXg9MX0se2xvY2F0aW9uPSJ0aWxlZ2VuLmx1YSM0Iix3b3Jrc3Bh
+Y2VfaW5kZXg9MX0se2xvY2F0aW9uPSIzZC5sdWEjOCIsd29ya3NwYWNlX2luZGV4PTF9LHtsb2Nh
+dGlvbj0iZ2Z4LzAuZ2Z4Iix3b3Jrc3BhY2VfaW5kZXg9Mn0se2xvY2F0aW9uPSJtYXAvMC5tYXAi
+LHdvcmtzcGFjZV9pbmRleD0zfSx7bG9jYXRpb249InNmeC8wLnNmeCIsd29ya3NwYWNlX2luZGV4
+PTR9fV1d
 :: [eoc]
